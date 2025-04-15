@@ -1,0 +1,23 @@
+Front face (z = 1)
+v1, v5, v7
+v1, v7, v3
+
+Back face (z = -1)
+v0, v2, v6
+v0, v6, v4
+
+Top face (y = 1)
+v2, v3, v7
+v2, v7, v6
+
+Bottom face (y = -1)
+v0, v4, v5
+v0, v5, v1
+
+Left face (x = -1)
+v0, v1, v3
+v0, v3, v2
+
+Right face (x = 1)
+v4, v6, v7
+v4, v7, v5

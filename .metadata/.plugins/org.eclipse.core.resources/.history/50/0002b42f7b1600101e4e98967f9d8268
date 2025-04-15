@@ -1,0 +1,61 @@
+package newproject;
+
+import java.awt.Color;
+import java.util.List;
+
+public class Rectangular {
+	
+	Color color;
+	List<Triangle> faces;
+	
+	Rectangular(Triangle f1t1, Triangle f1t2, Triangle f2t1, Triangle f2t2, Triangle f3t1, Triangle f3t2,
+			Triangle f4t1, Triangle f4t2, Triangle f5t1, Triangle f5t2, Triangle f6t1, Triangle f6t2,
+			Color color)
+	{
+		this.color = color;
+		
+		// face 1
+		
+		faces.add(new Triangle(new Vertex(f1t1.getV1().getX(), f1t1.getV1().getY(), f1t1.getV1().getZ()), 
+				new Vertex(f1t1.getV2().getX(), f1t1.getV2().getY(), f1t1.getV2().getZ()),
+				new Vertex(f1t1.getV3().getX(), f1t1.getV3().getY(), f1t1.getV3().getZ()), this.color));
+		
+		faces.add(new Triangle(new Vertex(f1t2.getV1().getX(), f1t2.getV1().getY(), f1t2.getV1().getZ()),
+				new Vertex(f1t2.getV2().getX(), f1t2.getV2().getY(), f1t2.getV2().getZ()),
+				new Vertex(f1t2.getV3().getX(), f1t2.getV3().getY(), f1t2.getV3().getZ()), this.color));
+		
+		// face 2
+		
+		faces.add(new Triangle(new Vertex(f2t1.getV1().getX(), f2t1.getV1().getY(), f2t1.getV1().getZ()), 
+				new Vertex(f2t1.getV2().getX(), f2t1.getV2().getY(), f2t1.getV2().getZ()),
+				new Vertex(f2t1.getV3().getX(), f2t1.getV3().getY(), f2t1.getV3().getZ()), this.color));
+		
+		faces.add(new Triangle(new Vertex(f2t2.getV1().getX(), f2t2.getV1().getY(), f2t2.getV1().getZ()),
+				new Vertex(f2t2.getV2().getX(), f2t2.getV2().getY(), f2t2.getV2().getZ()),
+				new Vertex(f2t2.getV3().getX(), f2t2.getV3().getY(), f2t2.getV3().getZ()), this.color));
+		
+		// face 3
+		
+		faces.add(new Triangle(new Vertex(f3t1.getV1().getX(), f3t1.getV1().getY(), f3t1.getV1().getZ()), 
+				new Vertex(f3t1.getV2().getX(), f3t1.getV2().getY(), f3t1.getV2().getZ()),
+				new Vertex(f3t1.getV3().getX(), f3t1.getV3().getY(), f3t1.getV3().getZ()), this.color));
+		
+		faces.add(new Triangle(new Vertex(f3t2.getV1().getX(), f3t2.getV1().getY(), f3t2.getV1().getZ()),
+				new Vertex(f3t2.getV2().getX(), f3t2.getV2().getY(), f3t2.getV2().getZ()),
+				new Vertex(f3t2.getV3().getX(), f3t2.getV3().getY(), f3t2.getV3().getZ()), this.color));
+		
+		// face 4
+		
+		faces.add(new Triangle(new Vertex(f3t1.getV1().getX(), f3t1.getV1().getY(), f3t1.getV1().getZ()), 
+				new Vertex(f3t1.getV2().getX(), f3t1.getV2().getY(), f3t1.getV2().getZ()),
+				new Vertex(f3t1.getV3().getX(), f3t1.getV3().getY(), f3t1.getV3().getZ()), this.color));
+		
+		faces.add(new Triangle(new Vertex(f3t2.getV1().getX(), f3t2.getV1().getY(), f3t2.getV1().getZ()),
+				new Vertex(f3t2.getV2().getX(), f3t2.getV2().getY(), f3t2.getV2().getZ()),
+				new Vertex(f3t2.getV3().getX(), f3t2.getV3().getY(), f3t2.getV3().getZ()), this.color));
+		
+	}
+	
+	//Cube(List<Triangle>face1, List<Triangle>face2, )
+	
+}

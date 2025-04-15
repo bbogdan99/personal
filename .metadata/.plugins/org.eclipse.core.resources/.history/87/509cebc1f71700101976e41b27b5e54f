@@ -1,0 +1,134 @@
+package Matrix;
+
+import newproject.Vertex;
+
+public class Matrix4 {
+	double[] values;
+	Matrix4(double[]values)
+	{
+		this.values=values;
+	}
+	public Matrix4 multiply(Matrix4 other)
+	{
+		double[] result = new double[16];
+		for (int row=0; row<4; row++)
+			for (int col=0; col<4; col++)
+				for (int i=0; i<4; i++)
+		result[row*4 + col] += this.values[row*4 + i] * other.values[i*4 + col];
+		
+		return new Matrix4(result);
+	}
+	public Matrix4 add(Matrix4 other)
+	{
+		double[] result = new double[16];
+		for (int row=0; row<4; row++)
+			for (int col=0; col<4; col++)
+				result[row*4 + col] = this.values[row*4 + col]+ other.values[row*4 + col];
+		
+		return new Matrix4(result);
+	}
+	public Matrix4 subtract(Matrix4 other)
+	{
+		double[] result = new double[16];
+		for (int row=0; row<4; row++)
+			for (int col=0; col<4; col++)
+				result[row*4 + col] = this.values[row*4 + col] - other.values[row*4 + col];
+		return new Matrix4(result);
+	}
+	public static Matrix4 identityMatrix4()
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 zeroMatrix4()
+	{
+		return new Matrix4(new double[] {
+				0, 0, 0, 0,
+				0, 0, 0, 0,
+				0, 0, 0, 0,
+				0, 0, 0, 0
+		});
+	}
+	public void rotateAroundX(double angle)
+	{
+		this.multiply(Matrix4.rotateAroundXMatrix(angle));
+	}
+	public void rotateAroundY(double angle)
+	{
+		this.multiply(Matrix4.rotateAroundYMatrix(angle));
+	}
+	public void rotateAroundZ(double angle)
+	{
+		this.multiply(Matrix4.rotateAroundZMatrix(angle));
+	}
+
+	public Vertex transform(Vertex in)
+	{
+		return new Vertex(
+				in.getX()*values[0] + in.getY()*values[4] + in.getZ()*values[8] + values[12],
+				in.getX()*values[1] + in.getY()*values[5] + in.getZ()*values[9] + values[13],
+				in.getX()*values[2] + in.getY()*values[6] + in.getZ()*values[10] + values[14]	
+				);
+	}
+	public static Matrix4 rotateAroundXMatrix(double angle)
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, Math.cos(angle), -Math.sin(angle), 0,
+				0, Math.sin(angle), Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 rotateAroundYMatrix(double angle)
+	{
+		return new Matrix4(new double[] {
+				Math.cos(angle), 0, Math.sin(angle), 0,
+				0, 1, 0, 0,
+				-Math.sin(angle), 0, Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 rotateAroundZMatrix(double angle)
+	{
+		return new Matrix4(new double[] {
+				Math.cos(angle), -Math.sin(angle), 0, 0,
+				Math.sin(angle), Math.cos(angle), 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 scaleX(double sx)
+	{
+		return Matrix4.scale(sx,  1.0, 1.0);
+	}
+	public static Matrix4 scaleY(double sy)
+	{
+		return Matrix4.scale(1.0, sy, 1.0);
+	}
+	public static Matrix4 scaleZ(double sz)
+	{
+		return Matrix4.scale(1.0, 1.0, sz);
+	}
+	public static Matrix4 scale(double sx, double sy, double sz)
+	{
+		return new Matrix4(new double[] {
+				sx, 0, 0, 0,
+				0, sy, 0, 0,
+				0, 0, sz, 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 translate(double tx, double ty, double tz)
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				tx, ty, tz, 1
+		});
+	}
+}
