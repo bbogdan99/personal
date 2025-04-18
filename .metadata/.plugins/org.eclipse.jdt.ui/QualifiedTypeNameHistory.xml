@@ -9,4 +9,5 @@
     <fullyQualifiedTypeName name="java.awt.Canvas"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="Drawables.DrawUtils"/>
+    <fullyQualifiedTypeName name="Matrix.Matrix4"/>
 </qualifiedTypeNameHistroy>

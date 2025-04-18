@@ -12,6 +12,13 @@ public class DrawUtils {
 		img.setRGB(px, py, color);
 	} //redundant
 	
+	public static void DrawWireframeTriangle(BufferedImage img,double p0x, double p0y, double p1x, double p1y, double p2x, double p2y, int color)
+	{
+		DrawLine(img, p0x, p0y, p1x, p1y, color);
+		DrawLine(img, p0x, p0y, p2x, p2y, color);
+		DrawLine(img, p1x, p1y, p2x, p2y, color);
+	}
+	
 	public static void DrawLine(BufferedImage img, double p0x, double p0y,
 			double p1x, double p1y, int color)
 	{

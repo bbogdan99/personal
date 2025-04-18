@@ -1,0 +1,22 @@
+package newproject;
+
+public class Vertex {
+	double x,y,z;
+	public Vertex(double x, double y, double z)
+	{
+		this.x=x;
+		this.y=y;
+		this.z=z;
+	}
+	public double getX() {return x;}
+	public double getY() {return y;}
+	public double getZ() {return z;}
+	public Vertex normalize(Vertex v, double w)
+	{
+		if (w==0) return new Vertex(v.x, v.y, v.z);
+		return new Vertex(v.x/w, v.y/w, v.z/w);
+	}
+	public void setX(double X) {this.x =X;}
+	public void setY(double Y) {this.y =Y;}
+	public void setZ(double Z) {this.z =Z;}
+}
