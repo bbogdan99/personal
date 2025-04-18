@@ -20,7 +20,7 @@ Concepts covered:
 
 -basic linear algebra in 3D graphics
 
--model -> world -> view -> projection (which are not fully tackled yet)
+-model -> world -> view -> projection 
 
 Features I hope to add in the future:
 
