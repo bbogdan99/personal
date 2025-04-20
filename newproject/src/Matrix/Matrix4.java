@@ -4,10 +4,118 @@ import newproject.Vertex;
 
 public class Matrix4 {
 	private double[] values;
+	
+	public Matrix4()
+	{
+		this.values = new double[16];
+		for (int i=0; i<16; i++) values[i] = (i%5 == 0)?1:0;
+	}
 	public Matrix4(double[]values)
 	{
-		this.setValues(values);
+		if (values.length != 16) throw new ArithmeticException("Nu se poate crea un obiect Matrix4 nou pentru " + getClass().getName() + " deoarece argumentul are size !=16\n");
+		this.values = new double[16];
+		for (int i=0; i<16; i++) this.values[i] = values[i];
 	}
+	public Matrix4(double tx, double ty, double tz, double xang, double yang, double zang, double scx, double scy, double scz)
+	{
+		this.values = new double[16];
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		values[0] = scz*cz*cy;
+		values[1] = cz*sx*sy - sz*cx;
+		values[2] = cz*cx*sy + sz*sx;
+		values[3] = 0;
+		
+		values[4] = sz*cy;
+		values[5] = scy*(sz*sx*sy + cz*cx);
+		values[6] = sz*cx*sy - cz*sx;
+		values[7] = 0;
+		
+		values[8] = -sy;
+		values[9] = cy*sx;
+		values[10] = scz*cy*cx;
+		values[11] = 0;
+		
+		values[12] = tx;
+		values[13] = ty;
+		values[14] = tz;
+		values[15] = 1;
+	}
+	public Matrix4(double tx, double ty, double tz, double xang, double yang, double zang)
+	{
+		this.values = new double[16];
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		values[0] = cz*cy;
+		values[1] = cz*sx*sy - sz*cx;
+		values[2] = cz*cx*sy + sz*sx;
+		values[3] = 0;
+		
+		values[4] = sz*cy;
+		values[5] = sz*sx*sy + cz*cx;
+		values[6] = sz*cx*sy - cz*sx;
+		values[7] = 0;
+		
+		values[8] = -sy;
+		values[9] = cy*sx;
+		values[10] = cy*cx;
+		values[11] = 0;
+		
+		values[12] = tx;
+		values[13] = ty;
+		values[14] = tz;
+		values[15] = 1;
+	}
+	public Matrix4(double tx, double ty, double tz)
+	{
+		this.values = new double[16];
+		for (int i = 0; i<12; i++)
+			values[i] = (i%5 == 0)? 1:0;
+		values[12] = tx;
+		values[13] = ty;
+		values[14] = tz;
+		values[15] = 1;
+	}
+	public Matrix4(double far, double near, double angle, double aspect)
+	{
+		double ft = 1.0/Math.tan(Math.toRadians(angle/2.0));
+		this.values = new double[16];
+		values[0] = ft/aspect;
+		values[1] = 0;
+		values[2] = 0;
+		values[3] = 0;
+		
+		values[4] = 0;
+		values[5] = ft;
+		values[6] = 0;
+		values[7] = 0;
+		
+		values[8] = 0;
+		values[9] = 0;
+		values[10] = (far + near) / (near - far);
+		values[11] = (2 * far * near) / (near - far);
+		
+		values[12] = 0;
+		values[13] = 0;
+		values[14] = -1;
+		values[15] = 0;
+	}
+	
+	
 	public Matrix4 multiply(Matrix4 other)
 	{
 		double[] result = new double[16];
@@ -75,12 +183,69 @@ public class Matrix4 {
 				in.getX()*getValues()[3] + in.getY()*getValues()[7] + in.getZ()*getValues()[11] + in.getW()*getValues()[15]
 				);
 	}
-	public double getW(Vertex in)
+	private double getW(Vertex in)
 	{
 		double[] m = getValues(); // 4x4 matrix, row-major order
 	    return in.getX() * m[12] + in.getY() * m[13] + in.getZ() * m[14] + in.getW()* m[15];
 		//return in.getX()*getValues()[3] + in.getY()*getValues()[7] + in.getZ()*getValues()[11] + getValues()[15];
 	}
+	public static Matrix4 TRS(double tx, double ty, double tz, double xang, double yang, double zang, double scx, double scy, double scz)
+	{
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		double[] matrix = {
+			    scx * cz*cy,                     cz*sx*sy - sz*cx,      cz*cx*sy + sz*sx,     0,
+			    sz*cy,                     scy * (sz*sx*sy + cz*cx),      sz*cx*sy - cz*sx,     0,
+			    -sy,                       cy*sx,                 scz * cy*cx,                0,
+			    tx,                        ty,                    tz,                   1
+			};
+		
+		return new Matrix4(matrix);
+	}
+	
+	
+	public static Matrix4 TR(double tx, double ty, double tz, double xang, double yang, double zang)
+	{
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		/*double[] results2 = {
+				cz, -sz, 0, 0,
+				sz, cz, 0, 0,
+				0, 0, 1, 0,
+				tx, ty, tz, 1
+		}; //T * Rz
+		
+		double[] results3 = {
+				cz*cy, sz*cy, -sy, 0,
+				-sz, cz, 0, 0,
+				cz*sy, sz*sy, cy, 0,
+				tx, ty, tz, 1
+		}; T* Rz * Ry */
+		
+		double[] matrix = {
+			    cz*cy,                     cz*sx*sy - sz*cx,      cz*cx*sy + sz*sx,     0,
+			    sz*cy,                     sz*sx*sy + cz*cx,      sz*cx*sy - cz*sx,     0,
+			    -sy,                       cy*sx,                 cy*cx,                0,
+			    tx,                        ty,                    tz,                   1
+			};
+		
+		return new Matrix4(matrix);
+	}
+	
 	public static Matrix4 rotateAroundXMatrix(double angle)
 	{
 		return new Matrix4(new double[] {

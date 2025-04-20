@@ -1,0 +1,64 @@
+package FirstPersonControl;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JPanel;
+
+import newproject.Camera;
+
+public class KeyEventManager implements KeyListener{
+	
+	public Camera camera;
+	public JPanel renderPanel;
+	
+	public void setCamera(Camera camera)
+	{
+		this.camera = camera;
+	}
+
+	public void setRenderPanel(JPanel renderPanel)
+	{
+		this.renderPanel = renderPanel;
+	}
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		switch (e.getKeyChar())
+		{
+		case 'a':
+			camera.setX(camera.getX() - 2);
+			break;
+		case 's':
+			camera.setZ(camera.getZ() - 2);
+			break;
+		case 'd':
+			camera.setX(camera.getX() + 2);
+			break;
+		case 'w':
+			camera.setZ(camera.getZ() + 2);
+			break;
+		case 'e':
+			camera.setY(camera.getY() + 2);
+			break;
+		case 'q':
+			camera.setY(camera.getY() - 2);
+			break;
+		}
+		camera.update();
+		if (renderPanel!= null) renderPanel.repaint();
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

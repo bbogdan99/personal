@@ -1,0 +1,51 @@
+package FirstPersonControl;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import newproject.Camera;
+
+public class KeyEventManager implements KeyListener{
+	
+	public Camera camera;
+	
+	public void setCamera(Camera camera)
+	{
+		this.camera = camera;
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		switch (e.getKeyChar())
+		{
+		case 'a':
+			
+			break;
+		case 's':
+			
+			break;
+			
+		case 'd':
+			
+			break;
+			
+		case 'w':
+			
+			break;
+		}
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

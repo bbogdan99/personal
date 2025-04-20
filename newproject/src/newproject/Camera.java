@@ -6,55 +6,98 @@ public class Camera
 {
 
 	Vertex pos;
+	
 	double pitch, yaw, roll; //x, y, z
+	double far, near, angle, aspect;
+	
 	Matrix4 ViewMatrix;
 	Matrix4 ProjectionMatrix;
+	
 	public Camera(Vertex pos, double pitch, double yaw, double roll)
 	{
 		this.pos = new Vertex(pos.getX(), pos.getY(), pos.getZ(), pos.getW());
 		this.yaw = yaw;
 		this.roll = roll;
 		this.pitch = pitch;
-		this.ViewMatrix = Matrix4.identityMatrix4();
-		//this.ViewMatrix.setValues(Matrix4.identityMatrix4().getValues());
-		//this.ProjectionMatrix.setValues(Matrix4.identityMatrix4().getValues());
-		this.ProjectionMatrix = Matrix4.identityMatrix4();
+		this.ViewMatrix = new Matrix4(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		this.ProjectionMatrix = new Matrix4();
+		
+		far = 1000.0;
+		near = 0.1;
+		angle = 60;
+		aspect = 16.0/9.0;
 	}
 	public Camera()
 	{
 		this.pos = new Vertex(0,0,0,1);
 		pitch = yaw = roll = 0;
-		this.ViewMatrix = Matrix4.identityMatrix4();
-		this.ProjectionMatrix = Matrix4.identityMatrix4();
-		//this.ViewMatrix.setValues(Matrix4.identityMatrix4().getValues());
-		//this.ProjectionMatrix.setValues(Matrix4.identityMatrix4().getValues());
+		this.ViewMatrix = new Matrix4();
+		this.ProjectionMatrix = new Matrix4();
+		
+		far = 1000.0;
+		near = 0.1;
+		angle = 60;
+		aspect = 16.0/9.0;
 	}
-	public Matrix4 getCameraT()
+	public Camera(Vertex pos, double pitch, double yaw, double roll, double far, double near, double angle, double aspect)
+	{
+		this.pos = new Vertex(pos.getX(), pos.getY(), pos.getZ(), pos.getW());
+		this.yaw = yaw;
+		this.roll = roll;
+		this.pitch = pitch;
+		this.ViewMatrix = new Matrix4(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		this.ProjectionMatrix = new Matrix4(far, near, angle, aspect);
+		
+		this.far = far;
+		this.near = near;
+		this.angle = angle;
+		this.aspect = aspect;
+	}
+	
+	/*public Matrix4 getCameraT()
 	{
 		return ViewMatrix.multiply(ProjectionMatrix);
-	}
-	public void update(double rx, double ry, double rz, double tx, double ty, double tz)
+	}*/
+	
+	
+	public void update()
 	{
-		pos.setX(pos.getX() - tx);
-		pos.setY(pos.getY() - ty);
-		pos.setZ(pos.getZ() - tz);
-		
-		pitch-=rx; yaw-=ry; roll-=rz;
-		setViewMatrix();
+		setViewMatrix(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		setProjectionMatrix(far, near, angle, aspect);
 	}
-	public void setViewMatrix()
+	
+	
+	public void setX(double x) {pos.x=x;}
+	public void setY(double y) {pos.y=y;}
+	public void setZ(double z) {pos.z=z;}
+	public double getX() {return pos.x;}
+	public double getY() {return pos.y;}
+	public double getZ() {return pos.z;}
+	
+	public void setPitch(double pitch) {this.pitch = pitch;}
+	public void setYaw(double yaw) {this.yaw = yaw;}
+	public void setRoll(double roll) {this.roll = roll;}
+	public double getPitch() {return pitch;}
+	public double getYaw() {return yaw;}
+	public double getRoll() {return roll;}
+	
+	public void setViewMatrix(double tx, double ty, double tz, double xangle, double yangle, double zangle)
 	{
-		Matrix4 Rx = Matrix4.rotateAroundXMatrix(Math.toRadians(-pitch));
-		Matrix4 Ry = Matrix4.rotateAroundYMatrix(Math.toRadians(-yaw));
-		Matrix4 Rz = Matrix4.rotateAroundZMatrix(Math.toRadians(-roll));
-		
-		Matrix4 T = Matrix4.translate(-pos.getX(), -pos.getY(), -pos.getZ());
-		Matrix4 RT = Rx.multiply(Ry).multiply(Rz).multiply(T);
-		ViewMatrix.setValues(RT.getValues());
+		pos.x = tx;
+		pos.y = ty;
+		pos.z = tz;
+		pitch = xangle;
+		yaw = yangle;
+		roll = zangle;
+		ViewMatrix = new Matrix4(tx, ty, tz, xangle, yangle, zangle);
 	}
 	public void setProjectionMatrix(double far, double near, double angle, double aspect)
 	{
-		ProjectionMatrix.setValues(Matrix4.perspectiveMatrix(far, near, angle, aspect).getValues());
+		this.far = far;
+		this.near = near;
+		this.angle = angle;
+		this.aspect = aspect;
+		ProjectionMatrix = new Matrix4(far, near, angle, aspect);
 	}
 	public void setViewMatrix(Matrix4 mat)
 	{

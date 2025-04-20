@@ -2,17 +2,20 @@ package newproject;
 import javax.swing.*;
 
 import Drawables.DrawUtils;
+import FirstPersonControl.KeyEventManager;
 import Matrix.Matrix3;
 import Matrix.Matrix4;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
 
 
 
-public class main {
+public class main{
 
 	public static void main(String[] args) 
 	{
@@ -20,19 +23,35 @@ public class main {
 		Container pane = frame.getContentPane();
 		pane.setLayout(new BorderLayout());
 		
-		JSlider headingSlider = new JSlider(0,360,0);
+		JSlider headingSlider = new JSlider(-2000,0,-800);
 		pane.add(headingSlider, BorderLayout.SOUTH);
 
         JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
         pane.add(pitchSlider, BorderLayout.EAST);
         final double epsilon = 0;//1e-6;
         
+        double fov = 90; // Or 60
+        double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = 0.1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0,-1000,1), 0, 0, 0, far, near, fov, aspect);
+        
+        KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        km.setSpeed(0.1);
         
         JPanel renderPanel = new JPanel() 
         {
         	
                 public void paintComponent(Graphics g) 
                 {
+                	km.setRenderPanel(this);
+                	this.addKeyListener(km);
+                    frame.addKeyListener(km);
+                    
+                	
                     Graphics2D g2 = (Graphics2D) g;
                     g2.setColor(Color.BLACK);
                     g2.fillRect(0, 0, getWidth(), getHeight());
@@ -81,36 +100,26 @@ public class main {
                     Triangle f6t2 = new Triangle(v4, v7, v5);
                     
                     Rectangular cube = new Rectangular(f1t1, f1t2, f2t1, f2t2, f3t1, f3t2, f4t1, f4t2, f5t1, f5t2, f6t1, f6t2, Color.WHITE);
-                 
-                    
-                    Matrix4 scale = Matrix4.scale(1.0, 1.0, 1.0);
-                    Matrix4 rotationX = Matrix4.rotateAroundXMatrix(Math.toRadians(0));//pitchSlider.getValue()));
-                    Matrix4 rotationY = Matrix4.rotateAroundYMatrix(Math.toRadians(0));//headingSlider.getValue()));
-                    Matrix4 rotationZ = Matrix4.rotateAroundZMatrix(Math.toRadians(0));
 
                     
-                    double fov = Math.toRadians(75); // Or 60
-                    double aspect =((double)getWidth()) / ((double)getHeight());
+                    /*double fov = 90; // Or 60
+                    double aspect = ((double)getWidth()) / ((double)getHeight());
                     double near = 0.1;
                     double far = 1000.0;
                     double f = 1.0 / Math.tan(fov / 2);
 
-                    Camera cam = new Camera();
-                    cam.setProjectionMatrix(far, near, fov, aspect);
-                    cam.setViewMatrix();
-                    cam.update(0, 0, 0, pitchSlider.getValue()+100, 0, headingSlider.getValue()+800);
+                    Camera cam = new Camera(new Vertex(0,0,-500,1), 0, 0, 0, far, near, fov, aspect);
                     
-                    Matrix4 perspective = Matrix4.perspectiveMatrix(far, near, fov, aspect);
-
+                    KeyEventManager km = new KeyEventManager();
+                    km.setCamera(cam);
+                    frame.addKeyListener(km);*/
                     
-                    Matrix4 model = rotationX.multiply(rotationY)
-                            .multiply(rotationZ)
-                            .multiply(scale)
-                            .multiply(Matrix4.translate(0.0, 0.0, 0.0));
-                            
-                    Matrix4 viewTest = Matrix4.translate(125, 0, 500).multiply(Matrix4.rotateAroundXMatrix(Math.toRadians(15)));
-
-                    Matrix4 mvp = model.multiply(cam.getCameraT());
+                    //cam.setViewMatrix(pitchSlider.getValue(), 0, -500 + headingSlider.getValue(), 90, 45, 30);
+                    
+                    
+                    Matrix4 model = new Matrix4(0, 0, 0, 0, 0 , 30, 1, 1, 1);
+                    
+                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
 
                     
                     g2.setColor(Color.WHITE);
@@ -199,15 +208,22 @@ public class main {
                     
                     // rendering magic will happen here
                 }
-            };
+        
+               
+       
+        };
             
-        headingSlider.addChangeListener(e->renderPanel.repaint());
-        pitchSlider.addChangeListener(e->renderPanel.repaint());
+        renderPanel.setFocusable(true);
+        
+        //headingSlider.addChangeListener(e->renderPanel.repaint());
+        //pitchSlider.addChangeListener(e->renderPanel.repaint());
         
         pane.add(renderPanel, BorderLayout.CENTER);
 
+        
         frame.setSize(1936, 1056);
         frame.setVisible(true);
 	}
+
 
 }
