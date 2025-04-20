@@ -2,13 +2,15 @@
 
 Features:
 
--scaling,rotation, translation using a custom Matrix4 class (among other 4x4 matrix operations)
+-scaling,rotation, translation using a custom Matrix4 class done somewhat efficiently (among other 4x4 matrix operations)
 
--support for chaining transformations via intuitive matrix multiplication
+-support for chaining transformations via intuitive matrix multiplication 
 
--drawing in real time using sliders (ie to rotate the cube, change it's translation etc)
+-drawing in real time according to the camera's position
 
 -checking for clipping using a zbuffer and rendering the pixels inside the triangles using barycentric coordonates
+
+-basic camera movement with correct perspective transformation (WASDEQ for user input)
 
 -a few other smaller things (ie a naive implementation of shading using the calculated barycentric coordonates, utils for interpolating and drawing lines etc, support for 3x3 matrix operations - meaning the object rendered is locked in place and not translate)
 
@@ -24,7 +26,7 @@ Concepts covered:
 
 Features I hope to add in the future:
 
--camera movement & control (rather than using the sliders present in the main code, defining a new custom class and working with it in the project)
+-better camera control (rotating the camera towards desired angle etc)
 
 -lighting and (proper) shading
 
