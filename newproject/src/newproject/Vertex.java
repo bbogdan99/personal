@@ -17,6 +17,26 @@ public class Vertex {
 		this.z = z;
 		w = 1;
 	}
+	
+	public Vertex subtract(Vertex other)
+	{
+		return new Vertex(this.x - other.x, this.y - other.y, this.z - other.z, 1);
+	}
+	public double dot(Vertex other)
+	{
+		return this.x * other.x + this.y * other.y + this.z * other.z;
+	}
+	public Vertex cross(Vertex other)
+	{
+		return new Vertex(this.y*other.z - this.z*other.y, this.z*other.x - this.x*other.z, this.x*other.y - this.y * other.x );
+	}
+	public Vertex normalizeVect()
+	{
+		double length = Math.sqrt(x*x + y*y + z*z);
+		if (length == 0) return new Vertex(0,0,0);
+		return new Vertex(x/length, y/length, z/length);
+	}
+	
 	public double getX() {return x;}
 	public double getY() {return y;}
 	public double getZ() {return z;}
@@ -35,6 +55,8 @@ public class Vertex {
 			w = 1;
 		}
 	}
+	
+	
 	public void setX(double X) {this.x =X;}
 	public void setY(double Y) {this.y =Y;}
 	public void setZ(double Z) {this.z =Z;}

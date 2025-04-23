@@ -5,6 +5,7 @@ import Drawables.DrawUtils;
 import FirstPersonControl.KeyEventManager;
 import Matrix.Matrix3;
 import Matrix.Matrix4;
+//import OtherMath.MathFct;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -13,6 +14,12 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
 
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
 
 
 public class main{
@@ -28,7 +35,7 @@ public class main{
 
         JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
         pane.add(pitchSlider, BorderLayout.EAST);
-        final double epsilon = 0;//1e-6;
+        final double epsilon = 1e-6;
         
         double fov = 90; // Or 60
         double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
@@ -36,7 +43,7 @@ public class main{
         double far = 1000.0;
         double f = 1.0 / Math.tan(fov / 2);
 
-        Camera cam = new Camera(new Vertex(0,0,-1000,1), 0, 0, 0, far, near, fov, aspect);
+        Camera cam = new Camera(new Vertex(0,0, -1000,1), 0, 0, 0, far, near, fov, aspect);
         
         KeyEventManager km = new KeyEventManager();
         km.setCamera(cam);
@@ -100,27 +107,8 @@ public class main{
                     Triangle f6t2 = new Triangle(v4, v7, v5);
                     
                     Rectangular cube = new Rectangular(f1t1, f1t2, f2t1, f2t2, f3t1, f3t2, f4t1, f4t2, f5t1, f5t2, f6t1, f6t2, Color.WHITE);
-
-                    
-                    /*double fov = 90; // Or 60
-                    double aspect = ((double)getWidth()) / ((double)getHeight());
-                    double near = 0.1;
-                    double far = 1000.0;
-                    double f = 1.0 / Math.tan(fov / 2);
-
-                    Camera cam = new Camera(new Vertex(0,0,-500,1), 0, 0, 0, far, near, fov, aspect);
-                    
-                    KeyEventManager km = new KeyEventManager();
-                    km.setCamera(cam);
-                    frame.addKeyListener(km);*/
-                    
-                    //cam.setViewMatrix(pitchSlider.getValue(), 0, -500 + headingSlider.getValue(), 90, 45, 30);
                     
                     
-                    Matrix4 model = new Matrix4(0, 0, 0, 0, 0 , 30, 1, 1, 1);
-                    
-                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
-
                     
                     g2.setColor(Color.WHITE);
                     
@@ -133,8 +121,64 @@ public class main{
                      zBuffer[q] = Double.NEGATIVE_INFINITY;
                     }
                     
+
+                    Matrix4 model = new Matrix4(0, 0, 200, 0, 0 , 0, 1, 1, 1);
+                    
+                    //System.out.println(model.toString());
+                    
+                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
+
+                    
                     for (Triangle t: cube.getTriangles())
                     {
+                    	Vertex cv1 = t.getV1();
+                    	cv1.normalize();
+                    	Vertex ncv1 = cv1.normalizeVect();
+                    	
+                    	Vertex lightDir1 = (new Vertex(250 - t.v1.x, 250 - t.v1.y, 0 - t.v1.z)).normalizeVect();
+                    	Vertex viewDir1 = (new Vertex(cam.getX() - t.v1.x,
+                    			cam.getY() - t.v1.y, cam.getZ() - t.v1.z)).normalizeVect();
+                    	Vertex halfway1 = (new Vertex(lightDir1.x + viewDir1.x,
+                    			lightDir1.y + viewDir1.y, lightDir1.z + viewDir1.z).normalizeVect());
+                    	double diffuse1 = Math.max(0.0, ncv1.dot(lightDir1));
+                    	double specular1 = Math.pow(Math.max(0.0, ncv1.dot(halfway1)), 8.0);
+                    	
+                    	int v1col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse1 + 0.05 * 255.0 * specular1);
+                    	int clampedv1 = Math.max(0,  Math.min(255, v1col));
+                    	
+                    	Vertex cv2 = t.getV2();
+                    	cv2.normalize();
+                    	Vertex ncv2 = cv2.normalizeVect();
+                    	
+                    	Vertex lightDir2 = (new Vertex(250 - t.v2.x, 250 - t.v2.y, 0 - t.v2.z)).normalizeVect();
+                    	Vertex viewDir2 = (new Vertex(cam.getX() - t.v2.x,
+                    			cam.getY() - t.v2.y, cam.getZ() - t.v2.z)).normalizeVect();
+                    	Vertex halfway2 = (new Vertex(lightDir2.x + viewDir2.x,
+                    			lightDir2.y + viewDir2.y, lightDir2.z + viewDir2.z).normalizeVect());
+                    	double diffuse2 = Math.max(0.0, ncv2.dot(lightDir2));
+                    	double specular2 = Math.pow(Math.max(0.0, ncv2.dot(halfway2)), 8.0);
+                    	
+                    	int v2col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse2 + 0.05 * 255.0 * specular2);
+                    	int clampedv2 = Math.max(0,  Math.min(255, v2col));
+                    	
+                    	Vertex cv3 = t.getV3();
+                    	cv3.normalize();
+                    	Vertex ncv3 = cv3.normalizeVect();
+                    	
+                    	Vertex lightDir3 = (new Vertex(250 - t.v3.x, 250 - t.v3.y, 0 - t.v3.z)).normalizeVect();
+                    	Vertex viewDir3 = (new Vertex(cam.getX() - t.v3.x,
+                    			cam.getY() - t.v3.y, cam.getZ() - t.v3.z)).normalizeVect();
+                    	Vertex halfway3 = (new Vertex(lightDir3.x + viewDir3.x,
+                    			lightDir3.y + viewDir3.y, lightDir3.z + viewDir3.z).normalizeVect());
+                    	double diffuse3 = Math.max(0.0, ncv3.dot(lightDir3));
+                    	double specular3 = Math.pow(Math.max(0.0, ncv3.dot(halfway3)), 8.0);
+                    	
+                    	int v3col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse3 + 0.05 * 255.0 * specular3);
+                    	int clampedv3 = Math.max(0,  Math.min(255, v3col));
+                    	
+                    	/*Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(0,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));*/
                     	
                     	Vertex tv1 = mvp.transform(t.v1);
                     	Vertex tv2 = mvp.transform(t.v2);
@@ -144,7 +188,7 @@ public class main{
                     	double tv2z = tv2.z;
                     	double tv3z = tv3.z;
                     	
-                    	System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
                     	
                     	tv1.normalize();
                     	tv2.normalize();
@@ -183,14 +227,31 @@ public class main{
                     		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
                     		    	
                     		    	int zIndex = y * img.getWidth() + x;
+                    		    	
                     		    	if (zBuffer[zIndex] < depth) 
                     		    	{
-                    		    		int r = (int)(t.color.getRed() * b1);
+                    		    		
+                    		    		/*int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;*/
+                    		    		double intensity = (b1 * clampedv1 + b2 * clampedv2 + b3* clampedv3)/255.0;
+                    		    		int r = (int)(t.color.getRed() * intensity);
+                    		    		int gr = (int)(t.color.getGreen() * intensity);
+                    		    		int b = (int)(t.color.getBlue() * intensity);
+                    		    		r = Math.max(0, Math.min(255, r));
+                    		    		gr = Math.max(0, Math.min(255, gr));
+                    		    		b = Math.max(0, Math.min(255, b));
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		/*int r = (int)(t.color.getRed() * b1);
                     		    		int a = t.color.getAlpha();
                     		    		int b = (int)(t.color.getBlue() * b2);
                     		    		int green = (int)(t.color.getGreen() * b3);
                     		    		
-                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);
+                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);*/
                     		    		
                     		    		
                     		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
@@ -214,10 +275,6 @@ public class main{
         };
             
         renderPanel.setFocusable(true);
-        
-        //headingSlider.addChangeListener(e->renderPanel.repaint());
-        //pitchSlider.addChangeListener(e->renderPanel.repaint());
-        
         pane.add(renderPanel, BorderLayout.CENTER);
 
         

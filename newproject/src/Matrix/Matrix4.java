@@ -28,21 +28,21 @@ public class Matrix4 {
 		double cz = Math.cos(Math.toRadians(zang));
 		double sz = Math.sin(Math.toRadians(zang));
 		
-		values[0] = scz*cz*cy;
-		values[1] = cz*sx*sy - sz*cx;
-		values[2] = cz*cx*sy + sz*sx;
-		values[3] = 0;
-		
-		values[4] = sz*cy;
-		values[5] = scy*(sz*sx*sy + cz*cx);
-		values[6] = sz*cx*sy - cz*sx;
-		values[7] = 0;
-		
-		values[8] = -sy;
-		values[9] = cy*sx;
-		values[10] = scz*cy*cx;
+		values[0]  = scx * (cz * cy);
+		values[1]  = scy * (cz * sy * sx - sz * cx);
+		values[2]  = scz * (cz * sy * cx + sz * sx);
+		values[3]  = 0;
+
+		values[4]  = scx * (sz * cy);
+		values[5]  = scy * (sz * sy * sx + cz * cx);
+		values[6]  = scz * (sz * sy * cx - cz * sx);
+		values[7]  = 0;
+
+		values[8]  = scx * (-sy);
+		values[9]  = scy * (cy * sx);
+		values[10] = scz * (cy * cx);
 		values[11] = 0;
-		
+
 		values[12] = tx;
 		values[13] = ty;
 		values[14] = tz;
@@ -115,6 +115,23 @@ public class Matrix4 {
 		values[15] = 0;
 	}
 	
+	public double[] decomposeTRS()
+	{
+		double[] result = new double[9];
+		result[0] = values[12];
+		result[1] = values[13];
+		result[2] = values[14];
+		
+		result[3] = Math.sqrt(values[0] * values[0] + values[1] * values[1] + values[2] * values[2]);
+		result[4] = Math.sqrt(values[4] * values[4] + values[5] * values[5] + values[6] * values[6]);
+		result[5] = Math.sqrt(values[8] * values[8] + values[9] * values[9] + values[10] * values[10]);
+		
+		result[6] = Math.asin(values[8]/ result[5]);
+		result[8] = Math.atan2(values[4]/result[4], values[0]/result[3]);
+		result[7] = Math.atan2(values[9]/result[5], values[10]/result[5]);
+		
+		return result;
+	}
 	
 	public Matrix4 multiply(Matrix4 other)
 	{
@@ -360,6 +377,25 @@ public class Matrix4 {
 		default:
 			break;
 		}
+	}
+	
+	public static Matrix4 orthographicPerspectiveMatrix(double f, double n)
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, -2.0/(f-n), -(f+n)/(f-n),
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 parallelPerspectiveMatrix(double f, double n, double angle, double width, double height)
+	{
+		return new Matrix4(new double[] {
+				2.0/width, 0, 0, 0,
+				0, 2.0/height, 0, 0,
+				0, 0, -2.0/(f-n), 0,
+				0, 0, 0, 1
+		});
 	}
 	
 	public static Matrix4 perspectiveMatrix(double f, double n, double angle,

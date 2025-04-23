@@ -1,0 +1,380 @@
+package newproject;
+import javax.swing.*;
+
+import Drawables.DrawUtils;
+import FirstPersonControl.KeyEventManager;
+import Matrix.Matrix3;
+import Matrix.Matrix4;
+//import OtherMath.MathFct;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.util.*;
+import java.util.List;
+
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
+
+
+public class main{
+
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Title");
+		Container pane = frame.getContentPane();
+		pane.setLayout(new BorderLayout());
+		
+		JSlider headingSlider = new JSlider(-2000,0,-800);
+		pane.add(headingSlider, BorderLayout.SOUTH);
+
+        JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
+        pane.add(pitchSlider, BorderLayout.EAST);
+        final double epsilon = 1e-6;
+        
+        double fov = 135; // Or 60
+        double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = 0.1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0, -1500,1), 0, 0, 0, far, near, fov, aspect);
+        
+        KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        km.setSpeed(0.1);
+        
+        JPanel renderPanel = new JPanel() 
+        {
+        	
+                public void paintComponent(Graphics g) 
+                {
+                	km.setRenderPanel(this);
+                	this.addKeyListener(km);
+                    frame.addKeyListener(km);
+                    
+                	
+                    Graphics2D g2 = (Graphics2D) g;
+                    g2.setColor(Color.BLACK);
+                    g2.fillRect(0, 0, getWidth(), getHeight());
+                    
+                    
+                    List<Triangle> tris = new ArrayList<>();
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(-100, 100, -100),
+                            Color.WHITE));
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(100, -100, -100),
+                            Color.RED));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(100, 100, 100),
+                            Color.GREEN));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(-100, -100, 100),
+                            Color.BLUE));
+                    
+                    List<Triangle> cubeFaces = new ArrayList<>();
+                    Vertex v0 = new Vertex(-100, -100, -100);
+                    Vertex v1 = new Vertex(-100, -100,  100);
+                    Vertex v2 = new Vertex(-100,  100, -100);
+                    Vertex v3 = new Vertex(-100,  100,  100);
+                    Vertex v4 = new Vertex( 100, -100, -100);
+                    Vertex v5 = new Vertex( 100, -100,  100);
+                    Vertex v6 = new Vertex( 100,  100, -100);
+                    Vertex v7 = new Vertex( 100,  100,  100);
+                    
+                    Triangle f1t1 = new Triangle(v1, v5, v7);
+                    Triangle f1t2 = new Triangle(v1, v7, v3);
+                    Triangle f2t1 = new Triangle(v0, v2, v6);
+                    Triangle f2t2 = new Triangle(v0, v6, v4);
+                    Triangle f3t1 = new Triangle(v2, v3, v7);
+                    Triangle f3t2 = new Triangle(v2, v7, v6);
+                    
+                    Triangle f4t1 = new Triangle(v0, v4, v5);
+                    Triangle f4t2 = new Triangle(v0, v5, v1);
+                    Triangle f5t1 = new Triangle(v0, v1, v3);
+                    Triangle f5t2 = new Triangle(v0, v3, v2);
+                    Triangle f6t1 = new Triangle(v4, v6, v7);
+                    Triangle f6t2 = new Triangle(v4, v7, v5);
+                    
+                    Rectangular cube = new Rectangular(f1t1, f1t2, f2t1, f2t2, f3t1, f3t2, f4t1, f4t2, f5t1, f5t2, f6t1, f6t2, Color.WHITE);
+                    
+                 // Funky twisted extrusion parameters
+                    int segments = 20; // Number of slices
+                    double height = 200.0;  // Height of the shape
+                    double baseSize = 100.0; // Base size (radius of the initial shape)
+
+                    // Define a list for all the vertices
+                    List<Vertex> vertices = new ArrayList<>();
+
+                    // Add vertices for the base polygon (we'll use a square for simplicity)
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle);
+                        double z = baseSize * Math.sin(angle);
+                        vertices.add(new Vertex(x, 0, z));  // Base vertices at y = 0
+                    }
+
+                    // Create the vertices for the top, with a twist and scale
+                    List<Vertex> topVertices = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle) * (1 + 0.3 * Math.sin(angle));  // Twisted scaling
+                        double z = baseSize * Math.sin(angle) * (1 + 0.3 * Math.cos(angle));  // Twisted scaling
+                        double y = height;  // Top level (extrusion height)
+                        topVertices.add(new Vertex(x, y, z));
+                    }
+
+                    // Create triangles for the twisted sides
+                    List<Triangle> sideTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Side triangle connecting base to top, with twist effect
+                        Triangle side1 = new Triangle(vertices.get(i), topVertices.get(i), topVertices.get(next), Color.RED);
+                        Triangle side2 = new Triangle(vertices.get(i), topVertices.get(next), vertices.get(next), Color.GREEN);
+
+                        sideTriangles.add(side1);
+                        sideTriangles.add(side2);
+                    }
+
+                    // Add the base (square) and top (twisted) triangles
+                    List<Triangle> capTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Base cap (flat)
+                        capTriangles.add(new Triangle(vertices.get(i), vertices.get(next), new Vertex(0, 0, 0), Color.YELLOW));
+
+                        // Top cap (twisted)
+                        capTriangles.add(new Triangle(topVertices.get(i), topVertices.get(next), new Vertex(0, height, 0), Color.BLUE));
+                    }
+
+                    // Combine all triangles for the funky shape
+                    List<Triangle> funkyShape = new ArrayList<>();
+                    funkyShape.addAll(sideTriangles);
+                    funkyShape.addAll(capTriangles);
+                    
+                    Matrix4 model1 = new Matrix4(0, 0, 500, 0, 0 , 0, 1, 1, 1);
+                    
+                    Matrix4 testingtest = Matrix4.orthographicPerspectiveMatrix(far, near);
+                    //cam.setProjectionMatrix(testingtest);
+                    
+                    Matrix4 mvp1 = model1.multiply(cam.getViewMatrix()).multiply(testingtest);//cam.getProjectionMatrix());
+                    
+                    g2.setColor(Color.WHITE);
+                    
+                    BufferedImage img = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    
+                    double[] zBuffer = new double[img.getWidth() * img.getHeight()];
+
+                    for (int q = 0; q < zBuffer.length; q++) 
+                    {
+                     zBuffer[q] = Double.NEGATIVE_INFINITY;
+                    }
+                    
+                    for (Triangle t: funkyShape)
+                    {
+
+                    	Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(1,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));
+                    	
+                    	Vertex tv1 = mvp1.transform(t.v1);
+                    	Vertex tv2 = mvp1.transform(t.v2);
+                    	Vertex tv3 = mvp1.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		/*int r = (int)(t.color.getRed() * b1);
+                    		    		int a = t.color.getAlpha();
+                    		    		int b = (int)(t.color.getBlue() * b2);
+                    		    		int green = (int)(t.color.getGreen() * b3);
+                    		    		
+                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);*/
+                    		    		
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    
+
+                    Matrix4 model = new Matrix4(0, 0, 200, 0, 0 , 0, 1, 1, 1);
+                    
+                    //System.out.println(model.toString());
+                    
+                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(testingtest);//cam.getProjectionMatrix());
+
+                    
+                    for (Triangle t: cube.getTriangles())
+                    {
+                    	Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(0,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));
+                    	
+                    	Vertex tv1 = mvp.transform(t.v1);
+                    	Vertex tv2 = mvp.transform(t.v2);
+                    	Vertex tv3 = mvp.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		/*int r = (int)(t.color.getRed() * b1);
+                    		    		int a = t.color.getAlpha();
+                    		    		int b = (int)(t.color.getBlue() * b2);
+                    		    		int green = (int)(t.color.getGreen() * b3);
+                    		    		
+                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);*/
+                    		    		
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    
+                    
+                    g2.drawImage(img,0,0,null);
+                    
+                    
+                    // rendering magic will happen here
+                }
+        
+               
+       
+        };
+            
+        renderPanel.setFocusable(true);
+        pane.add(renderPanel, BorderLayout.CENTER);
+
+        
+        frame.setSize(1936, 1056);
+        frame.setVisible(true);
+	}
+
+
+}

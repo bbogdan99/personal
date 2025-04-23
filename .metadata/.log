@@ -2810,3 +2810,2002 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-21 00:40:37.013 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-21 00:42:47.557
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-21 00:42:47.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-21 00:42:47.557
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-21 00:42:51.442
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-21 15:02:29.921 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-21 15:08:07.354
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-21 15:08:07.354
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-21 15:08:07.354
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-21 15:08:12.214
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-22 01:22:23.029 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-22 01:22:43.224
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 01:22:43.224
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 01:22:43.224
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-22 01:22:47.642
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-22 01:23:27.180 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-22 01:23:45.947
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 01:23:45.947
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 01:23:45.948
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-22 01:23:49.283
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-22 01:28:20.965 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-22 01:29:22.618
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 01:29:22.618
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 01:29:22.618
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-22 01:29:27.308
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-22 15:17:38.368 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-22 16:27:52.023
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 16:27:52.023
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-22 16:27:52.023
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-22 16:27:56.141
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-04-22 18:12:33.249
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package newproject;
+import javax.swing.*;
+
+import Drawables.DrawUtils;
+import FirstPersonControl.KeyEventManager;
+import Matrix.Matrix3;
+import Matrix.Matrix4;
+//import OtherMath.MathFct;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.util.*;
+import java.util.List;
+
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
+
+
+public class main{
+
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Title");
+		Container pane = frame.getContentPane();
+		pane.setLayout(new BorderLayout());
+		
+		JSlider headingSlider = new JSlider(-2000,0,-800);
+		pane.add(headingSlider, BorderLayout.SOUTH);
+
+        JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
+        pane.add(pitchSlider, BorderLayout.EAST);
+        final double epsilon = 1e-6;
+        
+        double fov = 135; // Or 60
+        double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = 0.1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0, -1000,1), 0, 0, 0, far, near, fov, aspect);
+        
+        KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        km.setSpeed(0.1);
+        
+        JPanel renderPanel = new JPanel() 
+        {
+        	
+                public void paintComponent(Graphics g) 
+                {
+                	km.setRenderPanel(this);
+                	this.addKeyListener(km);
+                    frame.addKeyListener(km);
+                    
+                	
+                    Graphics2D g2 = (Graphics2D) g;
+                    g2.setColor(Color.BLACK);
+                    g2.fillRect(0, 0, getWidth(), getHeight());
+                    
+                    
+                    List<Triangle> tris = new ArrayList<>();
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(-100, 100, -100),
+                            Color.WHITE));
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(100, -100, -100),
+                            Color.RED));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(100, 100, 100),
+                            Color.GREEN));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(-100, -100, 100),
+                            Color.BLUE));
+                    
+                    List<Triangle> cubeFaces = new ArrayList<>();
+                    Vertex v0 = new Vertex(-100, -100, -100);
+                    Vertex v1 = new Vertex(-100, -100,  100);
+                    Vertex v2 = new Vertex(-100,  100, -100);
+                    Vertex v3 = new Vertex(-100,  100,  100);
+                    Vertex v4 = new Vertex( 100, -100, -100);
+                    Vertex v5 = new Vertex( 100, -100,  100);
+                    Vertex v6 = new Vertex( 100,  100, -100);
+                    Vertex v7 = new Vertex( 100,  100,  100);
+                    
+                    Triangle f1t1 = new Triangle(v1, v5, v7);
+                    Triangle f1t2 = new Triangle(v1, v7, v3);
+                    Triangle f2t1 = new Triangle(v0, v2, v6);
+                    Triangle f2t2 = new Triangle(v0, v6, v4);
+                    Triangle f3t1 = new Triangle(v2, v3, v7);
+                    Triangle f3t2 = new Triangle(v2, v7, v6);
+                    
+                    Triangle f4t1 = new Triangle(v0, v4, v5);
+                    Triangle f4t2 = new Triangle(v0, v5, v1);
+                    Triangle f5t1 = new Triangle(v0, v1, v3);
+                    Triangle f5t2 = new Triangle(v0, v3, v2);
+                    Triangle f6t1 = new Triangle(v4, v6, v7);
+                    Triangle f6t2 = new Triangle(v4, v7, v5);
+                    
+                    Rectangular cube = new Rectangular(f1t1, f1t2, f2t1, f2t2, f3t1, f3t2, f4t1, f4t2, f5t1, f5t2, f6t1, f6t2, Color.WHITE);
+                    
+                    
+                    /*
+                 // Funky twisted extrusion parameters
+                    int segments = 20; // Number of slices
+                    double height = 200.0;  // Height of the shape
+                    double baseSize = 100.0; // Base size (radius of the initial shape)
+
+                    // Define a list for all the vertices
+                    List<Vertex> vertices = new ArrayList<>();
+
+                    // Add vertices for the base polygon (we'll use a square for simplicity)
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle);
+                        double z = baseSize * Math.sin(angle);
+                        vertices.add(new Vertex(x, 0, z));  // Base vertices at y = 0
+                    }
+
+                    // Create the vertices for the top, with a twist and scale
+                    List<Vertex> topVertices = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle) * (1 + 0.3 * Math.sin(angle));  // Twisted scaling
+                        double z = baseSize * Math.sin(angle) * (1 + 0.3 * Math.cos(angle));  // Twisted scaling
+                        double y = height;  // Top level (extrusion height)
+                        topVertices.add(new Vertex(x, y, z));
+                    }
+
+                    // Create triangles for the twisted sides
+                    List<Triangle> sideTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Side triangle connecting base to top, with twist effect
+                        Triangle side1 = new Triangle(vertices.get(i), topVertices.get(i), topVertices.get(next), Color.RED);
+                        Triangle side2 = new Triangle(vertices.get(i), topVertices.get(next), vertices.get(next), Color.GREEN);
+
+                        sideTriangles.add(side1);
+                        sideTriangles.add(side2);
+                    }
+
+                    // Add the base (square) and top (twisted) triangles
+                    List<Triangle> capTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Base cap (flat)
+                        capTriangles.add(new Triangle(vertices.get(i), vertices.get(next), new Vertex(0, 0, 0), Color.YELLOW));
+
+                        // Top cap (twisted)
+                        capTriangles.add(new Triangle(topVertices.get(i), topVertices.get(next), new Vertex(0, height, 0), Color.BLUE));
+                    }
+
+                    // Combine all triangles for the funky shape
+                    List<Triangle> funkyShape = new ArrayList<>();
+                    funkyShape.addAll(sideTriangles);
+                    funkyShape.addAll(capTriangles);
+                    
+                    Matrix4 model1 = new Matrix4(0, 0, 500, 0, 0 , 0, 1, 1, 1);
+                    
+                    //Matrix4 testingtest = Matrix4.orthographicPerspectiveMatrix(far, near);
+                    //cam.setProjectionMatrix(testingtest);
+                    
+                    Matrix4 mvp1 = model1.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix())*/
+                    
+                    g2.setColor(Color.WHITE);
+                    
+                    BufferedImage img = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    
+                    double[] zBuffer = new double[img.getWidth() * img.getHeight()];
+
+                    for (int q = 0; q < zBuffer.length; q++) 
+                    {
+                     zBuffer[q] = Double.NEGATIVE_INFINITY;
+                    }
+                    
+                    /*
+                    for (Triangle t: funkyShape)
+                    {
+
+                    	Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(1,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));
+                    	
+                    	Vertex tv1 = mvp1.transform(t.v1);
+                    	Vertex tv2 = mvp1.transform(t.v2);
+                    	Vertex tv3 = mvp1.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    */
+
+                    Matrix4 model = new Matrix4(0, 0, 200, 0, 0 , 0, 1, 1, 1);
+                    
+                    //System.out.println(model.toString());
+                    
+                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
+
+                    
+                    for (Triangle t: cube.getTriangles())
+                    {
+                    	Vertex cv1 = t.getV1();
+                    	cv1.normalize();
+                    	Vertex ncv1 = cv1.normalizeVect();
+                    	
+                    	Vertex lightDir = (new Vertex(250 - t.v1.x, 250 - t.v1.y, 0 - t.v1.z)).normalizeVect();
+                    	Vertex viewDir = (new Vertex(cam.getX() - t.v1.x,
+                    			cam.getY() - t.v1.y, cam.getZ() - t.v1.z)).normalizeVect();
+                    	Vertex halfway = (new Vertex(lightDir.x + viewDir.x,
+                    			lightDir.y + viewDir.y, lightDir.z + viewDir.z).normalizeVect());
+                    	double diffuse = Math.max(0.0, ncv1.dot(lightDir));
+                    	double specular = Math.pow(Math.max(0.0, ncv1.dot(halfway)), 8.0);
+                    	
+                    	int v1col = int(0.3 * 64.0 + 0.7 * 255.0 * diffuse + 0.05 * 255.0 * specular; 
+                    	/*Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(0,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));*/
+                    	
+                    	Vertex tv1 = mvp.transform(t.v1);
+                    	Vertex tv2 = mvp.transform(t.v2);
+                    	Vertex tv3 = mvp.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		/*int r = (int)(t.color.getRed() * b1);
+                    		    		int a = t.color.getAlpha();
+                    		    		int b = (int)(t.color.getBlue() * b2);
+                    		    		int green = (int)(t.color.getGreen() * b3);
+                    		    		
+                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);*/
+                    		    		
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    
+                    
+                    g2.drawImage(img,0,0,null);
+                    
+                    
+                    // rendering magic will happen here
+                }
+        
+               
+       
+        };
+            
+        renderPanel.setFocusable(true);
+        pane.add(renderPanel, BorderLayout.CENTER);
+
+        
+        frame.setSize(1936, 1056);
+        frame.setVisible(true);
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2025-04-22 18:12:33.250
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2025-04-22 18:12:33.251
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-04-22 18:12:34.896
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package newproject;
+import javax.swing.*;
+
+import Drawables.DrawUtils;
+import FirstPersonControl.KeyEventManager;
+import Matrix.Matrix3;
+import Matrix.Matrix4;
+//import OtherMath.MathFct;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.util.*;
+import java.util.List;
+
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
+
+
+public class main{
+
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Title");
+		Container pane = frame.getContentPane();
+		pane.setLayout(new BorderLayout());
+		
+		JSlider headingSlider = new JSlider(-2000,0,-800);
+		pane.add(headingSlider, BorderLayout.SOUTH);
+
+        JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
+        pane.add(pitchSlider, BorderLayout.EAST);
+        final double epsilon = 1e-6;
+        
+        double fov = 135; // Or 60
+        double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = 0.1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0, -1000,1), 0, 0, 0, far, near, fov, aspect);
+        
+        KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        km.setSpeed(0.1);
+        
+        JPanel renderPanel = new JPanel() 
+        {
+        	
+                public void paintComponent(Graphics g) 
+                {
+                	km.setRenderPanel(this);
+                	this.addKeyListener(km);
+                    frame.addKeyListener(km);
+                    
+                	
+                    Graphics2D g2 = (Graphics2D) g;
+                    g2.setColor(Color.BLACK);
+                    g2.fillRect(0, 0, getWidth(), getHeight());
+                    
+                    
+                    List<Triangle> tris = new ArrayList<>();
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(-100, 100, -100),
+                            Color.WHITE));
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(100, -100, -100),
+                            Color.RED));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(100, 100, 100),
+                            Color.GREEN));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(-100, -100, 100),
+                            Color.BLUE));
+                    
+                    List<Triangle> cubeFaces = new ArrayList<>();
+                    Vertex v0 = new Vertex(-100, -100, -100);
+                    Vertex v1 = new Vertex(-100, -100,  100);
+                    Vertex v2 = new Vertex(-100,  100, -100);
+                    Vertex v3 = new Vertex(-100,  100,  100);
+                    Vertex v4 = new Vertex( 100, -100, -100);
+                    Vertex v5 = new Vertex( 100, -100,  100);
+                    Vertex v6 = new Vertex( 100,  100, -100);
+                    Vertex v7 = new Vertex( 100,  100,  100);
+                    
+                    Triangle f1t1 = new Triangle(v1, v5, v7);
+                    Triangle f1t2 = new Triangle(v1, v7, v3);
+                    Triangle f2t1 = new Triangle(v0, v2, v6);
+                    Triangle f2t2 = new Triangle(v0, v6, v4);
+                    Triangle f3t1 = new Triangle(v2, v3, v7);
+                    Triangle f3t2 = new Triangle(v2, v7, v6);
+                    
+                    Triangle f4t1 = new Triangle(v0, v4, v5);
+                    Triangle f4t2 = new Triangle(v0, v5, v1);
+                    Triangle f5t1 = new Triangle(v0, v1, v3);
+                    Triangle f5t2 = new Triangle(v0, v3, v2);
+                    Triangle f6t1 = new Triangle(v4, v6, v7);
+                    Triangle f6t2 = new Triangle(v4, v7, v5);
+                    
+                    Rectangular cube = new Rectangular(f1t1, f1t2, f2t1, f2t2, f3t1, f3t2, f4t1, f4t2, f5t1, f5t2, f6t1, f6t2, Color.WHITE);
+                    
+                    
+                    /*
+                 // Funky twisted extrusion parameters
+                    int segments = 20; // Number of slices
+                    double height = 200.0;  // Height of the shape
+                    double baseSize = 100.0; // Base size (radius of the initial shape)
+
+                    // Define a list for all the vertices
+                    List<Vertex> vertices = new ArrayList<>();
+
+                    // Add vertices for the base polygon (we'll use a square for simplicity)
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle);
+                        double z = baseSize * Math.sin(angle);
+                        vertices.add(new Vertex(x, 0, z));  // Base vertices at y = 0
+                    }
+
+                    // Create the vertices for the top, with a twist and scale
+                    List<Vertex> topVertices = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle) * (1 + 0.3 * Math.sin(angle));  // Twisted scaling
+                        double z = baseSize * Math.sin(angle) * (1 + 0.3 * Math.cos(angle));  // Twisted scaling
+                        double y = height;  // Top level (extrusion height)
+                        topVertices.add(new Vertex(x, y, z));
+                    }
+
+                    // Create triangles for the twisted sides
+                    List<Triangle> sideTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Side triangle connecting base to top, with twist effect
+                        Triangle side1 = new Triangle(vertices.get(i), topVertices.get(i), topVertices.get(next), Color.RED);
+                        Triangle side2 = new Triangle(vertices.get(i), topVertices.get(next), vertices.get(next), Color.GREEN);
+
+                        sideTriangles.add(side1);
+                        sideTriangles.add(side2);
+                    }
+
+                    // Add the base (square) and top (twisted) triangles
+                    List<Triangle> capTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Base cap (flat)
+                        capTriangles.add(new Triangle(vertices.get(i), vertices.get(next), new Vertex(0, 0, 0), Color.YELLOW));
+
+                        // Top cap (twisted)
+                        capTriangles.add(new Triangle(topVertices.get(i), topVertices.get(next), new Vertex(0, height, 0), Color.BLUE));
+                    }
+
+                    // Combine all triangles for the funky shape
+                    List<Triangle> funkyShape = new ArrayList<>();
+                    funkyShape.addAll(sideTriangles);
+                    funkyShape.addAll(capTriangles);
+                    
+                    Matrix4 model1 = new Matrix4(0, 0, 500, 0, 0 , 0, 1, 1, 1);
+                    
+                    //Matrix4 testingtest = Matrix4.orthographicPerspectiveMatrix(far, near);
+                    //cam.setProjectionMatrix(testingtest);
+                    
+                    Matrix4 mvp1 = model1.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix())*/
+                    
+                    g2.setColor(Color.WHITE);
+                    
+                    BufferedImage img = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    
+                    double[] zBuffer = new double[img.getWidth() * img.getHeight()];
+
+                    for (int q = 0; q < zBuffer.length; q++) 
+                    {
+                     zBuffer[q] = Double.NEGATIVE_INFINITY;
+                    }
+                    
+                    /*
+                    for (Triangle t: funkyShape)
+                    {
+
+                    	Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(1,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));
+                    	
+                    	Vertex tv1 = mvp1.transform(t.v1);
+                    	Vertex tv2 = mvp1.transform(t.v2);
+                    	Vertex tv3 = mvp1.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    */
+
+                    Matrix4 model = new Matrix4(0, 0, 200, 0, 0 , 0, 1, 1, 1);
+                    
+                    //System.out.println(model.toString());
+                    
+                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
+
+                    
+                    for (Triangle t: cube.getTriangles())
+                    {
+                    	Vertex cv1 = t.getV1();
+                    	cv1.normalize();
+                    	Vertex ncv1 = cv1.normalizeVect();
+                    	
+                    	Vertex lightDir = (new Vertex(250 - t.v1.x, 250 - t.v1.y, 0 - t.v1.z)).normalizeVect();
+                    	Vertex viewDir = (new Vertex(cam.getX() - t.v1.x,
+                    			cam.getY() - t.v1.y, cam.getZ() - t.v1.z)).normalizeVect();
+                    	Vertex halfway = (new Vertex(lightDir.x + viewDir.x,
+                    			lightDir.y + viewDir.y, lightDir.z + viewDir.z).normalizeVect());
+                    	double diffuse = Math.max(0.0, ncv1.dot(lightDir));
+                    	double specular = Math.pow(Math.max(0.0, ncv1.dot(halfway)), 8.0);
+                    	
+                    	int v1col = int(0.3 * 64.0 + 0.7 * 255.0 * diffuse + 0.05 * 255.0 * specular; 
+                    	/*Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(0,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));*/
+                    	
+                    	Vertex tv1 = mvp.transform(t.v1);
+                    	Vertex tv2 = mvp.transform(t.v2);
+                    	Vertex tv3 = mvp.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		/*int r = (int)(t.color.getRed() * b1);
+                    		    		int a = t.color.getAlpha();
+                    		    		int b = (int)(t.color.getBlue() * b2);
+                    		    		int green = (int)(t.color.getGreen() * b3);
+                    		    		
+                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);*/
+                    		    		
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    
+                    
+                    g2.drawImage(img,0,0,null);
+                    
+                    
+                    // rendering magic will happen here
+                }
+        
+               
+       
+        };
+            
+        renderPanel.setFocusable(true);
+        pane.add(renderPanel, BorderLayout.CENTER);
+
+        
+        frame.setSize(1936, 1056);
+        frame.setVisible(true);
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2025-04-22 18:12:34.897
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2025-04-22 18:12:34.898
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-04-22 18:12:34.920
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package newproject;
+import javax.swing.*;
+
+import Drawables.DrawUtils;
+import FirstPersonControl.KeyEventManager;
+import Matrix.Matrix3;
+import Matrix.Matrix4;
+//import OtherMath.MathFct;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.util.*;
+import java.util.List;
+
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
+
+
+public class main{
+
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Title");
+		Container pane = frame.getContentPane();
+		pane.setLayout(new BorderLayout());
+		
+		JSlider headingSlider = new JSlider(-2000,0,-800);
+		pane.add(headingSlider, BorderLayout.SOUTH);
+
+        JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
+        pane.add(pitchSlider, BorderLayout.EAST);
+        final double epsilon = 1e-6;
+        
+        double fov = 135; // Or 60
+        double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = 0.1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0, -1000,1), 0, 0, 0, far, near, fov, aspect);
+        
+        KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        km.setSpeed(0.1);
+        
+        JPanel renderPanel = new JPanel() 
+        {
+        	
+                public void paintComponent(Graphics g) 
+                {
+                	km.setRenderPanel(this);
+                	this.addKeyListener(km);
+                    frame.addKeyListener(km);
+                    
+                	
+                    Graphics2D g2 = (Graphics2D) g;
+                    g2.setColor(Color.BLACK);
+                    g2.fillRect(0, 0, getWidth(), getHeight());
+                    
+                    
+                    List<Triangle> tris = new ArrayList<>();
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(-100, 100, -100),
+                            Color.WHITE));
+                    tris.add(new Triangle(new Vertex(100, 100, 100),
+                            new Vertex(-100, -100, 100),
+                            new Vertex(100, -100, -100),
+                            Color.RED));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(100, 100, 100),
+                            Color.GREEN));
+                    tris.add(new Triangle(new Vertex(-100, 100, -100),
+                            new Vertex(100, -100, -100),
+                            new Vertex(-100, -100, 100),
+                            Color.BLUE));
+                    
+                    List<Triangle> cubeFaces = new ArrayList<>();
+                    Vertex v0 = new Vertex(-100, -100, -100);
+                    Vertex v1 = new Vertex(-100, -100,  100);
+                    Vertex v2 = new Vertex(-100,  100, -100);
+                    Vertex v3 = new Vertex(-100,  100,  100);
+                    Vertex v4 = new Vertex( 100, -100, -100);
+                    Vertex v5 = new Vertex( 100, -100,  100);
+                    Vertex v6 = new Vertex( 100,  100, -100);
+                    Vertex v7 = new Vertex( 100,  100,  100);
+                    
+                    Triangle f1t1 = new Triangle(v1, v5, v7);
+                    Triangle f1t2 = new Triangle(v1, v7, v3);
+                    Triangle f2t1 = new Triangle(v0, v2, v6);
+                    Triangle f2t2 = new Triangle(v0, v6, v4);
+                    Triangle f3t1 = new Triangle(v2, v3, v7);
+                    Triangle f3t2 = new Triangle(v2, v7, v6);
+                    
+                    Triangle f4t1 = new Triangle(v0, v4, v5);
+                    Triangle f4t2 = new Triangle(v0, v5, v1);
+                    Triangle f5t1 = new Triangle(v0, v1, v3);
+                    Triangle f5t2 = new Triangle(v0, v3, v2);
+                    Triangle f6t1 = new Triangle(v4, v6, v7);
+                    Triangle f6t2 = new Triangle(v4, v7, v5);
+                    
+                    Rectangular cube = new Rectangular(f1t1, f1t2, f2t1, f2t2, f3t1, f3t2, f4t1, f4t2, f5t1, f5t2, f6t1, f6t2, Color.WHITE);
+                    
+                    
+                    /*
+                 // Funky twisted extrusion parameters
+                    int segments = 20; // Number of slices
+                    double height = 200.0;  // Height of the shape
+                    double baseSize = 100.0; // Base size (radius of the initial shape)
+
+                    // Define a list for all the vertices
+                    List<Vertex> vertices = new ArrayList<>();
+
+                    // Add vertices for the base polygon (we'll use a square for simplicity)
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle);
+                        double z = baseSize * Math.sin(angle);
+                        vertices.add(new Vertex(x, 0, z));  // Base vertices at y = 0
+                    }
+
+                    // Create the vertices for the top, with a twist and scale
+                    List<Vertex> topVertices = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        double angle = i * 2 * Math.PI / segments;
+                        double x = baseSize * Math.cos(angle) * (1 + 0.3 * Math.sin(angle));  // Twisted scaling
+                        double z = baseSize * Math.sin(angle) * (1 + 0.3 * Math.cos(angle));  // Twisted scaling
+                        double y = height;  // Top level (extrusion height)
+                        topVertices.add(new Vertex(x, y, z));
+                    }
+
+                    // Create triangles for the twisted sides
+                    List<Triangle> sideTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Side triangle connecting base to top, with twist effect
+                        Triangle side1 = new Triangle(vertices.get(i), topVertices.get(i), topVertices.get(next), Color.RED);
+                        Triangle side2 = new Triangle(vertices.get(i), topVertices.get(next), vertices.get(next), Color.GREEN);
+
+                        sideTriangles.add(side1);
+                        sideTriangles.add(side2);
+                    }
+
+                    // Add the base (square) and top (twisted) triangles
+                    List<Triangle> capTriangles = new ArrayList<>();
+                    for (int i = 0; i < segments; i++) {
+                        int next = (i + 1) % segments;
+
+                        // Base cap (flat)
+                        capTriangles.add(new Triangle(vertices.get(i), vertices.get(next), new Vertex(0, 0, 0), Color.YELLOW));
+
+                        // Top cap (twisted)
+                        capTriangles.add(new Triangle(topVertices.get(i), topVertices.get(next), new Vertex(0, height, 0), Color.BLUE));
+                    }
+
+                    // Combine all triangles for the funky shape
+                    List<Triangle> funkyShape = new ArrayList<>();
+                    funkyShape.addAll(sideTriangles);
+                    funkyShape.addAll(capTriangles);
+                    
+                    Matrix4 model1 = new Matrix4(0, 0, 500, 0, 0 , 0, 1, 1, 1);
+                    
+                    //Matrix4 testingtest = Matrix4.orthographicPerspectiveMatrix(far, near);
+                    //cam.setProjectionMatrix(testingtest);
+                    
+                    Matrix4 mvp1 = model1.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix())*/
+                    
+                    g2.setColor(Color.WHITE);
+                    
+                    BufferedImage img = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    
+                    double[] zBuffer = new double[img.getWidth() * img.getHeight()];
+
+                    for (int q = 0; q < zBuffer.length; q++) 
+                    {
+                     zBuffer[q] = Double.NEGATIVE_INFINITY;
+                    }
+                    
+                    /*
+                    for (Triangle t: funkyShape)
+                    {
+
+                    	Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(1,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));
+                    	
+                    	Vertex tv1 = mvp1.transform(t.v1);
+                    	Vertex tv2 = mvp1.transform(t.v2);
+                    	Vertex tv3 = mvp1.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    */
+
+                    Matrix4 model = new Matrix4(0, 0, 200, 0, 0 , 0, 1, 1, 1);
+                    
+                    //System.out.println(model.toString());
+                    
+                    Matrix4 mvp = model.multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
+
+                    
+                    for (Triangle t: cube.getTriangles())
+                    {
+                    	Vertex cv1 = t.getV1();
+                    	cv1.normalize();
+                    	Vertex ncv1 = cv1.normalizeVect();
+                    	
+                    	Vertex lightDir = (new Vertex(250 - t.v1.x, 250 - t.v1.y, 0 - t.v1.z)).normalizeVect();
+                    	Vertex viewDir = (new Vertex(cam.getX() - t.v1.x,
+                    			cam.getY() - t.v1.y, cam.getZ() - t.v1.z)).normalizeVect();
+                    	Vertex halfway = (new Vertex(lightDir.x + viewDir.x,
+                    			lightDir.y + viewDir.y, lightDir.z + viewDir.z).normalizeVect());
+                    	double diffuse = Math.max(0.0, ncv1.dot(lightDir));
+                    	double specular = Math.pow(Math.max(0.0, ncv1.dot(halfway)), 8.0);
+                    	
+                    	int v1col = int(0.3 * 64.0 + 0.7 * 255.0 * diffuse + 0.05 * 255.0 * specular; 
+                    	/*Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
+                    	Vertex lightDir = new Vertex(0,1,0).normalizeVect();
+                    	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));*/
+                    	
+                    	Vertex tv1 = mvp.transform(t.v1);
+                    	Vertex tv2 = mvp.transform(t.v2);
+                    	Vertex tv3 = mvp.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	//System.out.println(tv1z + " " + tv2z + " " + tv3z);
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                        
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		
+                    		    		int r = Math.min(255, (int) (t.color.getRed() * intensity));
+                    		    		int gr = Math.min(255, (int) (t.color.getGreen() * intensity));
+                    		    		int b = Math.min(255, (int) (t.color.getBlue() * intensity));
+                    		    		if (r<0) r=0;
+                    		    		if (gr<0) gr =0;
+                    		    		if (b<0) b =0;
+                    		    		
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		/*int r = (int)(t.color.getRed() * b1);
+                    		    		int a = t.color.getAlpha();
+                    		    		int b = (int)(t.color.getBlue() * b2);
+                    		    		int green = (int)(t.color.getGreen() * b3);
+                    		    		
+                    		    		int test = (a << 24) | (r << 16) | (green << 8) | (b);*/
+                    		    		
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    
+                    
+                    g2.drawImage(img,0,0,null);
+                    
+                    
+                    // rendering magic will happen here
+                }
+        
+               
+       
+        };
+            
+        renderPanel.setFocusable(true);
+        pane.add(renderPanel, BorderLayout.CENTER);
+
+        
+        frame.setSize(1936, 1056);
+        frame.setVisible(true);
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2025-04-22 18:12:34.921
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2025-04-22 18:12:34.922
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:561)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2025-04-23 20:22:12.085 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-23 20:24:26.597
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-23 20:24:26.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-23 20:24:26.597
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-23 20:24:31.107
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-24 02:04:12.446 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-24 02:04:33.445
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-24 02:04:33.445
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-24 02:04:33.445
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-24 02:04:38.155
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

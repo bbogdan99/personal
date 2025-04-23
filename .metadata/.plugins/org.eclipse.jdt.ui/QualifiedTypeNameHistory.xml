@@ -10,4 +10,8 @@
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="Drawables.DrawUtils"/>
     <fullyQualifiedTypeName name="Matrix.Matrix4"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
+    <fullyQualifiedTypeName name="newproject.Camera"/>
+    <fullyQualifiedTypeName name="FirstPersonControl.KeyEventManager"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 </qualifiedTypeNameHistroy>
