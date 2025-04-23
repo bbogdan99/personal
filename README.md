@@ -24,11 +24,13 @@ Concepts covered:
 
 -model -> world -> view -> projection 
 
+-gouraud (and flat) shading
+
 Features I hope to add in the future:
 
 -better camera control (rotating the camera towards desired angle etc)
 
--lighting and (proper) shading
+-phong shading, (and other types of shading)
 
 -loading from external files
 
