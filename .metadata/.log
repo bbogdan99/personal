@@ -4862,3 +4862,1023 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-24 14:35:31.453 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-24 14:36:07.194
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-24 14:36:07.194
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-24 14:36:07.194
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-24 14:36:11.710
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-24 16:19:20.176 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-24 16:20:22.652
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-24 16:20:22.652
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-24 16:20:22.652
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-24 16:20:26.676
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-25 01:29:03.369 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-04-25 01:30:16.408
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2025-04-25 01:30:29.610
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-25 01:30:29.610
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-25 01:30:29.610
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-25 01:30:34.639
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-25 16:09:11.097 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-25 16:09:59.192
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-25 16:09:59.192
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-25 16:09:59.192
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-25 16:10:04.370
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-26 16:34:52.781 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-26 16:35:27.065
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-26 16:35:27.065
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-26 16:35:27.065
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-26 16:35:34.408
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-26 21:37:26.098 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-26 22:02:43.222
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-26 22:02:43.222
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-26 22:02:43.222
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-26 22:02:47.082
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-27 02:17:54.240 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-04-27 02:19:23.799
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2025-04-27 02:19:40.581
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-27 02:19:40.581
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-27 02:19:40.581
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-27 02:19:46.337
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-04-27 04:16:05.842
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package newproject;
+import javax.swing.*;
+
+import FirstPersonControl.KeyEventManager;
+import Matrix.Matrix3;
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+//import OtherMath.MathFct;
+import ThreeDimensionals.Rectangular;
+import Utils.ClippingLogic;
+import Utils.DrawUtils;
+import World.Scene;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.util.*;
+import java.util.List;
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
+
+
+public class main{
+
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Title");
+		Container pane = frame.getContentPane();
+		pane.setLayout(new BorderLayout());
+		
+		JSlider headingSlider = new JSlider(-2000,0,-800);
+		pane.add(headingSlider, BorderLayout.SOUTH);
+
+        JSlider pitchSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
+        pane.add(pitchSlider, BorderLayout.EAST);
+        final double epsilon = 1e-6;
+        
+        double fov = 60; // Or 60
+        double aspect = 16.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = .1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0, -1000,1), 0, 0, 0, far, near, fov, aspect);
+        
+        KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        km.setSpeed(0.1);
+        Scene scene = new Scene(cam);
+        
+        JPanel renderPanel = new JPanel() 
+        {
+                public void paintComponent(Graphics g) 
+                {
+                	km.setRenderPanel(this);
+                	this.addKeyListener(km);
+                    frame.addKeyListener(km);
+                    
+                    Graphics2D g2 = (Graphics2D) g;
+                    g2.setColor(Color.BLACK);
+                    g2.fillRect(0, 0, getWidth(), getHeight());
+                    
+                    Vertex v0 = new Vertex(-100, -100, -100);
+                    Vertex v1 = new Vertex(-100, -100,  100);
+                    Vertex v2 = new Vertex(-100,  100, -100);
+                    Vertex v3 = new Vertex(-100,  100,  100);
+                    Vertex v4 = new Vertex( 100, -100, -100);
+                    Vertex v5 = new Vertex( 100, -100,  100);
+                    Vertex v6 = new Vertex( 100,  100, -100);
+                    Vertex v7 = new Vertex( 100,  100,  100);
+                    
+                    g2.setColor(Color.WHITE);
+                    
+                    BufferedImage img = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    
+                    double[] zBuffer = new double[img.getWidth() * img.getHeight()];
+
+                    for (int q = 0; q < zBuffer.length; q++) 
+                    {
+                     zBuffer[q] = Double.NEGATIVE_INFINITY;
+                    }
+                    
+                    Matrix4 model = new Matrix4(0, 0, 200, 0, 0 , 0, 1, 1, 1);
+                    Rectangular cube = new Rectangular(v0, v1, v2, v3, v4, v5, v6, v7, model, Color.WHITE);
+                    scene.addObject(cube);
+                    
+                    //System.out.println(model.toString());
+                    
+                    Matrix4 mvp = cube.getTRS().multiply(cam.getViewMatrix()).multiply(cam.getProjectionMatrix());
+                    //Matrix4 mv = cube.getTRS().multiply(cam.getViewMatrix());
+                 
+                    /*Vertex[] planes = new Vertex[1];
+                    
+                 // Near plane: keep points with z ≤ 0 (in front of camera)
+                 planes[0] = new Vertex( 0,  0, -1, -.1);
+
+                 // Left plane: 45° off the −Z axis toward +X
+                 //planes[1] = new Vertex(1.0/Math.sqrt(2.0), 0, 1.0/Math.sqrt(2.0), 0);
+
+                 // Right plane: 45° off the −Z axis toward −X
+                 //planes[2] = new Vertex(1.0/Math.sqrt(2.0), 0, 1.0/Math.sqrt(2.0), 0);
+
+                 // Top plane: 45° off the −Z axis toward −Y
+                 //planes[3] = new Vertex(0, 1.0/Math.sqrt(2.0), 1.0/Math.sqrt(2.0), 0);
+
+                 // Bottom plane: 45° off the −Z axis toward +Y
+                 //planes[4] = new Vertex( 0, 1.0/Math.sqrt(2.0), 1.0/Math.sqrt(2.0), 0);
+                 
+                 Scene scene1 = new Scene(cam); 
+                 scene1 = ClippingLogic.ClipScene(scene, planes);
+                 
+                 
+                    //ClippingLogic.ClipScene(scene, planes);
+                    for (Object3D obj: scene1.getObjects())//scene.getObjects())
+                    {
+                    	Matrix4 mvp = obj.getTRS().multiply(scene1.getCam().getViewMatrix()).multiply(scene1.getCam().getProjectionMatrix());
+                    	ArrayList<Triangle>Triangles = obj.getTriangles();
+                    	for (Triangle t:  Triangles)
+                    	{
+                    		
+                    		
+                            	Vertex cv1 = t.getV1();
+                            	cv1.normalize();
+                            	Vertex ncv1 = cv1.normalizeVect();
+                            	
+                            	Vertex lightDir1 = (new Vertex(250 - t.v1.x, 250 - t.v1.y, 0 - t.v1.z)).normalizeVect();
+                            	Vertex viewDir1 = (new Vertex(scene1.getCam().getX() - t.v1.x,
+                            			scene1.getCam().getY() - t.v1.y, scene1.getCam().getZ() - t.v1.z)).normalizeVect();
+                            	Vertex halfway1 = (new Vertex(lightDir1.x + viewDir1.x,
+                            			lightDir1.y + viewDir1.y, lightDir1.z + viewDir1.z).normalizeVect());
+                            	double diffuse1 = Math.max(0.0, ncv1.dot(lightDir1));
+                            	double specular1 = Math.pow(Math.max(0.0, ncv1.dot(halfway1)), 8.0);
+                            	
+                            	int v1col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse1 + 0.05 * 255.0 * specular1);
+                            	int clampedv1 = Math.max(0,  Math.min(255, v1col));
+                            	
+                            	Vertex cv2 = t.getV2();
+                            	cv2.normalize();
+                            	Vertex ncv2 = cv2.normalizeVect();
+                            	
+                            	Vertex lightDir2 = (new Vertex(250 - t.v2.x, 250 - t.v2.y, 0 - t.v2.z)).normalizeVect();
+                            	Vertex viewDir2 = (new Vertex(scene1.getCam().getX() - t.v2.x,
+                            			scene1.getCam().getY() - t.v2.y, scene1.getCam().getZ() - t.v2.z)).normalizeVect();
+                            	Vertex halfway2 = (new Vertex(lightDir2.x + viewDir2.x,
+                            			lightDir2.y + viewDir2.y, lightDir2.z + viewDir2.z).normalizeVect());
+                            	double diffuse2 = Math.max(0.0, ncv2.dot(lightDir2));
+                            	double specular2 = Math.pow(Math.max(0.0, ncv2.dot(halfway2)), 8.0);
+                            	
+                            	int v2col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse2 + 0.05 * 255.0 * specular2);
+                            	int clampedv2 = Math.max(0,  Math.min(255, v2col));
+                            	
+                            	Vertex cv3 = t.getV3();
+                            	cv3.normalize();
+                            	Vertex ncv3 = cv3.normalizeVect();
+                            	
+                            	Vertex lightDir3 = (new Vertex(250 - t.v3.x, 250 - t.v3.y, 0 - t.v3.z)).normalizeVect();
+                            	Vertex viewDir3 = (new Vertex(scene1.getCam().getX() - t.v3.x,
+                            			scene1.getCam().getY() - t.v3.y, scene1.getCam().getZ() - t.v3.z)).normalizeVect();
+                            	Vertex halfway3 = (new Vertex(lightDir3.x + viewDir3.x,
+                            			lightDir3.y + viewDir3.y, lightDir3.z + viewDir3.z).normalizeVect());
+                            	double diffuse3 = Math.max(0.0, ncv3.dot(lightDir3));
+                            	double specular3 = Math.pow(Math.max(0.0, ncv3.dot(halfway3)), 8.0);
+                            	
+                            	int v3col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse3 + 0.05 * 255.0 * specular3);
+                            	int clampedv3 = Math.max(0,  Math.min(255, v3col));
+                            	
+                            	
+                            	
+                            	Vertex tv1 = mvp.transform(t.v1);
+                            	Vertex tv2 = mvp.transform(t.v2);
+                            	Vertex tv3 = mvp.transform(t.v3);
+                            	
+                            	
+
+                            	double tv1z = tv1.z;
+                            	double tv2z = tv2.z;
+                            	double tv3z = tv3.z;
+                            	
+                            	tv1.normalize();
+                            	tv2.normalize();
+                            	tv3.normalize();
+                            	
+                            	//System.out.println("Rendering triangle with vertices: " + tv1.x + " " + tv1.y + " " + tv1.z);
+                            	//System.out.println(tv2.x + " " + tv2.y + " " + tv2.z);
+                            	//System.out.println(tv3.x + " " + tv3.y + " " + tv3.z);
+                            	
+                            	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                            	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                            	
+                            	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                            	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                            	
+                            	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                            	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                            	
+                            	System.out.println(tv1.x + " " + tv1.y + " " + tv1.z);
+                        		System.out.println(tv2.x + " " + tv2.y + " " + tv2.z);
+                        		System.out.println(tv3.x + " " + tv3.y + " " + tv3.z);
+                            	
+                            	//if (ClippingLogic.isBackFace(new Triangle(tv1, tv2, tv3), scene)) continue;
+                            	
+                            	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                            	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                        Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                            	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                            	int maxY = (int) Math.min(img.getHeight() - 1,
+                                        Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                            	
+                            	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                            			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                            	
+                            	
+                            	
+                            	for (int y = minY; y<=maxY; y++)
+                            		for (int x = minX; x<=maxX; x++)
+                            		{
+                            			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                            		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                            		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                            		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                            		    {
+                            		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                            		    	
+                            		    	int zIndex = y * img.getWidth() + x;
+                            		    	
+                            		    	if (zBuffer[zIndex] < depth) 
+                            		    	{
+                            		    		double intensity = (b1 * clampedv1 + b2 * clampedv2 + b3* clampedv3)/255.0;
+                            		    		int r = (int)(t.color.getRed() * intensity);
+                            		    		int gr = (int)(t.color.getGreen() * intensity);
+                            		    		int b = (int)(t.color.getBlue() * intensity);
+                            		    		r = Math.max(0, Math.min(255, r));
+                            		    		gr = Math.max(0, Math.min(255, gr));
+                            		    		b = Math.max(0, Math.min(255, b));
+                            		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                            		    		
+                            		    		//System.out.println(r + " " + gr + " " + b);
+                            		    		
+                            		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                            		    		zBuffer[zIndex] = depth;
+                            		    	}
+                            		    }
+                            		}
+                            	
+                            
+                    	}
+                    }*/
+                    
+                    for (Triangle t: cube.getTriangles())
+                    {
+                    	if (t.getV1().getZ() < cam.getZ() + .1) && (t.getV2().getZ() < cam.getZ() + .1 && t.getV3().getZ() < cam.getZ() + .1) continue;
+                    	Vertex cv1 = t.getV1();
+                    	cv1.normalize();
+                    	Vertex ncv1 = cv1.normalizeVect();
+                    	
+                    	Vertex lightDir1 = (new Vertex(250 - t.v1.x, 250 - t.v1.y, 0 - t.v1.z)).normalizeVect();
+                    	Vertex viewDir1 = (new Vertex(cam.getX() - t.v1.x,
+                    			cam.getY() - t.v1.y, cam.getZ() - t.v1.z)).normalizeVect();
+                    	Vertex halfway1 = (new Vertex(lightDir1.x + viewDir1.x,
+                    			lightDir1.y + viewDir1.y, lightDir1.z + viewDir1.z).normalizeVect());
+                    	double diffuse1 = Math.max(0.0, ncv1.dot(lightDir1));
+                    	double specular1 = Math.pow(Math.max(0.0, ncv1.dot(halfway1)), 8.0);
+                    	
+                    	int v1col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse1 + 0.05 * 255.0 * specular1);
+                    	int clampedv1 = Math.max(0,  Math.min(255, v1col));
+                    	
+                    	Vertex cv2 = t.getV2();
+                    	cv2.normalize();
+                    	Vertex ncv2 = cv2.normalizeVect();
+                    	
+                    	Vertex lightDir2 = (new Vertex(250 - t.v2.x, 250 - t.v2.y, 0 - t.v2.z)).normalizeVect();
+                    	Vertex viewDir2 = (new Vertex(cam.getX() - t.v2.x,
+                    			cam.getY() - t.v2.y, cam.getZ() - t.v2.z)).normalizeVect();
+                    	Vertex halfway2 = (new Vertex(lightDir2.x + viewDir2.x,
+                    			lightDir2.y + viewDir2.y, lightDir2.z + viewDir2.z).normalizeVect());
+                    	double diffuse2 = Math.max(0.0, ncv2.dot(lightDir2));
+                    	double specular2 = Math.pow(Math.max(0.0, ncv2.dot(halfway2)), 8.0);
+                    	
+                    	int v2col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse2 + 0.05 * 255.0 * specular2);
+                    	int clampedv2 = Math.max(0,  Math.min(255, v2col));
+                    	
+                    	Vertex cv3 = t.getV3();
+                    	cv3.normalize();
+                    	Vertex ncv3 = cv3.normalizeVect();
+                    	
+                    	Vertex lightDir3 = (new Vertex(250 - t.v3.x, 250 - t.v3.y, 0 - t.v3.z)).normalizeVect();
+                    	Vertex viewDir3 = (new Vertex(cam.getX() - t.v3.x,
+                    			cam.getY() - t.v3.y, cam.getZ() - t.v3.z)).normalizeVect();
+                    	Vertex halfway3 = (new Vertex(lightDir3.x + viewDir3.x,
+                    			lightDir3.y + viewDir3.y, lightDir3.z + viewDir3.z).normalizeVect());
+                    	double diffuse3 = Math.max(0.0, ncv3.dot(lightDir3));
+                    	double specular3 = Math.pow(Math.max(0.0, ncv3.dot(halfway3)), 8.0);
+                    	
+                    	int v3col = (int)(0.3 * 64.0 + 0.7 * 255.0 * diffuse3 + 0.05 * 255.0 * specular3);
+                    	int clampedv3 = Math.max(0,  Math.min(255, v3col));
+                    	
+                    	
+                    	
+                    	Vertex tv1 = mvp.transform(t.v1);
+                    	Vertex tv2 = mvp.transform(t.v2);
+                    	Vertex tv3 = mvp.transform(t.v3);
+
+                    	double tv1z = tv1.z;
+                    	double tv2z = tv2.z;
+                    	double tv3z = tv3.z;
+                    	
+                    	tv1.normalize();
+                    	tv2.normalize();
+                    	tv3.normalize();
+                    	
+                    	tv1.x = (tv1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv1.y = (1.0-tv1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv2.x = (tv2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv2.y = (1.0-tv2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	tv3.x = (tv3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	tv3.y = (1.0-tv3.y) * 0.5 * ((double)getHeight());
+                    	
+                    	
+                    	if (ClippingLogic.isBackFace(new Triangle(tv1, tv2, tv3), scene)) continue;
+                    	
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(tv1.x, Math.min(tv2.x, tv3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(tv1.x, Math.max(tv2.x, tv3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(tv1.y, Math.min(tv2.y, tv3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(tv1.y, Math.max(tv2.y, tv3.y))));
+                    	
+                    	double TriangleArea = (tv1.y - tv3.y) * (tv2.x - tv3.x) +
+                    			(tv2.y - tv3.y) * (tv3.x - tv1.x);
+                    	
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - tv3.y) * (tv2.x - tv3.x) + (tv2.y - tv3.y) * (tv3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - tv1.y) * (tv3.x - tv1.x) + (tv3.y - tv1.y) * (tv1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - tv2.y) * (tv1.x - tv2.x) + (tv1.y - tv2.y) * (tv2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * tv1z + b2 * tv2z + b3 * tv3z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		double intensity = (b1 * clampedv1 + b2 * clampedv2 + b3* clampedv3)/255.0;
+                    		    		int r = (int)(t.color.getRed() * intensity);
+                    		    		int gr = (int)(t.color.getGreen() * intensity);
+                    		    		int b = (int)(t.color.getBlue() * intensity);
+                    		    		r = Math.max(0, Math.min(255, r));
+                    		    		gr = Math.max(0, Math.min(255, gr));
+                    		    		b = Math.max(0, Math.min(255, b));
+                    		    		int test = (t.color.getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
+
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    g2.drawImage(img,0,0,null);
+                    // rendering magic will happen here
+                }
+        };
+            
+        renderPanel.setFocusable(true);
+        pane.add(renderPanel, BorderLayout.CENTER);
+
+        
+        frame.setSize(1936, 1056);
+        frame.setVisible(true);
+	}
+
+
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:557)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2025-04-27 04:16:05.843
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:557)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2025-04-27 04:16:05.855
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:880)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2038)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3037)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3013)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2168)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3003)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:429)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2842)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1966)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationFragment(ASTConverter.java:3986)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToVariableDeclarationStatement(ASTConverter.java:4066)
+	at org.eclipse.jdt.core.dom.ASTConverter.checkAndAddMultipleLocalDeclaration(ASTConverter.java:557)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:749)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SESSION 2025-04-27 21:17:31.912 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-27 21:19:56.919
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-27 21:19:56.919
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-27 21:19:56.919
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-27 21:20:01.588
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-04-28 02:54:14.454 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-04-28 02:54:44.246
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-28 02:54:44.246
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-04-28 02:54:44.246
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-04-28 02:54:50.492
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

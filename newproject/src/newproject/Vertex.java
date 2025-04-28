@@ -15,9 +15,16 @@ public class Vertex {
 		this.x = x;
 		this.y = y;
 		this.z = z;
-		w = 1;
+		w = 1.0;
 	}
 	
+	public Vertex(Vertex v1) {
+		this.x = v1.x;
+		this.y = v1.y;
+		this.z = v1.z;
+		this.w = v1.w;
+	}
+
 	public Vertex subtract(Vertex other)
 	{
 		return new Vertex(this.x - other.x, this.y - other.y, this.z - other.z, 1);
@@ -33,7 +40,7 @@ public class Vertex {
 	public Vertex normalizeVect()
 	{
 		double length = Math.sqrt(x*x + y*y + z*z);
-		if (length == 0) return new Vertex(0,0,0);
+		if (length == 0.0) return new Vertex(0,0,0);
 		return new Vertex(x/length, y/length, z/length);
 	}
 	

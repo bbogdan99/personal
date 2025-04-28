@@ -1,0 +1,51 @@
+package World;
+
+import java.util.ArrayList;
+
+import ThreeDimensionals.Object3D;
+import newproject.Camera;
+import newproject.Triangle;
+import newproject.Vertex;
+
+public class Scene 
+{
+	ArrayList<Object3D>Objects;
+	Camera cam;
+	//ArrayList<LightSource>LightSources;
+	Vertex Ia;
+	
+	Scene(Camera cam)
+	{
+		Objects = new ArrayList<Object3D>();
+		Ia = new Vertex(64, 64, 64);
+		this.cam = cam;
+	}
+	public void addObject(Object3D obj)
+	{
+		Objects.add(obj);
+	}
+	
+	
+	public void setIA(Vertex Ia)
+	{
+		this.Ia.setX(Ia.getX());
+		this.Ia.setY(Ia.getY());
+		this.Ia.setZ(Ia.getZ());
+	}
+	public String toString()
+	{
+		String returnd = "";
+		returnd += "Lumina ambientala " + Ia.getX() + " " + Ia.getY() + " " + Ia.getZ() + "\n";
+		returnd += "Camera pos: " + cam.getX() + " " + cam.getY() + " " + cam.getZ() + "\n";
+		returnd += "Camera rot: " + cam.getPitch() + " " + cam.getYaw() + " " + cam.getRoll() + "\n";
+		for (Object o: Objects)
+		{
+			/*returnd += "Triangle in Scene: \n";
+			returnd += t.getV1().getX() + " " + t.getV1().getY() + " " + t.getV1().getZ() + "\n";
+			returnd += t.getV2().getX() + " " + t.getV2().getY() + " " + t.getV2().getZ() + "\n";
+			returnd += t.getV3().getX() + " " + t.getV3().getY() + " " + t.getV3().getZ() + "\n";*/
+		}
+		return returnd;
+	}
+	
+}

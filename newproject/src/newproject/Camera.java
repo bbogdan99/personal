@@ -9,7 +9,7 @@ public class Camera
 	
 	double pitch, yaw, roll; //x, y, z
 	double far, near, angle, aspect;
-	
+
 	Matrix4 ViewMatrix;
 	Matrix4 ProjectionMatrix;
 	
@@ -58,7 +58,7 @@ public class Camera
 	{
 		return ViewMatrix.multiply(ProjectionMatrix);
 	}*/
-	
+
 	
 	public void update()
 	{

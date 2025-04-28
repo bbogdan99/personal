@@ -1,1 +1,12 @@
 1745250173540	Delete element
+1745536063363	Rename package 'Clipping'
+1745538192935	Rename package 'Object3D'
+1745538554795	Move compilation unit
+1745587495169	Delete element
+1745587516056	Delete elements
+1745587529569	Delete elements
+1745587538289	Delete elements
+1745595013372	Rename package 'Drawables'
+1745595180493	Encapsulate field 'cam'
+1745595228166	Encapsulate field 'Ia'
+1745595300035	Encapsulate field 'Objects'

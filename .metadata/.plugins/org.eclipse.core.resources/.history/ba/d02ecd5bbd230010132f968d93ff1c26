@@ -1,0 +1,109 @@
+package Utils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ThreeDimensionals.Object3D;
+import World.Scene;
+import newproject.Triangle;
+import newproject.Vertex;
+
+public class ClippingEngine {
+
+    public static class Plane {
+        public Vertex normal;
+        public double d;
+
+        public Plane(Vertex normal, double d) {
+            this.normal = normal.normalizeVect();
+            this.d = d;
+        }
+
+        public double distance(Vertex v) {
+            return normal.dot(v) + d;
+        }
+    }
+
+    public static Scene ClipScene(Scene scene, Plane[] planes) {
+        ArrayList<Object3D> clippedObjects = new ArrayList<>();
+        for (Object3D obj : scene.getObjects()) {
+            Object3D clippedObj = ClipObject(obj, planes);
+            if (clippedObj != null) clippedObjects.add(clippedObj);
+        }
+        Scene clippedScene = new Scene(scene.getCam());
+        clippedScene.setIA(scene.getIa());
+        for (Object3D obj : clippedObjects) clippedScene.addObject(obj);
+        return clippedScene;
+    }
+
+    private static Object3D ClipObject(Object3D obj, Plane[] planes) {
+        ArrayList<Triangle> clippedTriangles = obj.getTriangles();
+        for (Plane plane : planes) {
+            clippedTriangles = ClipTriangles(clippedTriangles, plane);
+            if (clippedTriangles.isEmpty()) return null;
+        }
+        Object3D clippedObj = new Object3D(obj);
+        clippedObj.setTriangles(clippedTriangles);
+        return clippedObj;
+    }
+
+    private static ArrayList<Triangle> ClipTriangles(ArrayList<Triangle> triangles, Plane plane) {
+        ArrayList<Triangle> result = new ArrayList<>();
+        for (Triangle t : triangles) {
+            result.addAll(ClipTriangleAgainstPlane(t, plane));
+        }
+        return result;
+    }
+
+    private static List<Triangle> ClipTriangleAgainstPlane(Triangle tri, Plane plane) {
+        List<Vertex> inside = new ArrayList<>();
+        List<Vertex> outside = new ArrayList<>();
+
+        
+        if (plane.distance(tri.getV1()) >= 0) inside.add(tri.getV1());
+        else outside.add(tri.getV1());
+        
+        if (plane.distance(tri.getV2()) >= 0) inside.add(tri.getV2());
+        else outside.add(tri.getV2());
+        
+        if (plane.distance(tri.getV3()) >= 0) inside.add(tri.getV3());
+        else outside.add(tri.getV3());
+        //for (Vertex v : tri.getV1()) {
+        //    if (plane.distance(v) >= 0) inside.add(v);
+        //    else outside.add(v);
+        //}
+
+        if (inside.size() == 3) {
+            return List.of(tri);
+        }
+        if (inside.size() == 0) {
+            return List.of();
+        }
+
+        if (inside.size() == 1) {
+            Vertex a = inside.get(0);
+            Vertex b = Intersection(a, outside.get(0), plane);
+            Vertex c = Intersection(a, outside.get(1), plane);
+            return List.of(new Triangle(a, b, c));
+        } else { // inside.size() == 2
+            Vertex a = inside.get(0);
+            Vertex b = inside.get(1);
+            Vertex p = Intersection(a, outside.get(0), plane);
+            Vertex q = Intersection(b, outside.get(0), plane);
+            return List.of(
+                new Triangle(a, b, p),
+                new Triangle(b, q, p)
+            );
+        }
+    }
+
+    private static Vertex Intersection(Vertex A, Vertex B, Plane plane) {
+        Vertex dir = B.subtract(A);
+        double t = -(plane.normal.dot(A) + plane.d) / (plane.normal.dot(B.subtract(A)));
+        //double t = -(plane.distance(A)) / (plane.normal.dot(dir));
+        return new Vertex(A.getX() + dir.getX() * t, 
+        		A.getY() + dir.getY() * t, 
+        		A.getZ() + dir.getZ() * t);
+    }
+
+}

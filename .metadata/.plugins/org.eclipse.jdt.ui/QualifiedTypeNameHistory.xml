@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.awt.geom.Path2D"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="Matrix.Matrix3"/>
-    <fullyQualifiedTypeName name="newproject.Vertex"/>
-    <fullyQualifiedTypeName name="java.awt.Color"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.awt.Canvas"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="Drawables.DrawUtils"/>
-    <fullyQualifiedTypeName name="Matrix.Matrix4"/>
     <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
-    <fullyQualifiedTypeName name="newproject.Camera"/>
     <fullyQualifiedTypeName name="FirstPersonControl.KeyEventManager"/>
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="newproject.Camera"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="Matrix.Matrix4"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="newproject.Triangle"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="Utils.ClippingLogic"/>
+    <fullyQualifiedTypeName name="ThreeDimensionals.Object3D"/>
+    <fullyQualifiedTypeName name="newproject.Vertex"/>
+    <fullyQualifiedTypeName name="World.Scene"/>
+    <fullyQualifiedTypeName name="Utils.ClippingEngine"/>
+    <fullyQualifiedTypeName name="Utils.ClippingEngine.Plane"/>
 </qualifiedTypeNameHistroy>
