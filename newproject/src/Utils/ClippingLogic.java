@@ -10,7 +10,7 @@ import newproject.Vertex;
 
 public class ClippingLogic
 {
-	public static Scene ClipScene(Scene scene, Vertex[] planes)
+	/*public static Scene ClipScene(Scene scene, Vertex[] planes)
 	{
 		ArrayList<Object3D>clipped_objects = new ArrayList<Object3D>();
 		for (Object3D obj: scene.getObjects())
@@ -142,7 +142,7 @@ public class ClippingLogic
 			temp.add(new Triangle(Ap, B, Bp));
 			return temp;
 		}
-	}
+	}*/
 	
 	public static boolean isBackFace(Triangle t, Scene scene)
 	{
@@ -166,7 +166,7 @@ public class ClippingLogic
     	if (n.dot(viewDir) >= 0) continue;*/
 	}
 	
-	private static double ObjRadius(ArrayList<Triangle>Triangles, Vertex Center)
+	/*private static double ObjRadius(ArrayList<Triangle>Triangles, Vertex Center)
 	{
 		double maxDist = 0.0;
 		for (Triangle t: Triangles)
@@ -217,5 +217,5 @@ public class ClippingLogic
 	private static double SignedDistance(Vertex plane, Vertex v)
 	{
 		return v.getX() * plane.getX() + v.getY() * plane.getY() + v.getZ() * plane.getZ() + plane.getW();
-	}
+	}*/
 }

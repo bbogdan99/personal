@@ -14,31 +14,46 @@ public class ClippingEngine {
         public Vertex normal;
         public double d;
 
-        public Plane(Vertex normal, double d) {
+        public Plane(Vertex normal, double d) 
+        {
             this.normal = normal.normalizeVect();
             this.d = d;
         }
 
-        public double distance(Vertex v) {
+        public double distance(Vertex v) 
+        {
             return normal.dot(v) + d;
         }
     }
 
-    public static Scene ClipScene(Scene scene, Plane[] planes) {
+    public static ArrayList<Triangle> ClipScene(Scene scene, Plane[] planes) 
+    {
         ArrayList<Object3D> clippedObjects = new ArrayList<>();
-        for (Object3D obj : scene.getObjects()) {
+        for (Object3D obj : scene.getObjects()) 
+        {
             Object3D clippedObj = ClipObject(obj, planes);
             if (clippedObj != null) clippedObjects.add(clippedObj);
         }
-        Scene clippedScene = new Scene(scene.getCam());
+        
+        ArrayList<Triangle>clippedTriangles = new ArrayList<>();
+        for (Object3D obj: clippedObjects)
+        	for (Triangle t: obj.getTriangles())
+        	{
+        		clippedTriangles.add(t);
+        	}
+        return clippedTriangles;
+        
+        /*Scene clippedScene = new Scene(scene.getCam());
         clippedScene.setIA(scene.getIa());
         for (Object3D obj : clippedObjects) clippedScene.addObject(obj);
-        return clippedScene;
+        return clippedScene;*/
     }
 
-    private static Object3D ClipObject(Object3D obj, Plane[] planes) {
+    private static Object3D ClipObject(Object3D obj, Plane[] planes) 
+    {
         ArrayList<Triangle> clippedTriangles = obj.getTriangles();
-        for (Plane plane : planes) {
+        for (Plane plane : planes) 
+        {
             clippedTriangles = ClipTriangles(clippedTriangles, plane);
             if (clippedTriangles.isEmpty()) return null;
         }
@@ -47,15 +62,18 @@ public class ClippingEngine {
         return clippedObj;
     }
 
-    private static ArrayList<Triangle> ClipTriangles(ArrayList<Triangle> triangles, Plane plane) {
+    private static ArrayList<Triangle> ClipTriangles(ArrayList<Triangle> triangles, Plane plane) 
+    {
         ArrayList<Triangle> result = new ArrayList<>();
-        for (Triangle t : triangles) {
+        for (Triangle t : triangles) 
+        {
             result.addAll(ClipTriangleAgainstPlane(t, plane));
         }
         return result;
     }
 
-    private static List<Triangle> ClipTriangleAgainstPlane(Triangle tri, Plane plane) {
+    private static List<Triangle> ClipTriangleAgainstPlane(Triangle tri, Plane plane) 
+    {
         List<Vertex> inside = new ArrayList<>();
         List<Vertex> outside = new ArrayList<>();
 
@@ -70,31 +88,32 @@ public class ClippingEngine {
         else outside.add(tri.getV3());
        
 
-        if (inside.size() == 3) {
-            return List.of(tri);
-        }
-        if (inside.size() == 0) {
-            return List.of();
-        }
+        if (inside.size() == 3) return List.of(tri);
 
-        if (inside.size() == 1) {
+        if (inside.size() == 0) return List.of();
+
+        if (inside.size() == 1) 
+        {
             Vertex a = inside.get(0);
             Vertex b = Intersection(a, outside.get(0), plane);
             Vertex c = Intersection(a, outside.get(1), plane);
-            return List.of(new Triangle(a, b, c));
-        } else { 
+            return List.of(new Triangle(a, b, c, tri.getColor()));
+        } 
+        else 
+        { 
             Vertex a = inside.get(0);
             Vertex b = inside.get(1);
             Vertex p = Intersection(a, outside.get(0), plane);
             Vertex q = Intersection(b, outside.get(0), plane);
             return List.of(
-                new Triangle(a, b, p),
-                new Triangle(b, q, p)
+                new Triangle(a, b, p, tri.getColor()),
+                new Triangle(b, q, p, tri.getColor())
             );
         }
     }
 
-    private static Vertex Intersection(Vertex A, Vertex B, Plane plane) {
+    private static Vertex Intersection(Vertex A, Vertex B, Plane plane) 
+    {
         Vertex dir = B.subtract(A);
         double t = -(plane.normal.dot(A) + plane.d) / (plane.normal.dot(B.subtract(A)));
         //double t = -(plane.distance(A)) / (plane.normal.dot(dir));

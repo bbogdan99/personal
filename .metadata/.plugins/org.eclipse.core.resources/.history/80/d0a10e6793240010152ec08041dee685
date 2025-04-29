@@ -1,0 +1,11 @@
+package World;
+
+import java.util.ArrayList;
+
+import newproject.Triangle;
+
+public class Renderer 
+{
+	ArrayList<Triangle>toRender;
+	
+}

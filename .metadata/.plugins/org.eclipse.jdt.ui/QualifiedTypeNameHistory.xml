@@ -11,13 +11,13 @@
     <fullyQualifiedTypeName name="newproject.Camera"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="Matrix.Matrix4"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="newproject.Triangle"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="Utils.ClippingLogic"/>
     <fullyQualifiedTypeName name="ThreeDimensionals.Object3D"/>
     <fullyQualifiedTypeName name="newproject.Vertex"/>
     <fullyQualifiedTypeName name="World.Scene"/>
     <fullyQualifiedTypeName name="Utils.ClippingEngine"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="newproject.Triangle"/>
     <fullyQualifiedTypeName name="Utils.ClippingEngine.Plane"/>
 </qualifiedTypeNameHistroy>
