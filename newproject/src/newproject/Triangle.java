@@ -5,14 +5,27 @@ import java.awt.Color;
 public class Triangle {
 	Vertex v1,v2,v3;
 	Color color;
+	public int clampedv1, clampedv2, clampedv3;
 	
-	
+	public Triangle(Vertex v1, Vertex v2, Vertex v3, Color color, int clampedv1,int clampedv2, int clampedv3)
+	{
+		this.v1=v1;
+		this.v2=v2;
+		this.v3=v3;
+		this.color=color;
+		this.clampedv1 = clampedv1;
+		this.clampedv2 = clampedv2;
+		this.clampedv3 = clampedv3;
+	}
 	public Triangle(Vertex v1, Vertex v2, Vertex v3, Color color)
 	{
 		this.v1=v1;
 		this.v2=v2;
 		this.v3=v3;
 		this.color=color;
+		clampedv1 = 0;
+		clampedv2 = 0;
+		clampedv3 = 0;
 	}
 	public Triangle(Vertex v1, Vertex v2, Vertex v3)
 	{
@@ -20,12 +33,20 @@ public class Triangle {
 		this.v2=v2;
 		this.v3=v3;
 		this.color=Color.WHITE;
+		clampedv1 = 0;
+		clampedv2 = 0;
+		clampedv3 = 0;
 	}
 	
 	public Vertex getV1() {return v1;}
 	public Vertex getV2() {return v2;}
 	public Vertex getV3() {return v3;}
 	public Color getColor() { return color;}
-	
+	public void setClamped(int clampedv1, int clampedv2, int clampedv3) 
+	{
+		this.clampedv1 = clampedv1;
+		this.clampedv2 = clampedv2;
+		this.clampedv3 = clampedv3;
+	}
 	
 }

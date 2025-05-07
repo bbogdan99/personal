@@ -5,6 +5,7 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
+import Matrix.Matrix4;
 import newproject.Camera;
 
 public class KeyEventManager implements KeyListener{
@@ -43,7 +44,7 @@ public class KeyEventManager implements KeyListener{
 			if (renderPanel!= null) renderPanel.repaint();
 			break;
 		case 's':
-			camera.setZ(camera.getZ() - speed);
+			camera.setZ(camera.getZ() + speed);
 			camera.update();
 			if (renderPanel!= null) renderPanel.repaint();
 			break;
@@ -53,7 +54,7 @@ public class KeyEventManager implements KeyListener{
 			if (renderPanel!= null) renderPanel.repaint();
 			break;
 		case 'w':
-			camera.setZ(camera.getZ() + speed);
+			camera.setZ(camera.getZ() - speed);
 			camera.update();
 			if (renderPanel!= null) renderPanel.repaint();
 			break;

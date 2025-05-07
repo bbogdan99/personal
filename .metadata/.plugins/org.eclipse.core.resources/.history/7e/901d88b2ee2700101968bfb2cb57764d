@@ -1,0 +1,564 @@
+package Matrix;
+
+import newproject.Vertex;
+
+public class Matrix4 {
+	private double[] values;
+	
+	public Matrix4()
+	{
+		this.values = new double[16];
+		for (int i=0; i<16; i++) values[i] = (i%5 == 0)?1:0;
+	}
+	public Matrix4(double[]values)
+	{
+		if (values.length != 16) throw new ArithmeticException("Nu se poate crea un obiect Matrix4 nou pentru " + getClass().getName() + " deoarece argumentul are size !=16\n");
+		this.values = new double[16];
+		for (int i=0; i<16; i++) this.values[i] = values[i];
+	}
+	public Matrix4(double tx, double ty, double tz, double xang, double yang, double zang, double scx, double scy, double scz)
+	{
+		this.values = new double[16];
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		values[0]  = scx * (cz * cy);
+		values[1]  = scx * (cz * sy * sx - sz * cx);
+		values[2]  = scx * (cz * sy * cx + sz * sx);
+		values[3]  = 0;
+
+		values[4]  = scy * (sz * cy);
+		values[5]  = scy * (sz * sy * sx + cz * cx);
+		values[6]  = scy * (sz * sy * cx - cz * sx);
+		values[7]  = 0;
+
+		values[8]  = scz * (-sy);
+		values[9]  = scz * (cy * sx);
+		values[10] = scz * (cy * cx);
+		values[11] = 0;
+
+		values[12] = tx;
+		values[13] = ty;
+		values[14] = tz;
+		values[15] = 1;
+	}
+	public Matrix4(double tx, double ty, double tz, double xang, double yang, double zang)
+	{
+		this.values = new double[16];
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		values[0] = cz*cy;
+		values[1] = cz*sx*sy - sz*cx;
+		values[2] = cz*cx*sy + sz*sx;
+		values[3] = 0;
+		
+		values[4] = sz*cy;
+		values[5] = sz*sx*sy + cz*cx;
+		values[6] = sz*cx*sy - cz*sx;
+		values[7] = 0;
+		
+		values[8] = -sy;
+		values[9] = cy*sx;
+		values[10] = cy*cx;
+		values[11] = 0;
+		
+		values[12] = tx;
+		values[13] = ty;
+		values[14] = tz;
+		values[15] = 1;
+	}
+	public Matrix4(double tx, double ty, double tz)
+	{
+		this.values = new double[16];
+		for (int i = 0; i<12; i++)
+			values[i] = (i%5 == 0)? 1:0;
+		values[12] = tx;
+		values[13] = ty;
+		values[14] = tz;
+		values[15] = 1;
+	}
+	public Matrix4(double far, double near, double angle, double aspect)
+	{
+		double ft = 1.0/Math.tan(Math.toRadians(angle/2.0));
+		this.values = new double[16];
+		values[0] = ft/aspect;
+		values[1] = 0;
+		values[2] = 0;
+		values[3] = 0;
+		
+		values[4] = 0;
+		values[5] = ft;
+		values[6] = 0;
+		values[7] = 0;
+		
+		values[8] = 0;
+		values[9] = 0;
+		values[10] = (far + near) / (near - far);
+		values[11] = (2 * far * near) / (near - far);
+		
+		values[12] = 0;
+		values[13] = 0;
+		values[14] = -1;
+		values[15] = 0;
+	}
+	
+	public double[] decomposeTRS()
+	{
+		double[] result = new double[9];
+		result[0] = values[12];
+		result[1] = values[13];
+		result[2] = values[14];
+		
+		result[3] = Math.sqrt(values[0] * values[0] + values[1] * values[1] + values[2] * values[2]);
+		result[4] = Math.sqrt(values[4] * values[4] + values[5] * values[5] + values[6] * values[6]);
+		result[5] = Math.sqrt(values[8] * values[8] + values[9] * values[9] + values[10] * values[10]);
+		
+		result[7] = -1.0*Math.toDegrees(Math.asin(values[8]/ result[5]));
+		result[8] = Math.toDegrees(Math.atan2(values[4]/result[4], values[0]/result[3]));
+		result[6] = Math.toDegrees(Math.atan2(values[9], values[10]));
+		//result[6] = Math.toDegrees(Math.atan2(values[9]/result[5], values[10]/result[5]));
+		
+		return result;
+	}
+	
+	public Matrix4 multiply(Matrix4 other)
+	{
+		double[] result = new double[16];
+		for (int row=0; row<4; row++)
+			for (int col=0; col<4; col++)
+				for (int i=0; i<4; i++)
+		result[row*4 + col] += this.getValues()[row*4 + i] * other.getValues()[i*4 + col];
+		
+		return new Matrix4(result);
+	}
+	public Matrix4 add(Matrix4 other)
+	{
+		double[] result = new double[16];
+		for (int row=0; row<4; row++)
+			for (int col=0; col<4; col++)
+				result[row*4 + col] = this.getValues()[row*4 + col]+ other.getValues()[row*4 + col];
+		
+		return new Matrix4(result);
+	}
+	public Matrix4 subtract(Matrix4 other)
+	{
+		double[] result = new double[16];
+		for (int row=0; row<4; row++)
+			for (int col=0; col<4; col++)
+				result[row*4 + col] = this.getValues()[row*4 + col] - other.getValues()[row*4 + col];
+		return new Matrix4(result);
+	}
+	public static Matrix4 identityMatrix4()
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 zeroMatrix4()
+	{
+		return new Matrix4(new double[] {
+				0, 0, 0, 0,
+				0, 0, 0, 0,
+				0, 0, 0, 0,
+				0, 0, 0, 0
+		});
+	}
+	public void rotateAroundX(double angle)
+	{
+		angle = Math.toRadians(angle);
+		Matrix4 test =  new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, Math.cos(angle), -Math.sin(angle), 0,
+				0, Math.sin(angle), Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+		
+		this.setValues(this.multiply(test).getValues());
+	}
+	public void rotateAroundY(double angle)
+	{
+		angle = Math.toRadians(angle);
+		Matrix4 test =  new Matrix4(new double[] {
+				Math.cos(angle), 0, Math.sin(angle), 0,
+				0, 1, 0, 0,
+				-Math.sin(angle), 0, Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+		
+		this.setValues(this.multiply(test).getValues());
+	}
+	public void rotateAroundZ(double angle)
+	{
+		angle = Math.toRadians(angle);
+		Matrix4 test = new Matrix4(new double[] {
+				Math.cos(angle), -Math.sin(angle), 0, 0,
+				Math.sin(angle), Math.cos(angle), 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		});
+		
+		this.setValues(this.multiply(test).getValues());
+	}
+
+	public Vertex transform(Vertex in)
+	{
+		return new Vertex(
+				in.getX()*getValues()[0] + in.getY()*getValues()[4] + in.getZ()*getValues()[8] + in.getW()*getValues()[12],
+				in.getX()*getValues()[1] + in.getY()*getValues()[5] + in.getZ()*getValues()[9] + in.getW()*getValues()[13],
+				in.getX()*getValues()[2] + in.getY()*getValues()[6] + in.getZ()*getValues()[10] + in.getW()*getValues()[14],
+				in.getX()*getValues()[3] + in.getY()*getValues()[7] + in.getZ()*getValues()[11] + in.getW()*getValues()[15]
+				);
+	}
+	private double getW(Vertex in)
+	{
+		double[] m = getValues(); // 4x4 matrix, row-major order
+	    return in.getX() * m[12] + in.getY() * m[13] + in.getZ() * m[14] + in.getW()* m[15];
+		//return in.getX()*getValues()[3] + in.getY()*getValues()[7] + in.getZ()*getValues()[11] + getValues()[15];
+	}
+	public static Matrix4 TRS(double tx, double ty, double tz, double xang, double yang, double zang, double scx, double scy, double scz)
+	{
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		double[] matrix = {
+			    scx * cz*cy,                     cz*sx*sy - sz*cx,      cz*cx*sy + sz*sx,     0,
+			    sz*cy,                     scy * (sz*sx*sy + cz*cx),      sz*cx*sy - cz*sx,     0,
+			    -sy,                       cy*sx,                 scz * cy*cx,                0,
+			    tx,                        ty,                    tz,                   1
+			};
+		
+		return new Matrix4(matrix);
+	}
+	
+	
+	public static Matrix4 TR(double tx, double ty, double tz, double xang, double yang, double zang)
+	{
+		double cx = Math.cos(Math.toRadians(xang));
+		double sx = Math.sin(Math.toRadians(xang));
+		
+		double cy = Math.cos(Math.toRadians(yang));
+		double sy = Math.sin(Math.toRadians(yang));
+		
+		double cz = Math.cos(Math.toRadians(zang));
+		double sz = Math.sin(Math.toRadians(zang));
+		
+		/*double[] results2 = {
+				cz, -sz, 0, 0,
+				sz, cz, 0, 0,
+				0, 0, 1, 0,
+				tx, ty, tz, 1
+		}; //T * Rz
+		
+		double[] results3 = {
+				cz*cy, sz*cy, -sy, 0,
+				-sz, cz, 0, 0,
+				cz*sy, sz*sy, cy, 0,
+				tx, ty, tz, 1
+		}; T* Rz * Ry */
+		
+		double[] matrix = {
+			    cz*cy,                     cz*sx*sy - sz*cx,      cz*cx*sy + sz*sx,     0,
+			    sz*cy,                     sz*sx*sy + cz*cx,      sz*cx*sy - cz*sx,     0,
+			    -sy,                       cy*sx,                 cy*cx,                0,
+			    tx,                        ty,                    tz,                   1
+			};
+		
+		return new Matrix4(matrix);
+	}
+	
+	public static Matrix4 rotateAroundXMatrix(double angle)
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, Math.cos(angle), -Math.sin(angle), 0,
+				0, Math.sin(angle), Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 rotateAroundYMatrix(double angle)
+	{
+		return new Matrix4(new double[] {
+				Math.cos(angle), 0, Math.sin(angle), 0,
+				0, 1, 0, 0,
+				-Math.sin(angle), 0, Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+	}
+	public static Matrix4 rotateAroundZMatrix(double angle)
+	{
+		return new Matrix4(new double[] {
+				Math.cos(angle), -Math.sin(angle), 0, 0,
+				Math.sin(angle), Math.cos(angle), 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		});
+	}
+	public void scaleX(double sx)
+	{
+		this.setValues(this.multiply(Matrix4.scale(sx,  1.0, 1.0)).getValues());
+	}
+	public void scaleY(double sy)
+	{
+		this.setValues(this.multiply( Matrix4.scale(1.0, sy, 1.0)).getValues());
+	}
+	public void scaleZ(double sz)
+	{
+		this.setValues(this.multiply( Matrix4.scale(1.0, 1.0, sz)).getValues());
+	}
+	public static Matrix4 scale(double sx, double sy, double sz)
+	{
+		return new Matrix4(new double[] {
+				sx, 0, 0, 0,
+				0, sy, 0, 0,
+				0, 0, sz, 0,
+				0, 0, 0, 1
+		});
+	}
+	
+	public void translateX(double tx)
+	{
+		this.getValues()[12] += this.getValues()[12] + tx;
+	}
+	public void translateY(double ty)
+	{
+		this.getValues()[12] += this.getValues()[13] + ty;
+		//this.setValues(this.multiply(Matrix4.translate(0.0, ty, 0.0)).getValues());
+	}
+	public void translateZ(double tz)
+	{
+		this.getValues()[12] += this.getValues()[14] + tz;
+		//this.setValues(this.multiply(Matrix4.translate(0.0, 0.0, tz)).getValues());
+	}
+	
+	public static Matrix4 translate(double tx, double ty, double tz)
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				tx, ty, tz, 1
+		});
+	}
+	public void shearXDirection(double sy, double sz)
+	{
+		this.setValues(this.multiply(new Matrix4(new double[] {
+				1, sy, sz, 0,
+				0, 1, 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		})).getValues());
+	}
+	public void shearYDirection(double sx, double sz)
+	{
+		this.setValues(this.multiply(new Matrix4(new double[] {
+				1, 0, 0, 0,
+				sx, 1, sz, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		})).getValues());
+	}
+	public void shearZDirection(double sx, double sy)
+	{
+		this.setValues(this.multiply(new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				sx, sy, 1, 0,
+				0, 0, 0, 1
+		})).getValues());
+	}
+	public void reflect(int axis)
+	{
+		switch (axis)
+		{
+		case 1:
+			this.setValues(this.multiply(Matrix4.scale(-1.0, 1.0, 1.0)).getValues());
+			break;
+		case 2:
+			this.setValues(this.multiply(Matrix4.scale(1.0, -1.0, 1.0)).getValues());
+			break;
+		case 3:
+			this.setValues(this.multiply(Matrix4.scale(1.0, 1.0, -1.0)).getValues());
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public static Matrix4 orthographicPerspectiveMatrix(double f, double n)
+	{
+		return new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, 1, 0, 0,
+				0, 0, -2.0/(f-n), -(f+n)/(f-n),
+				0, 0, 0, 1
+				
+		});
+	}
+	public static Matrix4 parallelPerspectiveMatrix(double f, double n, double angle, double width, double height)
+	{
+		return new Matrix4(new double[] {
+				2.0/width, 0, 0, 0,
+				0, 2.0/height, 0, 0,
+				0, 0, -2.0/(f-n), 0,
+				0, 0, 0, 1
+		});
+	}
+	
+	public static Matrix4 perspectiveMatrix(double f, double n, double angle,
+			double aspect)
+	{
+		double ft = 1.0/Math.tan(angle/2.0);
+		return new Matrix4(new double[] {
+				
+		ft / aspect, 0,  0, 0,
+        0, ft,  0, 0,
+        0, 0, (f + n) / (n - f), (2 * f * n) / (n - f),
+        0, 0, -1, 0,
+		});
+	}
+	
+	public Matrix4 transpose()
+	{
+		double[] result = new double[16];
+		for (int row = 0; row < 4; row++)
+			for (int col = 0; col < 4; col++)
+				result[row * 4 + col] = this.getValues()[col * 4 + row];
+		
+		return new Matrix4(result);
+	}
+	
+	public Matrix4 inverse()
+	{
+		double[] result = new double[16];
+		double det = this.determinant();
+		if (det == 0)  throw new ArithmeticException("Nu E inverse() pt " + this.getClass().getName());
+		for (int row = 0; row<4; row++)
+			for (int col =0; col <4; col++)
+				result[col*4 + row] = ((row+col)%2==0? 1:-1) * this.determinantM3(row, col) / det;
+		
+		return new Matrix4(result);
+	}
+	private double determinantM3(int row, int col)
+	{
+		double[] M = new double[9];
+		int pos = 0;
+		for (int i=0; i<4; i++)
+			for (int j=0; j<4; j++)
+				if (i==row || j == col) continue;
+				else {
+					M[pos] = getValues()[i*4+j];
+					pos++;
+				}
+		
+		return M[0*3 + 0] * M[1*3 + 1] * M[2*3 + 2] 
+		+ M[0*3 + 1] * M[1*3 + 2] * M[2*3 + 0]
+		+ M[0*3 + 2] * M[1*3 + 0] * M[2*3 + 1]
+		- M[0*3 + 2] * M[1*3 + 1] * M[2*3 + 0]
+		- M[0*3 + 0] * M[1*3 + 2] * M[2*3 + 1]
+		- M[0*3 + 1] * M[1*3 + 0] * M[2*3 + 2]; 
+	}
+	
+	public double determinant()
+	{
+		double A11 = getValues()[0*4 + 0];
+		double A12 = getValues()[0*4 + 1];
+		double A13 = getValues()[0*4 + 2];
+		double A14 = getValues()[0*4 + 3];
+		
+		double A21 = getValues()[1*4 + 0];
+		double A22 = getValues()[1*4 + 1];
+		double A23 = getValues()[1*4 + 2];
+		double A24 = getValues()[1*4 + 3];
+				
+		double A31 = getValues()[2*4 + 0];
+		double A32 = getValues()[2*4 + 1];
+		double A33 = getValues()[2*4 + 2];
+		double A34 = getValues()[2*4 + 3];
+		
+		double A41 = getValues()[3*4 + 0];
+		double A42 = getValues()[3*4 + 1];
+		double A43 = getValues()[3*4 + 2];
+		double A44 = getValues()[3*4 + 3];
+		
+		double result = 
+				  A11*A22*A33*A44 + A11*A23*A34*A42 + A11*A24*A32*A43 
+			    - A11*A24*A33*A42 - A11*A23*A32*A44 - A11*A22*A34*A43 
+				- A12*A21*A33*A44 - A13*A21*A34*A42 - A14*A21*A32*A43
+				+ A14*A21*A33*A42 + A13*A21*A32*A44 + A12*A21*A34*A43
+				+ A12*A23*A31*A44 + A13*A24*A31*A42 + A14*A22*A31*A43
+				- A14*A23*A31*A42 - A13*A22*A31*A44 - A12*A24*A31*A43
+				- A12*A23*A34*A41 - A13*A24*A32*A41 - A14*A22*A33*A41
+				+ A14*A23*A32*A41 + A13*A22*A34*A41 + A12*A24*A33*A41;
+		
+		return result;
+	}
+	public Matrix3 toMatrix3()
+	{
+		double[] result = new double[9];
+		if (getValues()[3] == 1.0)
+		{
+			return new Matrix3(new double[] {
+					getValues()[0], getValues()[1], getValues()[2],
+					getValues()[4], getValues()[5], getValues()[6],
+					getValues()[8], getValues()[9], getValues()[10]
+			});
+		}
+		else
+		{
+			for (int i=0; i<3; i++)
+				for (int j=0; j<3; j++)
+					result[i*3 + j] = getValues()[i*4 + j] / getValues()[3];
+		}
+		return new Matrix3(result);
+	}
+	
+	public boolean isEqual(Matrix4 other)
+	{
+		for (int row = 0; row < 4; row++)
+			for (int col = 0; col < 4; col++)
+				if (getValues()[row*4 + col] != other.getValues()[row*4 + col]) return false;
+		return true;
+	}
+	
+	public String toString()
+	{
+		String toReturn = "";
+		for (int row = 0; row < 4; row++)
+		{
+			String currRow = " ";
+			for (int col = 0; col < 4; col++)
+				currRow  = currRow + getValues()[row*4 + col] + " ";
+			currRow = currRow + '\n';
+			toReturn = toReturn + currRow;
+		}
+		return toReturn;
+	}
+	public double[] getValues() {
+		return values;
+	}
+	public void setValues(double[] values) {
+		this.values = values;
+	}
+}

@@ -19,7 +19,14 @@ public class Camera
 		this.yaw = yaw;
 		this.roll = roll;
 		this.pitch = pitch;
-		this.ViewMatrix = new Matrix4(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		
+		//this.ViewMatrix = new Matrix4(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		
+		Matrix4 Tnegated = new Matrix4(-pos.x, -pos.y, -pos.z);
+		Matrix4 Rtransp = new Matrix4(0, 0, 0, pitch, yaw, roll);
+		Rtransp = Rtransp.transpose();
+		this.ViewMatrix = Tnegated.multiply(Rtransp);
+		
 		this.ProjectionMatrix = new Matrix4();
 		
 		far = 1000.0;
@@ -45,7 +52,15 @@ public class Camera
 		this.yaw = yaw;
 		this.roll = roll;
 		this.pitch = pitch;
-		this.ViewMatrix = new Matrix4(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		
+		//this.ViewMatrix = new Matrix4(pos.x, pos.y, pos.z, pitch, yaw, roll);
+		
+		Matrix4 Tnegated = new Matrix4(-pos.x, -pos.y, -pos.z);
+		Matrix4 Rtransp = new Matrix4(0, 0, 0, pitch, yaw, roll);
+		Rtransp = Rtransp.transpose();
+		this.ViewMatrix = //Rtransp.multiply(Tnegated);
+		Tnegated.multiply(Rtransp);
+		
 		this.ProjectionMatrix = new Matrix4(far, near, angle, aspect);
 		
 		this.far = far;
@@ -89,7 +104,14 @@ public class Camera
 		pitch = xangle;
 		yaw = yangle;
 		roll = zangle;
-		ViewMatrix = new Matrix4(tx, ty, tz, xangle, yangle, zangle);
+		
+		//ViewMatrix = new Matrix4(tx, ty, tz, xangle, yangle, zangle);
+		
+		Matrix4 Tnegated = new Matrix4(-tx, -ty, -tz);
+		Matrix4 Rtransp = new Matrix4(0, 0, 0, xangle, yangle, zangle);
+		Rtransp = Rtransp.transpose();
+		this.ViewMatrix = //Rtransp.multiply(Tnegated);
+		Tnegated.multiply(Rtransp);
 	}
 	public void setProjectionMatrix(double far, double near, double angle, double aspect)
 	{

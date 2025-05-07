@@ -26,7 +26,7 @@ public class ClippingEngine {
         }
     }
 
-    public static ArrayList<Triangle> ClipScene(Scene scene, Plane[] planes) 
+    public static Scene ClipScene(Scene scene, Plane[] planes) 
     {
         ArrayList<Object3D> clippedObjects = new ArrayList<>();
         for (Object3D obj : scene.getObjects()) 
@@ -35,18 +35,18 @@ public class ClippingEngine {
             if (clippedObj != null) clippedObjects.add(clippedObj);
         }
         
-        ArrayList<Triangle>clippedTriangles = new ArrayList<>();
-        for (Object3D obj: clippedObjects)
-        	for (Triangle t: obj.getTriangles())
-        	{
-        		clippedTriangles.add(t);
-        	}
-        return clippedTriangles;
+        //ArrayList<Triangle>clippedTriangles = new ArrayList<>();
+        //for (Object3D obj: clippedObjects)
+        //	for (Triangle t: obj.getTriangles())
+        //	{
+        //		clippedTriangles.add(t);
+        //	}
+        //return clippedTriangles;
         
-        /*Scene clippedScene = new Scene(scene.getCam());
+        Scene clippedScene = new Scene(scene.getCam());
         clippedScene.setIA(scene.getIa());
         for (Object3D obj : clippedObjects) clippedScene.addObject(obj);
-        return clippedScene;*/
+        return clippedScene;
     }
 
     private static Object3D ClipObject(Object3D obj, Plane[] planes) 
@@ -97,7 +97,7 @@ public class ClippingEngine {
             Vertex a = inside.get(0);
             Vertex b = Intersection(a, outside.get(0), plane);
             Vertex c = Intersection(a, outside.get(1), plane);
-            return List.of(new Triangle(a, b, c, tri.getColor()));
+            return List.of(new Triangle(a, b, c, tri.getColor(), tri.clampedv1, tri.clampedv2, tri.clampedv3));
         } 
         else 
         { 
@@ -106,8 +106,8 @@ public class ClippingEngine {
             Vertex p = Intersection(a, outside.get(0), plane);
             Vertex q = Intersection(b, outside.get(0), plane);
             return List.of(
-                new Triangle(a, b, p, tri.getColor()),
-                new Triangle(b, q, p, tri.getColor())
+                new Triangle(a, b, p, tri.getColor(), tri.clampedv1, tri.clampedv2, tri.clampedv3),
+                new Triangle(b, q, p, tri.getColor(), tri.clampedv1, tri.clampedv2, tri.clampedv3)
             );
         }
     }

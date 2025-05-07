@@ -29,17 +29,17 @@ public class Matrix4 {
 		double sz = Math.sin(Math.toRadians(zang));
 		
 		values[0]  = scx * (cz * cy);
-		values[1]  = scy * (cz * sy * sx - sz * cx);
-		values[2]  = scz * (cz * sy * cx + sz * sx);
+		values[1]  = scx * (cz * sy * sx - sz * cx);
+		values[2]  = scx * (cz * sy * cx + sz * sx);
 		values[3]  = 0;
 
-		values[4]  = scx * (sz * cy);
+		values[4]  = scy * (sz * cy);
 		values[5]  = scy * (sz * sy * sx + cz * cx);
-		values[6]  = scz * (sz * sy * cx - cz * sx);
+		values[6]  = scy * (sz * sy * cx - cz * sx);
 		values[7]  = 0;
 
-		values[8]  = scx * (-sy);
-		values[9]  = scy * (cy * sx);
+		values[8]  = scz * (-sy);
+		values[9]  = scz * (cy * sx);
 		values[10] = scz * (cy * cx);
 		values[11] = 0;
 
@@ -126,10 +126,10 @@ public class Matrix4 {
 		result[4] = Math.sqrt(values[4] * values[4] + values[5] * values[5] + values[6] * values[6]);
 		result[5] = Math.sqrt(values[8] * values[8] + values[9] * values[9] + values[10] * values[10]);
 		
-		result[6] = Math.asin(values[8]/ result[5]);
-		result[8] = Math.atan2(values[4]/result[4], values[0]/result[3]);
-		result[7] = Math.atan2(values[9]/result[5], values[10]/result[5]);
-		
+		result[7] = -1.0*Math.toDegrees(Math.asin(values[8]/ result[5]));
+		result[8] = Math.toDegrees(Math.atan2(values[4]/result[4], values[0]/result[3]));
+		result[6] = Math.toDegrees(Math.atan2(values[9], values[10]));
+
 		return result;
 	}
 	
@@ -180,15 +180,39 @@ public class Matrix4 {
 	}
 	public void rotateAroundX(double angle)
 	{
-		this.setValues(this.multiply(Matrix4.rotateAroundXMatrix(angle)).getValues());
+		angle = Math.toRadians(angle);
+		Matrix4 test =  new Matrix4(new double[] {
+				1, 0, 0, 0,
+				0, Math.cos(angle), -Math.sin(angle), 0,
+				0, Math.sin(angle), Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+		
+		this.setValues(this.multiply(test).getValues());
 	}
 	public void rotateAroundY(double angle)
 	{
-		this.setValues(this.multiply(Matrix4.rotateAroundYMatrix(angle)).getValues());
+		angle = Math.toRadians(angle);
+		Matrix4 test =  new Matrix4(new double[] {
+				Math.cos(angle), 0, Math.sin(angle), 0,
+				0, 1, 0, 0,
+				-Math.sin(angle), 0, Math.cos(angle), 0,
+				0, 0, 0, 1
+		});
+		
+		this.setValues(this.multiply(test).getValues());
 	}
 	public void rotateAroundZ(double angle)
 	{
-		this.setValues(this.multiply(Matrix4.rotateAroundZMatrix(angle)).getValues());
+		angle = Math.toRadians(angle);
+		Matrix4 test = new Matrix4(new double[] {
+				Math.cos(angle), -Math.sin(angle), 0, 0,
+				Math.sin(angle), Math.cos(angle), 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1
+		});
+		
+		this.setValues(this.multiply(test).getValues());
 	}
 
 	public Vertex transform(Vertex in)
@@ -314,14 +338,17 @@ public class Matrix4 {
 	
 	public void translateX(double tx)
 	{
+		//this.getValues()[12] += this.getValues()[12] + tx;
 		this.setValues(this.multiply(Matrix4.translate(tx, 0.0, 0.0)).getValues());
 	}
 	public void translateY(double ty)
 	{
+		//this.getValues()[12] += this.getValues()[13] + ty;
 		this.setValues(this.multiply(Matrix4.translate(0.0, ty, 0.0)).getValues());
 	}
 	public void translateZ(double tz)
 	{
+		//this.getValues()[12] += this.getValues()[14] + tz;
 		this.setValues(this.multiply(Matrix4.translate(0.0, 0.0, tz)).getValues());
 	}
 	
@@ -379,16 +406,17 @@ public class Matrix4 {
 		}
 	}
 	
-	public static Matrix4 orthographicPerspectiveMatrix(double f, double n)
+	public static Matrix4 parallelMatrix(double f, double n)
 	{
 		return new Matrix4(new double[] {
 				1, 0, 0, 0,
 				0, 1, 0, 0,
 				0, 0, -2.0/(f-n), -(f+n)/(f-n),
 				0, 0, 0, 1
+				
 		});
 	}
-	public static Matrix4 parallelPerspectiveMatrix(double f, double n, double angle, double width, double height)
+	public static Matrix4 orthographicMatrix(double f, double n, double width, double height)
 	{
 		return new Matrix4(new double[] {
 				2.0/width, 0, 0, 0,
@@ -401,7 +429,7 @@ public class Matrix4 {
 	public static Matrix4 perspectiveMatrix(double f, double n, double angle,
 			double aspect)
 	{
-		double ft = 1.0/Math.tan(angle/2.0);
+		double ft = 1.0/Math.tan(Math.toRadians(angle)/2.0);
 		return new Matrix4(new double[] {
 				
 		ft / aspect, 0,  0, 0,

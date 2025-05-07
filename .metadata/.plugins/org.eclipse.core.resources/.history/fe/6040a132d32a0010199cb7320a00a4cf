@@ -1,0 +1,148 @@
+package Utils;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.imageio.ImageIO;
+
+import ThreeDimensionals.Object3D;
+import newproject.Triangle;
+import newproject.Vertex;
+
+public class FileReader 
+{
+	ArrayList<String> Buffer;
+	Object3D out;
+	
+	public FileReader()
+	{
+		
+	}
+	
+	public void readFile(String path, int type)
+	{
+		switch(type)
+		{
+			case 1: //texture
+				//readFileTexture(path);
+				break;
+			case 2: //object mesh
+				readFileObject(path);
+				break;
+			default:
+				readFileDebug(path);
+				break;
+		}
+	}
+	
+	public void readFileDebug(String path)
+	{
+		try
+		{
+			Scanner reader = new Scanner(new File(path));
+			while (reader.hasNextLine()) System.out.println(reader.nextLine());
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	public void readFileTexture(String path)
+	{
+		BufferedImage image = null;
+		try 
+		{
+			image = ImageIO.read(new File(path));
+		} 
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		} 
+	}
+	public void readFileObject(String path)
+	{
+		//filereader
+		out = new Object3D();
+		ArrayList<Vertex> vertexes = new ArrayList<>();
+		ArrayList<Triangle> triangles = new ArrayList<>();
+		
+		try
+		{
+			Scanner obj = new Scanner(new File(path));
+			while (obj.hasNextLine())
+			{
+				String data = obj.nextLine();
+				if (data.length() <= 1) continue;
+				if (data.charAt(0) == 'm' || data.charAt(0) == '#') continue;
+				
+				if (data.charAt(0) == 'v' && data.charAt(1) == ' ')
+				{
+					double x, y, z, w;
+					String xC = "", yC = "", zC = "", wC = "";
+					int pos = 3;
+					for (; data.charAt(pos) != ' '; pos++) xC+=data.charAt(pos);
+					x = Double.parseDouble(xC); pos++;
+					for (; data.charAt(pos) != ' '; pos++) yC+=data.charAt(pos);
+					y = Double.parseDouble(yC); pos++;
+					for (; pos < data.length() && data.charAt(pos) != ' '; pos++) zC+=data.charAt(pos);
+					z = Double.parseDouble(zC);
+					if (pos>= data.length()) w=1.0;
+					else
+					{
+						for (; pos<data.length(); pos++) wC+=data.charAt(pos);
+						w = Double.parseDouble(wC);
+					}
+					vertexes.add(new Vertex(x,y,z,w));
+				}
+				else if (data.charAt(0) == 'f' && data.charAt(1) == ' ')
+				{
+					int A, B, C, D = -1;
+					int pos = 2;
+					String firstC =  "", secondC = "", thirdC = "", fourthC = "";
+					
+					for (; data.charAt(pos) != '/'; pos++) firstC += data.charAt(pos);
+					A = Integer.parseInt(firstC); 
+					while (data.charAt(pos) != ' ') pos++;
+					pos++;
+					
+					for (; data.charAt(pos) != '/'; pos++) secondC += data.charAt(pos);
+					B = Integer.parseInt(secondC);
+					while (data.charAt(pos) != ' ') pos++;
+					pos++;
+					
+					for (; data.charAt(pos) != '/'; pos++) thirdC += data.charAt(pos);
+					C = Integer.parseInt(thirdC);
+					while (pos < data.length() && data.charAt(pos) != ' ') pos++;
+					pos++;
+					
+					if (pos >= data.length())
+					{
+						triangles.add(new Triangle(vertexes.get(A-1), vertexes.get(B-1), vertexes.get(C-1)));
+						continue;
+					}
+					
+					for (; data.charAt(pos) != '/'; pos++) fourthC += data.charAt(pos);
+					D = Integer.parseInt(fourthC);
+					
+					triangles.add(new Triangle(vertexes.get(A-1), vertexes.get(B-1), vertexes.get(C-1)));
+					triangles.add(new Triangle(vertexes.get(A-1), vertexes.get(C-1), vertexes.get(D-1)));
+				}	
+			}
+			
+			obj.close();
+			out = new Object3D(triangles);
+			vertexes = null;
+			triangles = null;
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public Object3D getObject() {return out;}
+}

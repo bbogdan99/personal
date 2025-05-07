@@ -1,0 +1,28 @@
+package newproject;
+
+public class Material 
+{
+	private double ka, kd, ks, B;
+	public Material()
+	{
+		ka = 0.2;
+		kd = 0.7;
+		ks = 0.05;
+		B = 32.0;
+	}
+	public Material(double ka, double kd, double ks, double B)
+	{
+		this.ka = ka;
+		this.kd = kd;
+		this.ks = ks;
+		this.B = B;
+	}
+	public void setKa(double ka) {this.ka = ka;}
+	public void setKd(double kd) {this.kd = kd;}
+	public void setKs(double ks) {this.ks = ks;}
+	public void setB(double B) {this.B = B;}
+	public double getKa() {return ka;}
+	public double getKs() {return ks;}
+	public double getKd() {return kd;}
+	public double getB() {return B;}
+}
