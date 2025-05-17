@@ -16,6 +16,8 @@ Features:
 
 -a few other smaller things (ie a naive implementation of shading using the calculated barycentric coordonates, utils for interpolating and drawing lines etc, support for 3x3 matrix operations - meaning the object rendered is locked in place and not translate)
 
+-rudimentary file loading
+
 Concepts covered:
 
 -3D to 2D screen mapping
@@ -36,10 +38,8 @@ Features I hope to add in the future:
 
 -phong shading, (and other types of shading)
 
--loading from external files
-
 -interactive menu to change object attributes (ie position, size, or just setting changes ie adding an epsilon for precision calcuations)
 
 -more custom classes for 3d objects (ie spheres)
 
-![CubeExample](https://github.com/user-attachments/assets/4c058bba-f463-41da-bf76-2b8d36a31d87)
+![Teapot](https://github.com/user-attachments/assets/11d41fcb-88d8-4c1c-93ca-a7c9ca9b42b3)
