@@ -18,6 +18,8 @@ Features:
 
 -rudimentary file loading
 
+-UI
+
 Concepts covered:
 
 -3D to 2D screen mapping
@@ -34,11 +36,9 @@ Features I hope to add in the future:
 
 -textures
 
--better camera control (rotating the camera towards desired angle etc)
-
 -phong shading, (and other types of shading)
 
--interactive menu to change object attributes (ie position, size, or just setting changes ie adding an epsilon for precision calcuations)
+-demos
 
 -more custom classes for 3d objects (ie spheres)
 
