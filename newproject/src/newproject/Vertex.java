@@ -2,27 +2,30 @@ package newproject;
 
 public class Vertex {
 	double x,y,z, w;
+	double xn, yn, zn;
+	double u, v;
+	
 	public Vertex(double x, double y, double z, double w)
 	{
 		this.x = x;
 		this.y = y;
 		this.z = z;
 		this.w = w;
+		xn = yn = zn = 0.0;
 	}
 	
-	public Vertex(double x, double y, double z)
+	public Vertex(double x, double y, double z) {this(x,y,z,1.0);}
+	
+	public Vertex(Vertex v1) 
 	{
-		this.x = x;
-		this.y = y;
-		this.z = z;
-		w = 1.0;
-	}
-	
-	public Vertex(Vertex v1) {
 		this.x = v1.x;
 		this.y = v1.y;
 		this.z = v1.z;
 		this.w = v1.w;
+		
+		this.xn = v1.xn;
+		this.yn = v1.yn;
+		this.zn = v1.zn;
 	}
 
 	public Vertex subtract(Vertex other)
@@ -44,10 +47,23 @@ public class Vertex {
 		return new Vertex(x/length, y/length, z/length);
 	}
 	
+	public Vertex getNormal()
+	{
+		return new Vertex(xn,yn,zn, 0.0);
+	}
+	public void setNormal(double xn, double yn, double zn)
+	{
+		this.xn = xn;
+		this.yn = yn;
+		this.zn = zn;
+	}
+	
 	public double getX() {return x;}
 	public double getY() {return y;}
 	public double getZ() {return z;}
 	public double getW() {return w;}
+	public double getU() {return u;}
+	public double getV() {return v;}
 	public void normalize()
 	{
 		if (w==0) 
@@ -68,4 +84,6 @@ public class Vertex {
 	public void setY(double Y) {this.y =Y;}
 	public void setZ(double Z) {this.z =Z;}
 	public void setW(double W) {this.w =W;}
+	public void setU(double U) {this.u =U;}
+	public void setV(double V) {this.v =V;}
 }

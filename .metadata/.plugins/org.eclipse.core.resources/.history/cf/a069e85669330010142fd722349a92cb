@@ -1,0 +1,122 @@
+package UIManager;
+
+import java.awt.GraphicsEnvironment;
+import java.awt.GridLayout;
+
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+
+import FirstPersonControl.KeyEventManager;
+import FirstPersonControl.MouseControlManager;
+import World.Scene;
+
+public class WorldOptions extends JPanel
+{
+	Scene scene;
+	JPanel renderPanel;
+	KeyEventManager km;
+	MouseControlManager mm;
+	
+	private JLabel cameraPosLabel;
+	private JLabel cameraRotLabel;
+	private JLabel projTypeLabel;
+	
+	ObjectOptions objOptions;
+	
+	public WorldOptions(Scene scene, KeyEventManager km, MouseControlManager mm)
+	{
+		this.scene = scene;
+		this.km = km;
+		this.mm = mm;
+		
+		showWorld();
+		
+		setFocusable(true);
+	}
+	
+	public void showWorld()
+	{
+		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		var worldView = new JLabel("World View");
+		var cameraLabel = new JLabel("Camera stats:");
+		
+		cameraPosLabel = new JLabel();
+		String pX = String.valueOf(scene.getCam().getX());
+		String pY = String.valueOf(scene.getCam().getY());
+		String pZ = String.valueOf(scene.getCam().getZ());
+		cameraPosLabel.setText("Pos: X:" + pX + " Y:" + pY + " Z:" + pZ);
+		
+		cameraRotLabel = new JLabel();
+		String rX = String.valueOf(scene.getCam().getPitch());
+		String rY = String.valueOf(scene.getCam().getYaw());
+		String rZ = String.valueOf(scene.getCam().getRoll());
+		cameraRotLabel.setText("Rot: X:" + rX + " Y:" + rY + " Z:" + rZ);
+		
+		projTypeLabel = new JLabel();
+		int type = scene.getCam().getProjType();
+		String proj = "";
+		switch (type)
+		{
+		case 1:
+			proj = "1p perspective";
+			break;
+		case 2:
+			proj = "2p perspective";
+			break;
+		case 3:
+			proj = "3p perspective";
+			break;
+		default:
+			proj = "Undefined";
+			break;
+		}
+		projTypeLabel.setText("Projection type: " + proj);
+		
+		add(worldView);
+		add(cameraLabel);
+		
+		add(cameraPosLabel);
+		add(cameraRotLabel);
+		add(projTypeLabel);
+
+		/*var objList = new JList(scene.getObjects().toArray());
+		objList.addListSelectionListener(e->{
+			if (!e.getValueIsAdjusting())
+			{
+				
+			}
+		});*/
+	}
+
+	public void updateRelevant()
+	{
+		if (scene.getCam() != null)
+		{
+			if (cameraPosLabel != null)
+				cameraPosLabel.setText("Pos: X:" + scene.getCam().getX() + 
+						" Y:" + scene.getCam().getY() + 
+						" Z:" + scene.getCam().getZ());
+			if (cameraRotLabel != null)
+				cameraRotLabel.setText("Rot: X:" + scene.getCam().getPitch() +
+						" Y:" + scene.getCam().getYaw() +
+						" Z:" + scene.getCam().getRoll());
+			if (projTypeLabel != null)
+			{
+				switch(scene.getCam().getProjType())
+				{
+				case 1:
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				default:
+					break;
+				}
+			}
+		}
+	}
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+}

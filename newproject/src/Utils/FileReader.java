@@ -14,12 +14,13 @@ import newproject.Vertex;
 
 public class FileReader 
 {
-	ArrayList<String> Buffer;
-	Object3D out;
+	private BufferedImage image;
+	private Object3D out;
 	
 	public FileReader()
 	{
-		
+		image = null;
+		out = new Object3D();
 	}
 	
 	public void readFile(String path, int type)
@@ -27,7 +28,7 @@ public class FileReader
 		switch(type)
 		{
 			case 1: //texture
-				//readFileTexture(path);
+				readFileTexture(path);
 				break;
 			case 2: //object mesh
 				readFileObject(path);
@@ -52,7 +53,6 @@ public class FileReader
 	}
 	public void readFileTexture(String path)
 	{
-		BufferedImage image = null;
 		try 
 		{
 			image = ImageIO.read(new File(path));
@@ -64,9 +64,10 @@ public class FileReader
 	}
 	public void readFileObject(String path)
 	{
-		//filereader
-		out = new Object3D();
 		ArrayList<Vertex> vertexes = new ArrayList<>();
+		ArrayList<Triplet<Double, Double, Double>>vertexNormals = new ArrayList<>();
+		ArrayList<Triplet<Double, Double, Double>>vertexTexels = new ArrayList<>();
+		
 		ArrayList<Triangle> triangles = new ArrayList<>();
 		
 		try
@@ -75,20 +76,25 @@ public class FileReader
 			while (obj.hasNextLine())
 			{
 				String data = obj.nextLine();
-				if (data.length() <= 1) continue;
-				if (data.charAt(0) == 'm' || data.charAt(0) == '#') continue;
+				if (data.length() <= 2) continue;
+				if (data.charAt(0) == '#') continue;
 				
 				if (data.charAt(0) == 'v' && data.charAt(1) == ' ')
 				{
 					double x, y, z, w;
 					String xC = "", yC = "", zC = "", wC = "";
 					int pos = 2;
+					while ((data.charAt(pos) < '0' || data.charAt(pos) > '9') && (data.charAt(pos) != '-')) pos++;
+					
 					for (; data.charAt(pos) != ' '; pos++) xC+=data.charAt(pos);
 					x = Double.parseDouble(xC); pos++;
+					
 					for (; data.charAt(pos) != ' '; pos++) yC+=data.charAt(pos);
 					y = Double.parseDouble(yC); pos++;
+					
 					for (; pos < data.length() && data.charAt(pos) != ' '; pos++) zC+=data.charAt(pos);
 					z = Double.parseDouble(zC);
+					
 					if (pos>= data.length()) w=1.0;
 					else
 					{
@@ -96,45 +102,117 @@ public class FileReader
 						w = Double.parseDouble(wC);
 					}
 					vertexes.add(new Vertex(x,y,z,w));
+					//System.out.println(x + " " + y + " " + z);
+				}
+				else if (data.charAt(0) == 'v' && data.charAt(1) == 'n')
+				{
+					double xn, yn, zn;
+					String xnC = "", ynC = "", znC = "";
+					int pos = 2;
+					while ((data.charAt(pos) < '0' || data.charAt(pos) > '9') && (data.charAt(pos) != '-')) pos++;
+					
+					for (; data.charAt(pos) != ' '; pos++) xnC+=data.charAt(pos);
+					xn = Double.parseDouble(xnC); pos++;
+					
+					for (; data.charAt(pos) != ' '; pos++) ynC+=data.charAt(pos);
+					yn = Double.parseDouble(ynC); pos++;
+					
+					for (; pos < data.length(); pos++) znC+=data.charAt(pos);
+					zn = Double.parseDouble(znC);
+					
+					vertexNormals.add(new Triplet<Double, Double, Double>(xn, yn, zn));
+				}
+				else if (data.charAt(0) == 'v' && data.charAt(1) == 't')
+				{
+					double xt, yt, zt;
+					String xtC = "", ytC = "", ztC = "";
+					int pos = 2;
+					while ((data.charAt(pos) < '0' || data.charAt(pos) > '9') && (data.charAt(pos) != '-')) pos++;
+					
+					for (; data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) xtC += data.charAt(pos);
+					xt = Double.parseDouble(xtC); pos++;
+					
+					for (; data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) ytC += data.charAt(pos);
+					yt = Double.parseDouble(ytC); pos++;
+					
+					for (; pos < data.length(); pos++) ztC += data.charAt(pos);
+					zt = Double.parseDouble(ztC);
+					
+					vertexTexels.add(new Triplet<Double, Double, Double>(xt, yt, zt));
 				}
 				else if (data.charAt(0) == 'f' && data.charAt(1) == ' ')
 				{
-					int A, B, C, D = -1;
+					int Av = 0, Bv = 0, Cv = 0, Dv = 0;
+					int Avt = 0, Bvt = 0, Cvt = 0, Dvt = 0;
+					int Avn = 0, Bvn = 0, Cvn = 0, Dvn = 0;
+					
+					int[] temp = new int[4];
+					
 					int pos = 2;
-					String firstC =  "", secondC = "", thirdC = "", fourthC = "";
 					
-					for (; data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) firstC += data.charAt(pos);
-					A = Integer.parseInt(firstC); 
-					while (data.charAt(pos) != ' ') pos++;
-					pos++;
+					temp = faceObjRead(data, pos);
+					Av = temp[0]; Avt = temp[1]; Avn = temp[2]; pos = temp[3];
 					
-					for (; data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) secondC += data.charAt(pos);
-					B = Integer.parseInt(secondC);
-					while (data.charAt(pos) != ' ') pos++;
-					pos++;
-					
-					for (; pos < data.length() && data.charAt(pos) != '/' && data.charAt(pos) != ' '; pos++) thirdC += data.charAt(pos);
-					C = Integer.parseInt(thirdC);
-					while (pos < data.length() && data.charAt(pos) != ' ') pos++;
-					pos++;
-					
-					if (pos >= data.length())
+					if (pos >= data.length()) 
 					{
-						triangles.add(new Triangle(vertexes.get(A-1), vertexes.get(B-1), vertexes.get(C-1)));
+						triangles.add(new Triangle(vertexes.get(Av-1), vertexes.get(Avt-1), vertexes.get(Avn-1)));
+						//System.out.println(Av + " " + Avt + " " + Avn);
 						continue;
 					}
 					
-					for (; data.charAt(pos) != '/' && data.charAt(pos) != '/'; pos++) fourthC += data.charAt(pos);
-					D = Integer.parseInt(fourthC);
+					vertexes.get(Av-1).setU( vertexTexels.get(Avt-1).getFirst()  );
+					vertexes.get(Av-1).setV( vertexTexels.get(Avt-1).getSecond() );
 					
-					triangles.add(new Triangle(vertexes.get(A-1), vertexes.get(B-1), vertexes.get(C-1)));
-					triangles.add(new Triangle(vertexes.get(A-1), vertexes.get(C-1), vertexes.get(D-1)));
+					vertexes.get(Av-1).setNormal( vertexNormals.get(Avn-1).getFirst(), 
+							vertexNormals.get(Avn-1).getSecond(), 
+							vertexNormals.get(Avn-1).getThird());
+					
+					temp = faceObjRead(data, pos);
+					Bv = temp[0]; Bvt = temp[1]; Bvn = temp[2]; pos = temp[3];
+					
+					vertexes.get(Bv-1).setU( vertexTexels.get(Bvt-1).getFirst()  );
+					vertexes.get(Bv-1).setV( vertexTexels.get(Bvt-1).getSecond() );
+					
+					vertexes.get(Bv-1).setNormal( vertexNormals.get(Bvn-1).getFirst(), 
+							vertexNormals.get(Bvn-1).getSecond(), 
+							vertexNormals.get(Bvn-1).getThird());
+					
+					temp = faceObjRead(data, pos);
+					Cv = temp[0]; Cvt = temp[1]; Cvn = temp[2]; pos = temp[3];
+					
+					vertexes.get(Cv-1).setU( vertexTexels.get(Cvt-1).getFirst()  );
+					vertexes.get(Cv-1).setV( vertexTexels.get(Cvt-1).getSecond() );
+					
+					vertexes.get(Cv-1).setNormal( vertexNormals.get(Cvn-1).getFirst(), 
+							vertexNormals.get(Cvn-1).getSecond(), 
+							vertexNormals.get(Cvn-1).getThird());
+					
+					if (pos >= data.length()) 
+					{
+						triangles.add(new Triangle(vertexes.get(Av-1), vertexes.get(Bv-1), vertexes.get(Cv-1)));
+						continue;
+					}
+					
+					temp = faceObjRead(data, pos);
+					Dv = temp[0]; Dvt = temp[1]; Dvn = temp[2]; 
+					
+					vertexes.get(Dv-1).setU( vertexTexels.get(Dvt-1).getFirst()  );
+					vertexes.get(Dv-1).setV( vertexTexels.get(Dvt-1).getSecond() );
+					
+					vertexes.get(Dv-1).setNormal( vertexNormals.get(Dvn-1).getFirst(), 
+							vertexNormals.get(Dvn-1).getSecond(), 
+							vertexNormals.get(Dvn-1).getThird());
+					
+					triangles.add(new Triangle(vertexes.get(Av-1), vertexes.get(Bv-1), vertexes.get(Cv-1)));
+					triangles.add(new Triangle(vertexes.get(Av-1), vertexes.get(Cv-1), vertexes.get(Dv-1)));
 				}	
 			}
 			
 			obj.close();
 			out = new Object3D(triangles);
 			vertexes = null;
+			vertexNormals = null;
+			vertexTexels = null;
 			triangles = null;
 		}
 		catch (IOException e)
@@ -143,6 +221,61 @@ public class FileReader
 		}
 	}
 	
+	private int[] faceObjRead(String data, int pos)
+	{
+		int v, vt, vn;
+		
+		String vC = "", vtC = "", vnC = "";
+		while (pos < data.length() && (data.charAt(pos) <'0' || data.charAt(pos) > '9')) pos++;
+		
+		for (; data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) vC += data.charAt(pos);
+		v = Integer.parseInt(vC);
+		while (data.charAt(pos) <'0' || data.charAt(pos) > '9') pos++;
+		
+		for (; data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) vtC += data.charAt(pos);
+		vt = Integer.parseInt(vtC);
+		while (data.charAt(pos) <'0' || data.charAt(pos) > '9') pos++;
+
+		for (; pos < data.length() && data.charAt(pos) != ' ' && data.charAt(pos) != '/'; pos++) vnC += data.charAt(pos);
+		vn = Integer.parseInt(vnC);
+		while (pos < data.length() && (data.charAt(pos) <'0' || data.charAt(pos) > '9')) pos++;
+		
+		int copy = pos;
+		
+		return new int[] {v,vt,vn, copy};
+	}
 	
 	public Object3D getObject() {return out;}
+	public BufferedImage getImage() {return image;}
+}
+
+class Triplet<A, B, C>
+{
+	private final A xn;
+	private final B yn;
+	private final C zn;
+	
+	public Triplet(A xn, B yn, C zn) {this.xn = xn; this.yn = yn; this.zn = zn;}
+	public A getFirst() {return xn;}
+	public B getSecond() {return yn;}
+	public C getThird() {return zn;}
+}
+class Quartet<A, B, C, D>
+{
+	private final A first;
+	private final B second;
+	private final C third;
+	private final D fourth;
+	
+	public Quartet(A first, B second, C third, D fourth) 
+	{
+		this.first = first;
+		this.second = second;
+		this.third = third;
+		this.fourth = fourth;
+	}
+	public A getFirst() {return first;}
+	public B getSecond() {return second;}
+	public C getThird() {return third;}
+	public D getFourth() {return fourth;}
 }

@@ -6770,3 +6770,4383 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-07 06:25:00.665 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-07 06:25:09.989
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-07 06:25:09.989
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-07 06:25:09.989
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-07 06:25:22.427
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-07 07:53:43.974 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-07 07:53:50.406
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-07 07:53:50.406
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-07 07:53:50.406
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-07 07:53:53.474
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-07 19:51:25.173 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-07 19:52:24.733
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-07 19:52:24.733
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-07 19:52:24.733
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-07 19:52:31.469
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-08 09:24:57.253 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-08 09:27:11.599
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-08 09:27:11.599
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-08 09:27:11.599
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-08 09:28:18.244
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-09 00:15:43.666 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-09 01:31:04.783
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-09 01:31:04.783
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-09 01:31:04.783
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-09 01:31:12.548
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-09 03:15:45.283 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-09 03:16:31.442
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-09 03:16:31.442
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-09 03:16:31.442
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-09 03:16:35.643
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-10 02:52:07.820 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-10 02:54:37.496
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-10 02:54:37.496
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-10 02:54:37.496
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-10 02:54:42.336
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-11 10:20:50.218 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-11 10:22:34.868
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-11 10:22:34.868
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-11 10:22:34.868
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-11 10:22:39.270
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-11 12:49:05.404 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-11 12:50:10.449
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-11 12:50:10.449
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-11 12:50:10.449
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-11 12:50:14.297
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-12 11:28:04.760 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-12 11:28:36.712
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 11:28:36.712
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 11:28:36.712
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-12 11:28:42.729
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-12 12:16:39.252 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-12 12:16:45.297
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 12:16:45.297
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 12:16:45.297
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-12 12:16:48.463
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-12 12:17:31.854 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-12 12:17:37.181
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 12:17:37.181
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 12:17:37.181
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-12 12:17:40.265
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.discovery 4 0 2025-05-12 12:27:47.031
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to https://marketplace.eclipse.org/api/p/search/apachesolr_search/.obj?client=org.eclipse.epp.mpc.core&os=win32&platform.version=4.25: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:195)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:501)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:413)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.lambda$0(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:331)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:539)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$0(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.runDiscoveryOperation(MarketplaceCatalog.java:529)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:488)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.lambda$6(MarketplaceViewer.java:704)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:109)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	... 15 more
+	Suppressed: java.io.FileNotFoundException: https://marketplace.eclipse.org/api/p/search/apachesolr_search/.obj?client=org.eclipse.epp.mpc.core&os=win32&platform.version=4.25
+		at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:298)
+		at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:511)
+		at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:465)
+		at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:294)
+		at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:181)
+		at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:269)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:37)
+		at org.eclipse.epp.internal.mpc.core.util.TransportFactory.lambda$0(TransportFactory.java:421)
+		at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:130)
+		at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:91)
+		... 16 more
+Caused by: org.apache.hc.client5.http.HttpResponseException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:128)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	... 17 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2025-05-12 12:27:47.031
+!MESSAGE Cannot complete request to https://marketplace.eclipse.org/api/p/search/apachesolr_search/.obj?client=org.eclipse.epp.mpc.core&os=win32&platform.version=4.25: status code: 403, reason phrase: Forbidden
+!STACK 1
+org.eclipse.core.runtime.CoreException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:109)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:501)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:413)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.lambda$0(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:331)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:539)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$0(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.runDiscoveryOperation(MarketplaceCatalog.java:529)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:488)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.lambda$6(MarketplaceViewer.java:704)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+	Suppressed: java.io.FileNotFoundException: https://marketplace.eclipse.org/api/p/search/apachesolr_search/.obj?client=org.eclipse.epp.mpc.core&os=win32&platform.version=4.25
+		at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:298)
+		at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:511)
+		at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:465)
+		at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:294)
+		at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:181)
+		at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:269)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:37)
+		at org.eclipse.epp.internal.mpc.core.util.TransportFactory.lambda$0(TransportFactory.java:421)
+		at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:130)
+		at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:91)
+		... 16 more
+Caused by: org.apache.hc.client5.http.HttpResponseException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:128)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	... 17 more
+Contains: status code: 403, reason phrase: Forbidden
+org.apache.hc.client5.http.HttpResponseException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:128)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:501)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:413)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.lambda$0(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:331)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:539)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$0(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.runDiscoveryOperation(MarketplaceCatalog.java:529)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:488)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.lambda$6(MarketplaceViewer.java:704)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2025-05-12 12:27:47.032
+!MESSAGE status code: 403, reason phrase: Forbidden
+!STACK 0
+org.apache.hc.client5.http.HttpResponseException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:128)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:501)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:413)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.lambda$0(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:331)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:539)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$0(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.runDiscoveryOperation(MarketplaceCatalog.java:529)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:488)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.lambda$6(MarketplaceViewer.java:704)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 3 org.eclipse.epp.mpc.core 4 0 2025-05-12 12:27:47.032
+!MESSAGE status code: 403, reason phrase: Forbidden
+!STACK 0
+org.apache.hc.client5.http.HttpResponseException: status code: 403, reason phrase: Forbidden
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:97)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:128)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:46)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:501)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:413)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.lambda$0(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:331)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:306)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:539)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$0(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.runDiscoveryOperation(MarketplaceCatalog.java:529)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:488)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:81)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.lambda$6(MarketplaceViewer.java:704)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2025-05-12 13:32:48.624 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-12 13:32:56.981
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 13:32:56.981
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 13:32:56.981
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-12 13:33:00.650
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-12 18:29:05.621 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-12 18:48:04.939
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 18:48:04.939
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-12 18:48:04.939
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-12 18:48:10.779
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-13 16:17:04.552 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-13 16:21:20.528
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-13 16:21:20.528
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-13 16:21:20.528
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-13 16:21:25.068
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-14 15:55:20.797 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-14 16:24:15.843
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-14 16:24:15.843
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-14 16:24:15.843
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-14 16:24:23.969
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2025-05-15 16:30:11.464 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-15 16:32:58.598
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-15 16:32:58.598
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-15 16:32:58.598
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-15 16:33:03.339
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-05-16 15:18:05.494
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package UIManager;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+import World.Scene;
+
+public class ObjectOptions extends JPanel
+{
+	Object3D obj;
+	Scene scene;
+	JPanel renderPanel;
+	
+	public ObjectOptions(Scene scene)
+	{
+		obj = new Object3D();
+		this.scene = scene;
+
+        setFocusable(false);
+	}
+	
+	
+	
+	public void showDisabled()
+	{
+		var viewLabel = new JLabel("<html>Viewing: </html>"); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+        
+		setFocusable(false);
+	}
+	
+	public void showOptions()
+	{
+		setFocusable(true);
+		
+		String type = obj.getClass().getTypeName();
+		var viewLabel = new JLabel("<html>Viewing: " + type); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+		
+		double[] attTSR = obj.getTRS().decomposeTRS();
+
+	    JPanel scaleXRow = scaleOption(attTSR, 'x');
+	    JPanel scaleYRow = scaleOption(attTSR, 'y');
+	    JPanel scaleZRow = scaleOption(attTSR, 'z');
+	    
+	    add(scaleXRow);
+	    add(scaleYRow);
+	    add(scaleZRow);
+	    
+	    JPanel rotateXRow = rotationOption(attTSR, 'x');
+	    JPanel rotateYRow = rotationOption(attTSR, 'y');
+	    JPanel rotateZRow = rotationOption(attTSR, 'z');
+	    
+	    add(rotateXRow);
+	    add(rotateYRow);
+	    add(rotateZRow);
+	    
+	    JPanel translateXRow = translateOption(attTSR, 'x');
+	    JPanel translateYRow = translateOption(attTSR, 'y');
+	    JPanel translateZRow = translateOption(attTSR, 'z');
+	    
+	    add(translateXRow);
+	    add(translateYRow);
+	    add(translateZRow);
+	    
+	    JPanel reflectRow = reflectOption(attTSR);
+	    
+	    add(reflectRow);
+	    
+	    JPanel kakdRow = kakdOption();
+	    JPanel ksBRow = ksBOption();
+	    
+	    add(kakdRow);
+	    add(ksBRow);
+	}
+	
+	private JPanel scaleOption(double[] att, char axis)
+	{
+		double x = att[3], y = att[4], z = att[5];
+		
+		var scaleALabel = new JLabel("Scale :");
+		scaleALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleALabel.setForeground(new Color(50,50,25));
+		
+		var modifyScaleA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			scaleALabel.setText("Scale X: ");
+			modifyScaleA.setText(String.valueOf(x));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							X, att[4], att[5]);
+					att[3] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[3]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			scaleALabel.setText("Scale Y: ");
+			modifyScaleA.setText(String.valueOf(y));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], Y, att[5]);
+					att[4] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[4]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			scaleALabel.setText("Scale Z: ");
+			modifyScaleA.setText(String.valueOf(z));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], Z);
+					att[5] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[5]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			scaleALabel.setText("Undefined axis for scaling");
+			break;
+		}	
+		
+		JPanel ScaleARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		ScaleARow.add(scaleALabel);
+		ScaleARow.add(modifyScaleA);
+		
+		return ScaleARow;
+	}
+	
+	private JPanel rotationOption(double[] att, char axis)
+	{
+		double x = att[6], y = att[7], z = att[8];
+		var rotateALabel = new JLabel("Rotate: ");
+		rotateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		rotateALabel.setForeground(new Color(50,50,25));
+		
+		var rotateASlider = new JSlider(0, 360, 0);
+		var modifyRotateA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			rotateASlider.setValue((int)x);
+			modifyRotateA.setText(String.valueOf(x));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						val, att[7], att[8],
+						att[3], att[4], att[5]);
+				att[6] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyRotateA.getText());
+					X = X % 360;
+					modifyRotateA.setText(String.valueOf(X));
+					rotateASlider.setValue((int)X);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							X, att[7], att[8],
+							att[3], att[4], att[5]);
+					att[6] = X;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[6]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			rotateASlider.setValue((int)y);
+			modifyRotateA.setText(String.valueOf(y));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], val, att[8],
+						att[3], att[4], att[5]);
+				att[7] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyRotateA.getText());
+					Y = Y % 360;
+					modifyRotateA.setText(String.valueOf(Y));
+					rotateASlider.setValue((int)Y);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], Y, att[8],
+							att[3], att[4], att[5]);
+					att[7] = Y;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[7]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			rotateASlider.setValue((int)z);
+			modifyRotateA.setText(String.valueOf(z));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], att[7], val,
+						att[3], att[4], att[5]);
+				att[8] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyRotateA.getText());
+					Z = Z % 360;
+					modifyRotateA.setText(String.valueOf(Z));
+					rotateASlider.setValue((int)Z);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], Z,
+							att[3], att[4], att[5]);
+					att[8] = Z;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[8]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			
+			break;
+		default:
+			rotateALabel.setText("Undefined axis for rotation");
+			break;
+		}
+		
+		JPanel RotateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		RotateARow.add(rotateALabel);
+		RotateARow.add(rotateASlider);
+		RotateARow.add(modifyRotateA);
+		
+		return RotateARow;		
+	}
+	
+	private JPanel translateOption(double[] att, char axis)
+	{
+		double x = att[0], y = att[1], z = att[2];
+		var translateALabel = new JLabel("Translate :");
+		translateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		translateALabel.setForeground(new Color(50,50,25));
+		
+		var modifyTranslateA = new JTextField(11);
+		
+		switch (Character.toUpperCase(axis))
+		{
+		case 'X':
+			translateALabel.setText("Translate x:");
+			modifyTranslateA.setText(String.valueOf(x));
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(X, att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[0] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[0]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			translateALabel.setText("Translate y:");
+			modifyTranslateA.setText(String.valueOf(y));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], Y, att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[1] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[1]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			translateALabel.setText("Translate z:");
+			modifyTranslateA.setText(String.valueOf(z));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], Z,
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[2] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[2]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			translateALabel.setText("Undefined axis for translation");
+			break;
+		}
+		
+		JPanel TranslateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		TranslateARow.add(translateALabel);
+		TranslateARow.add(modifyTranslateA);
+		return TranslateARow;
+	}
+	
+	private JPanel reflectOption(double[] att)
+	{
+		JLabel reflectLabel = new JLabel("Reflect on: ");
+		reflectLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		reflectLabel.setForeground(new Color(50,50,25));
+		
+		var reflectX = new JButton("X");
+		reflectX.addActionListener(e-> {
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					(-1.0 * att[3]), att[4], att[5]);
+			att[3] = (-1.0 * att[3]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectY = new JButton("Y");
+		reflectY.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], (-1.0 * att[4]), att[5]);
+			att[4] = (-1.0 * att[4]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectZ = new JButton("Z");
+		reflectZ.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], att[4], (-1.0 * att[5]));
+			att[5] = (-1.0 * att[5]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		JPanel reflect = new JPanel();
+		reflect.add(reflectLabel);
+		reflect.add(reflectX);
+		reflect.add(reflectY);
+		reflect.add(reflectZ);
+		return reflect;
+	}
+	
+	private JPanel kakdOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var kaLabel = new JLabel("ka:");
+		kaLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kaLabel.setForeground(new Color(50,50,25));
+		kaLabel.setToolTipText("Value used for ambient lighting");
+		
+		var kamodify = new JTextField(5);
+		kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+		kamodify.addActionListener(e-> {
+			try
+			{
+				double ka = Double.parseDouble(kamodify.getText());
+				ka = clampK(ka);
+				kamodify.setText(String.valueOf(ka));
+				
+				obj.getMaterial().setKa(ka);
+				
+			} catch (Exception ex)
+			{
+				kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var kdLabel = new JLabel("kd:");
+		kdLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kdLabel.setForeground(new Color(50,50,25));
+		kdLabel.setToolTipText("Value used for diffuse lighting");
+		
+		var kdmodify = new JTextField(5);
+		kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+		kdmodify.addActionListener(e-> {
+			try
+			{
+				double kd = Double.parseDouble(kdmodify.getText());
+				kd = clampK(kd);
+				kdmodify.setText(String.valueOf(kd));
+				
+				obj.getMaterial().setKd(kd);
+				
+			} catch (Exception ex)
+			{
+				kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(kaLabel);
+		MaterialRow.add(kamodify);
+		
+		MaterialRow.add(kdLabel);
+		MaterialRow.add(kdmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel ksBOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var ksLabel = new JLabel("ks:");
+		ksLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		ksLabel.setForeground(new Color(50,50,25));
+		ksLabel.setToolTipText("Value used for specular lighting");
+		
+		var ksmodify = new JTextField(5);
+		ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+		ksmodify.addActionListener(e-> {
+			try
+			{
+				double ks = Double.parseDouble(ksmodify.getText());
+				ks = clampK(ks);
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var BLabel = new JLabel("B:");
+		BLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		BLabel.setForeground(new Color(50,50,25));
+		BLabel.setToolTipText("Value used for specular lighting (shininess)");
+		
+		var Bmodify = new JTextField(5);
+		Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+		Bmodify.addActionListener(e-> {
+			try
+			{
+				double B = Double.parseDouble(Bmodify.getText());
+				B = clampB(B);
+				Bmodify.setText(String.valueOf(B));
+				
+				obj.getMaterial().setB(B);
+				
+			} catch (Exception ex)
+			{
+				Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(ksLabel);
+		MaterialRow.add(ksmodify);
+		
+		MaterialRow.add(BLabel);
+		MaterialRow.add(Bmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel colorOption()
+	{
+		JPanel colorRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//obj.getMaterial().getColor();
+		
+		var colorLabel = new JLabel("Color:");
+		colorLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		colorLabel.setForeground(new Color(50,50,25));
+		
+		var redModify = new JTextField(5);
+		redModify.setText(String.valueOf(obj.getMaterial().getColor().getRed()));
+		redModify.addActionListener(e->{
+			try
+			{
+				double red = Double.parseDouble(redModify.getText());
+				(red > 255.0) ? 255:red; 
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		return colorRow;
+	}
+	
+	
+	
+	private double clampK(double ka)
+	{
+		if (ka <0.0) return 0.0;
+		if (ka >1.0) return 1.0;
+		return ka;
+	}
+	private double clampB(double B)
+	{
+		if (B <1.0) return 1.0;
+		if (B >256.0) return 256.0;
+		return B;
+	}
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+	public void setObject(Object3D obj) 
+	{
+		this.obj = obj;
+		if (obj != null) showOptions();
+		else showDisabled();
+	}
+	public void setScene(Scene scene) {this.scene = scene;}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2025-05-16 15:18:05.509
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2025-05-16 15:18:05.510
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:540)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:201)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1142)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:173)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1319)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-05-16 15:18:07.198
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package UIManager;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+import World.Scene;
+
+public class ObjectOptions extends JPanel
+{
+	Object3D obj;
+	Scene scene;
+	JPanel renderPanel;
+	
+	public ObjectOptions(Scene scene)
+	{
+		obj = new Object3D();
+		this.scene = scene;
+
+        setFocusable(false);
+	}
+	
+	
+	
+	public void showDisabled()
+	{
+		var viewLabel = new JLabel("<html>Viewing: </html>"); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+        
+		setFocusable(false);
+	}
+	
+	public void showOptions()
+	{
+		setFocusable(true);
+		
+		String type = obj.getClass().getTypeName();
+		var viewLabel = new JLabel("<html>Viewing: " + type); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+		
+		double[] attTSR = obj.getTRS().decomposeTRS();
+
+	    JPanel scaleXRow = scaleOption(attTSR, 'x');
+	    JPanel scaleYRow = scaleOption(attTSR, 'y');
+	    JPanel scaleZRow = scaleOption(attTSR, 'z');
+	    
+	    add(scaleXRow);
+	    add(scaleYRow);
+	    add(scaleZRow);
+	    
+	    JPanel rotateXRow = rotationOption(attTSR, 'x');
+	    JPanel rotateYRow = rotationOption(attTSR, 'y');
+	    JPanel rotateZRow = rotationOption(attTSR, 'z');
+	    
+	    add(rotateXRow);
+	    add(rotateYRow);
+	    add(rotateZRow);
+	    
+	    JPanel translateXRow = translateOption(attTSR, 'x');
+	    JPanel translateYRow = translateOption(attTSR, 'y');
+	    JPanel translateZRow = translateOption(attTSR, 'z');
+	    
+	    add(translateXRow);
+	    add(translateYRow);
+	    add(translateZRow);
+	    
+	    JPanel reflectRow = reflectOption(attTSR);
+	    
+	    add(reflectRow);
+	    
+	    JPanel kakdRow = kakdOption();
+	    JPanel ksBRow = ksBOption();
+	    
+	    add(kakdRow);
+	    add(ksBRow);
+	}
+	
+	private JPanel scaleOption(double[] att, char axis)
+	{
+		double x = att[3], y = att[4], z = att[5];
+		
+		var scaleALabel = new JLabel("Scale :");
+		scaleALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleALabel.setForeground(new Color(50,50,25));
+		
+		var modifyScaleA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			scaleALabel.setText("Scale X: ");
+			modifyScaleA.setText(String.valueOf(x));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							X, att[4], att[5]);
+					att[3] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[3]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			scaleALabel.setText("Scale Y: ");
+			modifyScaleA.setText(String.valueOf(y));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], Y, att[5]);
+					att[4] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[4]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			scaleALabel.setText("Scale Z: ");
+			modifyScaleA.setText(String.valueOf(z));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], Z);
+					att[5] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[5]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			scaleALabel.setText("Undefined axis for scaling");
+			break;
+		}	
+		
+		JPanel ScaleARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		ScaleARow.add(scaleALabel);
+		ScaleARow.add(modifyScaleA);
+		
+		return ScaleARow;
+	}
+	
+	private JPanel rotationOption(double[] att, char axis)
+	{
+		double x = att[6], y = att[7], z = att[8];
+		var rotateALabel = new JLabel("Rotate: ");
+		rotateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		rotateALabel.setForeground(new Color(50,50,25));
+		
+		var rotateASlider = new JSlider(0, 360, 0);
+		var modifyRotateA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			rotateASlider.setValue((int)x);
+			modifyRotateA.setText(String.valueOf(x));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						val, att[7], att[8],
+						att[3], att[4], att[5]);
+				att[6] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyRotateA.getText());
+					X = X % 360;
+					modifyRotateA.setText(String.valueOf(X));
+					rotateASlider.setValue((int)X);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							X, att[7], att[8],
+							att[3], att[4], att[5]);
+					att[6] = X;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[6]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			rotateASlider.setValue((int)y);
+			modifyRotateA.setText(String.valueOf(y));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], val, att[8],
+						att[3], att[4], att[5]);
+				att[7] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyRotateA.getText());
+					Y = Y % 360;
+					modifyRotateA.setText(String.valueOf(Y));
+					rotateASlider.setValue((int)Y);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], Y, att[8],
+							att[3], att[4], att[5]);
+					att[7] = Y;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[7]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			rotateASlider.setValue((int)z);
+			modifyRotateA.setText(String.valueOf(z));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], att[7], val,
+						att[3], att[4], att[5]);
+				att[8] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyRotateA.getText());
+					Z = Z % 360;
+					modifyRotateA.setText(String.valueOf(Z));
+					rotateASlider.setValue((int)Z);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], Z,
+							att[3], att[4], att[5]);
+					att[8] = Z;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[8]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			
+			break;
+		default:
+			rotateALabel.setText("Undefined axis for rotation");
+			break;
+		}
+		
+		JPanel RotateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		RotateARow.add(rotateALabel);
+		RotateARow.add(rotateASlider);
+		RotateARow.add(modifyRotateA);
+		
+		return RotateARow;		
+	}
+	
+	private JPanel translateOption(double[] att, char axis)
+	{
+		double x = att[0], y = att[1], z = att[2];
+		var translateALabel = new JLabel("Translate :");
+		translateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		translateALabel.setForeground(new Color(50,50,25));
+		
+		var modifyTranslateA = new JTextField(11);
+		
+		switch (Character.toUpperCase(axis))
+		{
+		case 'X':
+			translateALabel.setText("Translate x:");
+			modifyTranslateA.setText(String.valueOf(x));
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(X, att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[0] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[0]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			translateALabel.setText("Translate y:");
+			modifyTranslateA.setText(String.valueOf(y));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], Y, att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[1] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[1]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			translateALabel.setText("Translate z:");
+			modifyTranslateA.setText(String.valueOf(z));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], Z,
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[2] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[2]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			translateALabel.setText("Undefined axis for translation");
+			break;
+		}
+		
+		JPanel TranslateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		TranslateARow.add(translateALabel);
+		TranslateARow.add(modifyTranslateA);
+		return TranslateARow;
+	}
+	
+	private JPanel reflectOption(double[] att)
+	{
+		JLabel reflectLabel = new JLabel("Reflect on: ");
+		reflectLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		reflectLabel.setForeground(new Color(50,50,25));
+		
+		var reflectX = new JButton("X");
+		reflectX.addActionListener(e-> {
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					(-1.0 * att[3]), att[4], att[5]);
+			att[3] = (-1.0 * att[3]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectY = new JButton("Y");
+		reflectY.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], (-1.0 * att[4]), att[5]);
+			att[4] = (-1.0 * att[4]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectZ = new JButton("Z");
+		reflectZ.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], att[4], (-1.0 * att[5]));
+			att[5] = (-1.0 * att[5]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		JPanel reflect = new JPanel();
+		reflect.add(reflectLabel);
+		reflect.add(reflectX);
+		reflect.add(reflectY);
+		reflect.add(reflectZ);
+		return reflect;
+	}
+	
+	private JPanel kakdOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var kaLabel = new JLabel("ka:");
+		kaLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kaLabel.setForeground(new Color(50,50,25));
+		kaLabel.setToolTipText("Value used for ambient lighting");
+		
+		var kamodify = new JTextField(5);
+		kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+		kamodify.addActionListener(e-> {
+			try
+			{
+				double ka = Double.parseDouble(kamodify.getText());
+				ka = clampK(ka);
+				kamodify.setText(String.valueOf(ka));
+				
+				obj.getMaterial().setKa(ka);
+				
+			} catch (Exception ex)
+			{
+				kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var kdLabel = new JLabel("kd:");
+		kdLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kdLabel.setForeground(new Color(50,50,25));
+		kdLabel.setToolTipText("Value used for diffuse lighting");
+		
+		var kdmodify = new JTextField(5);
+		kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+		kdmodify.addActionListener(e-> {
+			try
+			{
+				double kd = Double.parseDouble(kdmodify.getText());
+				kd = clampK(kd);
+				kdmodify.setText(String.valueOf(kd));
+				
+				obj.getMaterial().setKd(kd);
+				
+			} catch (Exception ex)
+			{
+				kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(kaLabel);
+		MaterialRow.add(kamodify);
+		
+		MaterialRow.add(kdLabel);
+		MaterialRow.add(kdmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel ksBOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var ksLabel = new JLabel("ks:");
+		ksLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		ksLabel.setForeground(new Color(50,50,25));
+		ksLabel.setToolTipText("Value used for specular lighting");
+		
+		var ksmodify = new JTextField(5);
+		ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+		ksmodify.addActionListener(e-> {
+			try
+			{
+				double ks = Double.parseDouble(ksmodify.getText());
+				ks = clampK(ks);
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var BLabel = new JLabel("B:");
+		BLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		BLabel.setForeground(new Color(50,50,25));
+		BLabel.setToolTipText("Value used for specular lighting (shininess)");
+		
+		var Bmodify = new JTextField(5);
+		Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+		Bmodify.addActionListener(e-> {
+			try
+			{
+				double B = Double.parseDouble(Bmodify.getText());
+				B = clampB(B);
+				Bmodify.setText(String.valueOf(B));
+				
+				obj.getMaterial().setB(B);
+				
+			} catch (Exception ex)
+			{
+				Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(ksLabel);
+		MaterialRow.add(ksmodify);
+		
+		MaterialRow.add(BLabel);
+		MaterialRow.add(Bmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel colorOption()
+	{
+		JPanel colorRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//obj.getMaterial().getColor();
+		
+		var colorLabel = new JLabel("Color:");
+		colorLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		colorLabel.setForeground(new Color(50,50,25));
+		
+		var redModify = new JTextField(5);
+		redModify.setText(String.valueOf(obj.getMaterial().getColor().getRed()));
+		redModify.addActionListener(e->{
+			try
+			{
+				double red = Double.parseDouble(redModify.getText());
+				(red > 255.0) ? 255:red; 
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		return colorRow;
+	}
+	
+	
+	
+	private double clampK(double ka)
+	{
+		if (ka <0.0) return 0.0;
+		if (ka >1.0) return 1.0;
+		return ka;
+	}
+	private double clampB(double B)
+	{
+		if (B <1.0) return 1.0;
+		if (B >256.0) return 256.0;
+		return B;
+	}
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+	public void setObject(Object3D obj) 
+	{
+		this.obj = obj;
+		if (obj != null) showOptions();
+		else showDisabled();
+	}
+	public void setScene(Scene scene) {this.scene = scene;}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2025-05-16 15:18:07.198
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2025-05-16 15:18:07.199
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-05-16 15:18:08.740
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package UIManager;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+import World.Scene;
+
+public class ObjectOptions extends JPanel
+{
+	Object3D obj;
+	Scene scene;
+	JPanel renderPanel;
+	
+	public ObjectOptions(Scene scene)
+	{
+		obj = new Object3D();
+		this.scene = scene;
+
+        setFocusable(false);
+	}
+	
+	
+	
+	public void showDisabled()
+	{
+		var viewLabel = new JLabel("<html>Viewing: </html>"); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+        
+		setFocusable(false);
+	}
+	
+	public void showOptions()
+	{
+		setFocusable(true);
+		
+		String type = obj.getClass().getTypeName();
+		var viewLabel = new JLabel("<html>Viewing: " + type); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+		
+		double[] attTSR = obj.getTRS().decomposeTRS();
+
+	    JPanel scaleXRow = scaleOption(attTSR, 'x');
+	    JPanel scaleYRow = scaleOption(attTSR, 'y');
+	    JPanel scaleZRow = scaleOption(attTSR, 'z');
+	    
+	    add(scaleXRow);
+	    add(scaleYRow);
+	    add(scaleZRow);
+	    
+	    JPanel rotateXRow = rotationOption(attTSR, 'x');
+	    JPanel rotateYRow = rotationOption(attTSR, 'y');
+	    JPanel rotateZRow = rotationOption(attTSR, 'z');
+	    
+	    add(rotateXRow);
+	    add(rotateYRow);
+	    add(rotateZRow);
+	    
+	    JPanel translateXRow = translateOption(attTSR, 'x');
+	    JPanel translateYRow = translateOption(attTSR, 'y');
+	    JPanel translateZRow = translateOption(attTSR, 'z');
+	    
+	    add(translateXRow);
+	    add(translateYRow);
+	    add(translateZRow);
+	    
+	    JPanel reflectRow = reflectOption(attTSR);
+	    
+	    add(reflectRow);
+	    
+	    JPanel kakdRow = kakdOption();
+	    JPanel ksBRow = ksBOption();
+	    
+	    add(kakdRow);
+	    add(ksBRow);
+	}
+	
+	private JPanel scaleOption(double[] att, char axis)
+	{
+		double x = att[3], y = att[4], z = att[5];
+		
+		var scaleALabel = new JLabel("Scale :");
+		scaleALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleALabel.setForeground(new Color(50,50,25));
+		
+		var modifyScaleA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			scaleALabel.setText("Scale X: ");
+			modifyScaleA.setText(String.valueOf(x));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							X, att[4], att[5]);
+					att[3] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[3]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			scaleALabel.setText("Scale Y: ");
+			modifyScaleA.setText(String.valueOf(y));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], Y, att[5]);
+					att[4] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[4]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			scaleALabel.setText("Scale Z: ");
+			modifyScaleA.setText(String.valueOf(z));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], Z);
+					att[5] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[5]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			scaleALabel.setText("Undefined axis for scaling");
+			break;
+		}	
+		
+		JPanel ScaleARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		ScaleARow.add(scaleALabel);
+		ScaleARow.add(modifyScaleA);
+		
+		return ScaleARow;
+	}
+	
+	private JPanel rotationOption(double[] att, char axis)
+	{
+		double x = att[6], y = att[7], z = att[8];
+		var rotateALabel = new JLabel("Rotate: ");
+		rotateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		rotateALabel.setForeground(new Color(50,50,25));
+		
+		var rotateASlider = new JSlider(0, 360, 0);
+		var modifyRotateA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			rotateASlider.setValue((int)x);
+			modifyRotateA.setText(String.valueOf(x));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						val, att[7], att[8],
+						att[3], att[4], att[5]);
+				att[6] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyRotateA.getText());
+					X = X % 360;
+					modifyRotateA.setText(String.valueOf(X));
+					rotateASlider.setValue((int)X);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							X, att[7], att[8],
+							att[3], att[4], att[5]);
+					att[6] = X;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[6]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			rotateASlider.setValue((int)y);
+			modifyRotateA.setText(String.valueOf(y));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], val, att[8],
+						att[3], att[4], att[5]);
+				att[7] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyRotateA.getText());
+					Y = Y % 360;
+					modifyRotateA.setText(String.valueOf(Y));
+					rotateASlider.setValue((int)Y);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], Y, att[8],
+							att[3], att[4], att[5]);
+					att[7] = Y;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[7]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			rotateASlider.setValue((int)z);
+			modifyRotateA.setText(String.valueOf(z));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], att[7], val,
+						att[3], att[4], att[5]);
+				att[8] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyRotateA.getText());
+					Z = Z % 360;
+					modifyRotateA.setText(String.valueOf(Z));
+					rotateASlider.setValue((int)Z);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], Z,
+							att[3], att[4], att[5]);
+					att[8] = Z;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[8]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			
+			break;
+		default:
+			rotateALabel.setText("Undefined axis for rotation");
+			break;
+		}
+		
+		JPanel RotateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		RotateARow.add(rotateALabel);
+		RotateARow.add(rotateASlider);
+		RotateARow.add(modifyRotateA);
+		
+		return RotateARow;		
+	}
+	
+	private JPanel translateOption(double[] att, char axis)
+	{
+		double x = att[0], y = att[1], z = att[2];
+		var translateALabel = new JLabel("Translate :");
+		translateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		translateALabel.setForeground(new Color(50,50,25));
+		
+		var modifyTranslateA = new JTextField(11);
+		
+		switch (Character.toUpperCase(axis))
+		{
+		case 'X':
+			translateALabel.setText("Translate x:");
+			modifyTranslateA.setText(String.valueOf(x));
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(X, att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[0] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[0]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			translateALabel.setText("Translate y:");
+			modifyTranslateA.setText(String.valueOf(y));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], Y, att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[1] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[1]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			translateALabel.setText("Translate z:");
+			modifyTranslateA.setText(String.valueOf(z));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], Z,
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[2] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[2]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			translateALabel.setText("Undefined axis for translation");
+			break;
+		}
+		
+		JPanel TranslateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		TranslateARow.add(translateALabel);
+		TranslateARow.add(modifyTranslateA);
+		return TranslateARow;
+	}
+	
+	private JPanel reflectOption(double[] att)
+	{
+		JLabel reflectLabel = new JLabel("Reflect on: ");
+		reflectLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		reflectLabel.setForeground(new Color(50,50,25));
+		
+		var reflectX = new JButton("X");
+		reflectX.addActionListener(e-> {
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					(-1.0 * att[3]), att[4], att[5]);
+			att[3] = (-1.0 * att[3]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectY = new JButton("Y");
+		reflectY.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], (-1.0 * att[4]), att[5]);
+			att[4] = (-1.0 * att[4]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectZ = new JButton("Z");
+		reflectZ.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], att[4], (-1.0 * att[5]));
+			att[5] = (-1.0 * att[5]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		JPanel reflect = new JPanel();
+		reflect.add(reflectLabel);
+		reflect.add(reflectX);
+		reflect.add(reflectY);
+		reflect.add(reflectZ);
+		return reflect;
+	}
+	
+	private JPanel kakdOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var kaLabel = new JLabel("ka:");
+		kaLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kaLabel.setForeground(new Color(50,50,25));
+		kaLabel.setToolTipText("Value used for ambient lighting");
+		
+		var kamodify = new JTextField(5);
+		kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+		kamodify.addActionListener(e-> {
+			try
+			{
+				double ka = Double.parseDouble(kamodify.getText());
+				ka = clampK(ka);
+				kamodify.setText(String.valueOf(ka));
+				
+				obj.getMaterial().setKa(ka);
+				
+			} catch (Exception ex)
+			{
+				kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var kdLabel = new JLabel("kd:");
+		kdLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kdLabel.setForeground(new Color(50,50,25));
+		kdLabel.setToolTipText("Value used for diffuse lighting");
+		
+		var kdmodify = new JTextField(5);
+		kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+		kdmodify.addActionListener(e-> {
+			try
+			{
+				double kd = Double.parseDouble(kdmodify.getText());
+				kd = clampK(kd);
+				kdmodify.setText(String.valueOf(kd));
+				
+				obj.getMaterial().setKd(kd);
+				
+			} catch (Exception ex)
+			{
+				kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(kaLabel);
+		MaterialRow.add(kamodify);
+		
+		MaterialRow.add(kdLabel);
+		MaterialRow.add(kdmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel ksBOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var ksLabel = new JLabel("ks:");
+		ksLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		ksLabel.setForeground(new Color(50,50,25));
+		ksLabel.setToolTipText("Value used for specular lighting");
+		
+		var ksmodify = new JTextField(5);
+		ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+		ksmodify.addActionListener(e-> {
+			try
+			{
+				double ks = Double.parseDouble(ksmodify.getText());
+				ks = clampK(ks);
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var BLabel = new JLabel("B:");
+		BLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		BLabel.setForeground(new Color(50,50,25));
+		BLabel.setToolTipText("Value used for specular lighting (shininess)");
+		
+		var Bmodify = new JTextField(5);
+		Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+		Bmodify.addActionListener(e-> {
+			try
+			{
+				double B = Double.parseDouble(Bmodify.getText());
+				B = clampB(B);
+				Bmodify.setText(String.valueOf(B));
+				
+				obj.getMaterial().setB(B);
+				
+			} catch (Exception ex)
+			{
+				Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(ksLabel);
+		MaterialRow.add(ksmodify);
+		
+		MaterialRow.add(BLabel);
+		MaterialRow.add(Bmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel colorOption()
+	{
+		JPanel colorRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//obj.getMaterial().getColor();
+		
+		var colorLabel = new JLabel("Color:");
+		colorLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		colorLabel.setForeground(new Color(50,50,25));
+		
+		var redModify = new JTextField(5);
+		redModify.setText(String.valueOf(obj.getMaterial().getColor().getRed()));
+		redModify.addActionListener(e->{
+			try
+			{
+				double red = Double.parseDouble(redModify.getText());
+				(red > 255.0) ? 255:red; 
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		return colorRow;
+	}
+	
+	
+	
+	private double clampK(double ka)
+	{
+		if (ka <0.0) return 0.0;
+		if (ka >1.0) return 1.0;
+		return ka;
+	}
+	private double clampB(double B)
+	{
+		if (B <1.0) return 1.0;
+		if (B >256.0) return 256.0;
+		return B;
+	}
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+	public void setObject(Object3D obj) 
+	{
+		this.obj = obj;
+		if (obj != null) showOptions();
+		else showDisabled();
+	}
+	public void setScene(Scene scene) {this.scene = scene;}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2025-05-16 15:18:08.740
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2025-05-16 15:18:08.741
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.internalGetHoverInfo(NLSStringHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.NLSStringHover.getHoverInfo2(NLSStringHover.java:120)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-05-16 15:18:08.760
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package UIManager;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+import World.Scene;
+
+public class ObjectOptions extends JPanel
+{
+	Object3D obj;
+	Scene scene;
+	JPanel renderPanel;
+	
+	public ObjectOptions(Scene scene)
+	{
+		obj = new Object3D();
+		this.scene = scene;
+
+        setFocusable(false);
+	}
+	
+	
+	
+	public void showDisabled()
+	{
+		var viewLabel = new JLabel("<html>Viewing: </html>"); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+        
+		setFocusable(false);
+	}
+	
+	public void showOptions()
+	{
+		setFocusable(true);
+		
+		String type = obj.getClass().getTypeName();
+		var viewLabel = new JLabel("<html>Viewing: " + type); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+		
+		double[] attTSR = obj.getTRS().decomposeTRS();
+
+	    JPanel scaleXRow = scaleOption(attTSR, 'x');
+	    JPanel scaleYRow = scaleOption(attTSR, 'y');
+	    JPanel scaleZRow = scaleOption(attTSR, 'z');
+	    
+	    add(scaleXRow);
+	    add(scaleYRow);
+	    add(scaleZRow);
+	    
+	    JPanel rotateXRow = rotationOption(attTSR, 'x');
+	    JPanel rotateYRow = rotationOption(attTSR, 'y');
+	    JPanel rotateZRow = rotationOption(attTSR, 'z');
+	    
+	    add(rotateXRow);
+	    add(rotateYRow);
+	    add(rotateZRow);
+	    
+	    JPanel translateXRow = translateOption(attTSR, 'x');
+	    JPanel translateYRow = translateOption(attTSR, 'y');
+	    JPanel translateZRow = translateOption(attTSR, 'z');
+	    
+	    add(translateXRow);
+	    add(translateYRow);
+	    add(translateZRow);
+	    
+	    JPanel reflectRow = reflectOption(attTSR);
+	    
+	    add(reflectRow);
+	    
+	    JPanel kakdRow = kakdOption();
+	    JPanel ksBRow = ksBOption();
+	    
+	    add(kakdRow);
+	    add(ksBRow);
+	}
+	
+	private JPanel scaleOption(double[] att, char axis)
+	{
+		double x = att[3], y = att[4], z = att[5];
+		
+		var scaleALabel = new JLabel("Scale :");
+		scaleALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleALabel.setForeground(new Color(50,50,25));
+		
+		var modifyScaleA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			scaleALabel.setText("Scale X: ");
+			modifyScaleA.setText(String.valueOf(x));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							X, att[4], att[5]);
+					att[3] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[3]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			scaleALabel.setText("Scale Y: ");
+			modifyScaleA.setText(String.valueOf(y));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], Y, att[5]);
+					att[4] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[4]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			scaleALabel.setText("Scale Z: ");
+			modifyScaleA.setText(String.valueOf(z));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], Z);
+					att[5] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[5]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			scaleALabel.setText("Undefined axis for scaling");
+			break;
+		}	
+		
+		JPanel ScaleARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		ScaleARow.add(scaleALabel);
+		ScaleARow.add(modifyScaleA);
+		
+		return ScaleARow;
+	}
+	
+	private JPanel rotationOption(double[] att, char axis)
+	{
+		double x = att[6], y = att[7], z = att[8];
+		var rotateALabel = new JLabel("Rotate: ");
+		rotateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		rotateALabel.setForeground(new Color(50,50,25));
+		
+		var rotateASlider = new JSlider(0, 360, 0);
+		var modifyRotateA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			rotateASlider.setValue((int)x);
+			modifyRotateA.setText(String.valueOf(x));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						val, att[7], att[8],
+						att[3], att[4], att[5]);
+				att[6] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyRotateA.getText());
+					X = X % 360;
+					modifyRotateA.setText(String.valueOf(X));
+					rotateASlider.setValue((int)X);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							X, att[7], att[8],
+							att[3], att[4], att[5]);
+					att[6] = X;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[6]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			rotateASlider.setValue((int)y);
+			modifyRotateA.setText(String.valueOf(y));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], val, att[8],
+						att[3], att[4], att[5]);
+				att[7] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyRotateA.getText());
+					Y = Y % 360;
+					modifyRotateA.setText(String.valueOf(Y));
+					rotateASlider.setValue((int)Y);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], Y, att[8],
+							att[3], att[4], att[5]);
+					att[7] = Y;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[7]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			rotateASlider.setValue((int)z);
+			modifyRotateA.setText(String.valueOf(z));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], att[7], val,
+						att[3], att[4], att[5]);
+				att[8] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyRotateA.getText());
+					Z = Z % 360;
+					modifyRotateA.setText(String.valueOf(Z));
+					rotateASlider.setValue((int)Z);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], Z,
+							att[3], att[4], att[5]);
+					att[8] = Z;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[8]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			
+			break;
+		default:
+			rotateALabel.setText("Undefined axis for rotation");
+			break;
+		}
+		
+		JPanel RotateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		RotateARow.add(rotateALabel);
+		RotateARow.add(rotateASlider);
+		RotateARow.add(modifyRotateA);
+		
+		return RotateARow;		
+	}
+	
+	private JPanel translateOption(double[] att, char axis)
+	{
+		double x = att[0], y = att[1], z = att[2];
+		var translateALabel = new JLabel("Translate :");
+		translateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		translateALabel.setForeground(new Color(50,50,25));
+		
+		var modifyTranslateA = new JTextField(11);
+		
+		switch (Character.toUpperCase(axis))
+		{
+		case 'X':
+			translateALabel.setText("Translate x:");
+			modifyTranslateA.setText(String.valueOf(x));
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(X, att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[0] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[0]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			translateALabel.setText("Translate y:");
+			modifyTranslateA.setText(String.valueOf(y));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], Y, att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[1] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[1]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			translateALabel.setText("Translate z:");
+			modifyTranslateA.setText(String.valueOf(z));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], Z,
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[2] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[2]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			translateALabel.setText("Undefined axis for translation");
+			break;
+		}
+		
+		JPanel TranslateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		TranslateARow.add(translateALabel);
+		TranslateARow.add(modifyTranslateA);
+		return TranslateARow;
+	}
+	
+	private JPanel reflectOption(double[] att)
+	{
+		JLabel reflectLabel = new JLabel("Reflect on: ");
+		reflectLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		reflectLabel.setForeground(new Color(50,50,25));
+		
+		var reflectX = new JButton("X");
+		reflectX.addActionListener(e-> {
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					(-1.0 * att[3]), att[4], att[5]);
+			att[3] = (-1.0 * att[3]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectY = new JButton("Y");
+		reflectY.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], (-1.0 * att[4]), att[5]);
+			att[4] = (-1.0 * att[4]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		var reflectZ = new JButton("Z");
+		reflectZ.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], att[4], (-1.0 * att[5]));
+			att[5] = (-1.0 * att[5]);
+			obj.getTRS().setValues(temp.getValues());
+			
+			renderPanel.repaint();
+		});
+		
+		JPanel reflect = new JPanel();
+		reflect.add(reflectLabel);
+		reflect.add(reflectX);
+		reflect.add(reflectY);
+		reflect.add(reflectZ);
+		return reflect;
+	}
+	
+	private JPanel kakdOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var kaLabel = new JLabel("ka:");
+		kaLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kaLabel.setForeground(new Color(50,50,25));
+		kaLabel.setToolTipText("Value used for ambient lighting");
+		
+		var kamodify = new JTextField(5);
+		kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+		kamodify.addActionListener(e-> {
+			try
+			{
+				double ka = Double.parseDouble(kamodify.getText());
+				ka = clampK(ka);
+				kamodify.setText(String.valueOf(ka));
+				
+				obj.getMaterial().setKa(ka);
+				
+			} catch (Exception ex)
+			{
+				kamodify.setText(String.valueOf(obj.getMaterial().getKa()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var kdLabel = new JLabel("kd:");
+		kdLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		kdLabel.setForeground(new Color(50,50,25));
+		kdLabel.setToolTipText("Value used for diffuse lighting");
+		
+		var kdmodify = new JTextField(5);
+		kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+		kdmodify.addActionListener(e-> {
+			try
+			{
+				double kd = Double.parseDouble(kdmodify.getText());
+				kd = clampK(kd);
+				kdmodify.setText(String.valueOf(kd));
+				
+				obj.getMaterial().setKd(kd);
+				
+			} catch (Exception ex)
+			{
+				kdmodify.setText(String.valueOf(obj.getMaterial().getKd()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(kaLabel);
+		MaterialRow.add(kamodify);
+		
+		MaterialRow.add(kdLabel);
+		MaterialRow.add(kdmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel ksBOption()
+	{
+		JPanel MaterialRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		
+		var ksLabel = new JLabel("ks:");
+		ksLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		ksLabel.setForeground(new Color(50,50,25));
+		ksLabel.setToolTipText("Value used for specular lighting");
+		
+		var ksmodify = new JTextField(5);
+		ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+		ksmodify.addActionListener(e-> {
+			try
+			{
+				double ks = Double.parseDouble(ksmodify.getText());
+				ks = clampK(ks);
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		var BLabel = new JLabel("B:");
+		BLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		BLabel.setForeground(new Color(50,50,25));
+		BLabel.setToolTipText("Value used for specular lighting (shininess)");
+		
+		var Bmodify = new JTextField(5);
+		Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+		Bmodify.addActionListener(e-> {
+			try
+			{
+				double B = Double.parseDouble(Bmodify.getText());
+				B = clampB(B);
+				Bmodify.setText(String.valueOf(B));
+				
+				obj.getMaterial().setB(B);
+				
+			} catch (Exception ex)
+			{
+				Bmodify.setText(String.valueOf(obj.getMaterial().getB()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		MaterialRow.add(ksLabel);
+		MaterialRow.add(ksmodify);
+		
+		MaterialRow.add(BLabel);
+		MaterialRow.add(Bmodify);
+		
+		return MaterialRow;
+	}
+	
+	private JPanel colorOption()
+	{
+		JPanel colorRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		//obj.getMaterial().getColor();
+		
+		var colorLabel = new JLabel("Color:");
+		colorLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		colorLabel.setForeground(new Color(50,50,25));
+		
+		var redModify = new JTextField(5);
+		redModify.setText(String.valueOf(obj.getMaterial().getColor().getRed()));
+		redModify.addActionListener(e->{
+			try
+			{
+				double red = Double.parseDouble(redModify.getText());
+				(red > 255.0) ? 255:red; 
+				ksmodify.setText(String.valueOf(ks));
+				
+				obj.getMaterial().setKs(ks);
+				
+			} catch (Exception ex)
+			{
+				ksmodify.setText(String.valueOf(obj.getMaterial().getKs()));
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		return colorRow;
+	}
+	
+	
+	
+	private double clampK(double ka)
+	{
+		if (ka <0.0) return 0.0;
+		if (ka >1.0) return 1.0;
+		return ka;
+	}
+	private double clampB(double B)
+	{
+		if (B <1.0) return 1.0;
+		if (B >256.0) return 256.0;
+		return B;
+	}
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+	public void setObject(Object3D obj) 
+	{
+		this.obj = obj;
+		if (obj != null) showOptions();
+		else showDisabled();
+	}
+	public void setScene(Scene scene) {this.scene = scene;}
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 2 2025-05-16 15:18:08.760
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core.manipulation".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 0 2025-05-16 15:18:08.761
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.InfixExpression.setOperator(InfixExpression.java:383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1287)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2047)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3853)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1204)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1990)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3278)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3055)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1383)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2560)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2068)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1736)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2056)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2059)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3095)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:751)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3390)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1534)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:344)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1272)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:868)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider$1.run(CoreASTProvider.java:294)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.createAST(CoreASTProvider.java:286)
+	at org.eclipse.jdt.core.manipulation.CoreASTProvider.getAST(CoreASTProvider.java:199)
+	at org.eclipse.jdt.core.manipulation.SharedASTProviderCore.getAST(SharedASTProviderCore.java:138)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoveredASTNode(JavadocHover.java:1003)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:799)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:743)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2025-05-17 15:19:07.975 -----------------------------------------------
+eclipse.buildId=4.25.0.I20220831-1800
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2025-05-17 15:20:55.297
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-17 15:20:55.297
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-05-17 15:20:55.297
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-05-17 15:20:59.733
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Bogdan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

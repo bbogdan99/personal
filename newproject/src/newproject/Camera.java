@@ -9,6 +9,8 @@ public class Camera
 	
 	double pitch, yaw, roll; //x, y, z
 	double far, near, angle, aspect;
+	
+	int projType;
 
 	Matrix4 ViewMatrix;
 	Matrix4 ProjectionMatrix;
@@ -33,6 +35,8 @@ public class Camera
 		near = 0.1;
 		angle = 60;
 		aspect = 16.0/9.0;
+		
+		projType = 3;
 	}
 	public Camera()
 	{
@@ -45,6 +49,8 @@ public class Camera
 		near = 0.1;
 		angle = 60;
 		aspect = 16.0/9.0;
+		
+		projType = 3;
 	}
 	public Camera(Vertex pos, double pitch, double yaw, double roll, double far, double near, double angle, double aspect)
 	{
@@ -67,6 +73,8 @@ public class Camera
 		this.near = near;
 		this.angle = angle;
 		this.aspect = aspect;
+		
+		projType = 3;
 	}
 	
 	/*public Matrix4 getCameraT()
@@ -78,7 +86,9 @@ public class Camera
 	public void update()
 	{
 		setViewMatrix(pos.x, pos.y, pos.z, pitch, yaw, roll);
-		setProjectionMatrix(far, near, angle, aspect);
+		setProjectionMatrix(far, near, angle, aspect, projType);
+		//System.out.println(ProjectionMatrix);
+		//System.out.println(projType);
 	}
 	
 	
@@ -90,6 +100,10 @@ public class Camera
 	public double getZ() {return pos.z;}
 	
 	public void setPitch(double pitch) {this.pitch = pitch;}
+	//public void setPitchMouse(double pitch)
+	//{
+	//	this.pitch = Math.max(-Math.PI/2.0 + 0.01,  Math.min(Math.PI/2.0 - 0.01, pitch));
+	//}
 	public void setYaw(double yaw) {this.yaw = yaw;}
 	public void setRoll(double roll) {this.roll = roll;}
 	public double getPitch() {return pitch;}
@@ -113,13 +127,46 @@ public class Camera
 		this.ViewMatrix = //Rtransp.multiply(Tnegated);
 		Tnegated.multiply(Rtransp);
 	}
-	public void setProjectionMatrix(double far, double near, double angle, double aspect)
+	public void setProjectionMatrix(double far, double near, double angle, double aspect, int projType)
 	{
 		this.far = far;
 		this.near = near;
 		this.angle = angle;
 		this.aspect = aspect;
+		this.projType = projType;
+		
 		ProjectionMatrix = new Matrix4(far, near, angle, aspect);
+		
+		switch(projType)
+		{
+		case 1:
+			projType = 1;
+			ProjectionMatrix = new Matrix4(new double[] {
+					1, 0, 0, 0,
+					0, 1, 0, 0,
+					0, 0, -(far+near)/(far-near), -(2.0 * far * near)/ (far - near),
+					0, 0, -1, 0
+			});
+			break;
+		case 2:
+			projType = 2;
+			double ft = 1.0/Math.tan(Math.toRadians(angle/2.0));
+			ProjectionMatrix = new Matrix4(new double[] {
+					ft/aspect, 0, 0, 0,
+					0, 1, 0, 0,
+					0, 0, -(far+near)/(far-near), -(2.0 * far * near)/ (far - near),
+					0, 0, -1, 0
+			});
+			break;
+		default:
+			projType = 3;
+			break;
+		}
+		//ProjectionMatrix = Matrix4.orthographicMatrix(far, near, 1, 1);
+	}
+	public void setProjType(int projType)
+	{
+		this.projType = projType;
 	}
 	public void setViewMatrix(Matrix4 mat)
 	{
@@ -137,5 +184,8 @@ public class Camera
 	{
 		return ProjectionMatrix;
 	}
-	
+	public int getProjType()
+	{
+		return projType;
+	}
 }

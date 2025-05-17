@@ -10,6 +10,21 @@ import newproject.Vertex;
 
 public class ClippingLogic
 {
+	
+	public static void applyCurvilinearDistortion(Vertex v)
+	{
+		double strength = 0.5;
+	    double maxBend = Math.PI / 4;
+
+	    double factor = v.getY(); // in NDC range [-1, 1]
+	    double bend = Math.sin(factor * Math.PI / 2) * strength; 
+
+	    double newX = v.getX() * Math.cos(bend) - v.getZ() * Math.sin(bend);
+	    double newZ = v.getX() * Math.sin(bend) + v.getZ() * Math.cos(bend);
+
+	    v.setX(newX);
+	    v.setZ(newZ);
+	}
 	/*public static Scene ClipScene(Scene scene, Vertex[] planes)
 	{
 		ArrayList<Object3D>clipped_objects = new ArrayList<Object3D>();

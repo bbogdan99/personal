@@ -1,0 +1,144 @@
+package UIManager;
+
+import java.awt.Robot;
+import java.awt.event.ItemEvent;
+import java.awt.image.BufferedImage;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+import World.Scene;
+
+public class MenusBar extends JMenuBar 
+{
+	private Scene scene;
+
+	public MenusBar()
+	{
+		var FileMenu = new JMenu("File");
+		var ViewMenu = new JMenu("View");
+		var SettingsMenu = new JMenu("Settings");
+		var HelpMenu = new JMenu("Help");
+		
+		setFileMenu(FileMenu);
+		setViewMenu(ViewMenu);
+		setSettingsMenu(SettingsMenu);
+		setHelppMenu(HelpMenu);
+		
+		add(FileMenu);
+		add(ViewMenu);
+		add(SettingsMenu);
+		add(HelpMenu);
+	}
+
+	public void setScene(Scene scene) {this.scene = scene;}
+	
+	private void setFileMenu(JMenu FileMenu)
+	{
+		var lMenuItem = new JMenuItem("Load Object from File");
+		lMenuItem.setToolTipText("Upload and render an object from a file");
+		lMenuItem.addActionListener( e -> {
+			
+		});
+		
+		var sMenuItem = new JMenuItem("Screenshot scene");
+		sMenuItem.setToolTipText("Take a screenshot of the scene");
+		sMenuItem.addActionListener( e -> {
+			var formatter = DateTimeFormatter.ISO_DATE;
+			var lTime = Instant.ofEpochMilli(e.getWhen()).atZone(ZoneId.systemDefault()).toLocalTime();
+			System.out.println(lTime.format(formatter));
+		});
+		
+		var eMenuItem = new JMenuItem("Exit");
+		eMenuItem.setToolTipText("Exit the program");
+		eMenuItem.addActionListener(e-> System.exit(0));
+		
+		FileMenu.add(lMenuItem);
+		FileMenu.add(sMenuItem);
+		FileMenu.add(eMenuItem);
+	}
+	private void setViewMenu(JMenu ViewMenu)
+	{
+		var wMenuItem = new JCheckBoxMenuItem("WireFrame only");
+		wMenuItem.setToolTipText("Render only the objects' skeleton");
+		wMenuItem.addItemListener( e -> {
+			if (e.getStateChange() == ItemEvent.SELECTED)
+			{
+				
+			}
+			else
+			{
+				
+			}
+		});
+		
+		var pMenuItem = new JMenu("Set Projection Mode");
+		pMenuItem.setToolTipText("Change the camera's projection type");
+		
+		var p_1pMenuItem = new JMenuItem("1 point perspective");
+		p_1pMenuItem.setToolTipText("Convergence on the z-axis only");
+		p_1pMenuItem.addActionListener( e -> {
+			scene.getCam().setProjType(1);
+		});
+		
+		var p_2pMenuItem = new JMenuItem("2 point perspective");
+		p_2pMenuItem.setToolTipText("Convergence on z and x axis");
+		p_2pMenuItem.addActionListener( e -> {
+			scene.getCam().setProjType(2);
+		});
+		
+		var p_3pMenuItem = new JMenuItem("3 point perspective");
+		p_3pMenuItem.setToolTipText("Convergence on all three axis (default projection)");
+		p_3pMenuItem.addActionListener( e -> {
+			scene.getCam().setProjType(3);
+		});
+		
+		pMenuItem.add(p_1pMenuItem);
+		pMenuItem.add(p_2pMenuItem);
+		pMenuItem.add(p_3pMenuItem);
+		
+		var rMenuItem = new JMenuItem("Reset View");
+		rMenuItem.setToolTipText("Reset the camera's position and rotation");
+		rMenuItem.addActionListener( e-> {
+			scene.getCam().setPitch(0);
+			scene.getCam().setRoll(0);
+			scene.getCam().setYaw(0);
+			
+			scene.getCam().setX(0);
+			scene.getCam().setY(0);
+			scene.getCam().setZ(0);
+		});
+		
+		ViewMenu.add(wMenuItem);
+		ViewMenu.add(pMenuItem);
+		ViewMenu.add(rMenuItem);
+	}
+	private void setSettingsMenu(JMenu SettingsMenu)
+	{
+		var lMenuItem = new JMenuItem("Lighting Settings");
+		lMenuItem.setToolTipText("Set the scene's lighting properties");
+		
+		var bMenuItem = new JMenuItem("Background Color");
+		bMenuItem.setToolTipText("Set the scene's background color");
+		
+		
+		var pMenuItem = new JMenuItem("Epsilon");
+		pMenuItem.setToolTipText("Change the acceptable error margin used for calculating and rendering objects");
+	
+		SettingsMenu.add(lMenuItem);
+		SettingsMenu.add(bMenuItem);
+		SettingsMenu.add(pMenuItem);
+	}
+	private void setHelppMenu(JMenu HelpMenu)
+	{
+		var hMenuItem = new JMenuItem("About");
+		hMenuItem.setToolTipText("Information in regards to this application");
+	
+		HelpMenu.add(hMenuItem);
+	}
+}

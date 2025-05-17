@@ -205,5 +205,8 @@ public class Rectangular extends Object3D {
 	//	return Triangles;
 	//}
 	//Cube(List<Triangle>face1, List<Triangle>face2, )
-	
+	public String toString()
+	{
+		return "Rectangular";
+	}
 }

@@ -73,4 +73,10 @@ public class Object3D
 			this.Triangles.add(new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3));
 		}
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "Object3D";
+	}
 }

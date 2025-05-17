@@ -1,0 +1,5 @@
+package UIManager;
+
+public enum ObjectType {
+
+}

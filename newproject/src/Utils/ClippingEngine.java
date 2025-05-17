@@ -34,15 +34,7 @@ public class ClippingEngine {
             Object3D clippedObj = ClipObject(obj, planes);
             if (clippedObj != null) clippedObjects.add(clippedObj);
         }
-        
-        //ArrayList<Triangle>clippedTriangles = new ArrayList<>();
-        //for (Object3D obj: clippedObjects)
-        //	for (Triangle t: obj.getTriangles())
-        //	{
-        //		clippedTriangles.add(t);
-        //	}
-        //return clippedTriangles;
-        
+
         Scene clippedScene = new Scene(scene.getCam());
         clippedScene.setIA(scene.getIa());
         for (Object3D obj : clippedObjects) clippedScene.addObject(obj);
@@ -76,7 +68,6 @@ public class ClippingEngine {
     {
         List<Vertex> inside = new ArrayList<>();
         List<Vertex> outside = new ArrayList<>();
-
         
         if (plane.distance(tri.getV1()) >= 0) inside.add(tri.getV1());
         else outside.add(tri.getV1());
@@ -86,12 +77,9 @@ public class ClippingEngine {
         
         if (plane.distance(tri.getV3()) >= 0) inside.add(tri.getV3());
         else outside.add(tri.getV3());
-       
 
         if (inside.size() == 3) return List.of(tri);
-
         if (inside.size() == 0) return List.of();
-
         if (inside.size() == 1) 
         {
             Vertex a = inside.get(0);
@@ -116,9 +104,6 @@ public class ClippingEngine {
     {
         Vertex dir = B.subtract(A);
         double t = -(plane.normal.dot(A) + plane.d) / (plane.normal.dot(B.subtract(A)));
-        //double t = -(plane.distance(A)) / (plane.normal.dot(dir));
-        //System.out.println(A.getX() + " " + A.getY() + " " + A.getZ());
-        //System.out.println(B.getX() + " " + B.getY() + " " + B.getZ());
         return new Vertex(A.getX() + dir.getX() * t, 
         		A.getY() + dir.getY() * t, 
         		A.getZ() + dir.getZ() * t);

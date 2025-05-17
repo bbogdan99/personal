@@ -94,6 +94,7 @@ public class Matrix4 {
 	{
 		double ft = 1.0/Math.tan(Math.toRadians(angle/2.0));
 		this.values = new double[16];
+		
 		values[0] = ft/aspect;
 		values[1] = 0;
 		values[2] = 0;
@@ -113,6 +114,27 @@ public class Matrix4 {
 		values[13] = 0;
 		values[14] = -1;
 		values[15] = 0;
+		
+		/*values[0] = 1.0;
+		values[1] = 0;
+		values[2] = -1.0/2.0;
+		values[3] = 0;
+		
+		values[4] = 0;
+		values[5] = 1.0;
+		values[6] = 0;
+		values[7] = 0;
+		
+		values[8] = 0;
+		values[9] = 0;
+		values[10] = 0;
+		values[11] = 0;
+		
+		values[12] = 0;
+		values[13] = 0;
+		values[14] = -1.0/2.0;
+		values[15] = 1.0;*/
+		
 	}
 	
 	public double[] decomposeTRS()
@@ -422,7 +444,7 @@ public class Matrix4 {
 				2.0/width, 0, 0, 0,
 				0, 2.0/height, 0, 0,
 				0, 0, -2.0/(f-n), 0,
-				0, 0, 0, 1
+				0, 0, -(f+n)/(f-n), 1
 		});
 	}
 	

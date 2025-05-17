@@ -1,0 +1,158 @@
+package UIManager;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+import World.Scene;
+
+public class ObjectOptions extends JPanel
+{
+	Object3D obj;
+	Scene scene;
+	JPanel renderPanel;
+	
+	public ObjectOptions(Scene scene)
+	{
+		obj = new Object3D();
+		this.scene = scene;
+
+		
+        
+        setFocusable(false);
+	}
+	
+	
+	
+	public void showDisabled()
+	{
+		var viewLabel = new JLabel("<html>Viewing: </html>"); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+        
+		setFocusable(false);
+	}
+	
+	public void showOptions()
+	{
+		setFocusable(true);
+		
+		var viewLabel = new JLabel("<html>Viewing: " + obj.getClass().getCanonicalName()); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+		
+		double[] attTSR = obj.getTRS().decomposeTRS();
+		double[] material = {obj.getMaterial().getKa(), obj.getMaterial().getKd(), obj.getMaterial().getKs(), obj.getMaterial().getB()};
+		
+		var scaleXLabel = new JLabel("<html>Scale x: ");
+		scaleXLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleXLabel.setForeground(new Color(50, 50, 25));
+		
+		var currentScaleX = new JLabel("<html> " + attTSR[3]);
+		currentScaleX.setFont(new Font("Serif", Font.PLAIN, 12));
+		currentScaleX.setForeground(new Color(50, 50, 25));
+		
+		var modifyScaleX = new JTextField(11);
+		modifyScaleX.addActionListener(e -> {
+			try
+			{
+				double x = Double.parseDouble(modifyScaleX.getText());
+				currentScaleX.setText(String.valueOf(x));
+				
+				Matrix4 temp = new Matrix4(attTSR[0], attTSR[1], attTSR[2],
+						attTSR[6], attTSR[7], attTSR[8],
+						x, attTSR[4], attTSR[5]);
+				obj.getTRS().setValues(temp.getValues());
+			} catch (Exception ex)
+			{
+				ex.printStackTrace();
+				currentScaleX.setText("1.0");
+				Matrix4 temp = new Matrix4(attTSR[0], attTSR[1], attTSR[2],
+						attTSR[6], attTSR[7], attTSR[8],
+						1.0, attTSR[4], attTSR[5]);
+				obj.getTRS().setValues(temp.getValues());
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		JPanel scaleXRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		scaleXRow.add(scaleXLabel);
+		scaleXRow.add(modifyScaleX);
+		scaleXRow.add(currentScaleX);
+		
+		add(scaleXRow);
+		
+		var scaleYLabel = new JLabel("<html>Scale y: ");
+		scaleYLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleYLabel.setForeground(new Color(50, 50, 25));
+		
+		var currentScaleY = new JLabel("<html> " + attTSR[4]);
+		currentScaleY.setFont(new Font("Serif", Font.PLAIN, 12));
+		currentScaleY.setForeground(new Color(50, 50, 25));
+		
+		var modifyScaleY = new JTextField(11);
+		modifyScaleY.addActionListener( e -> {
+			try
+			{
+				double y = Double.parseDouble(modifyScaleY.getText());
+				currentScaleY.setText(String.valueOf(y));
+				
+				Matrix4 temp = new Matrix4(attTSR[0], attTSR[1], attTSR[2],
+						attTSR[6], attTSR[7], attTSR[8],
+						attTSR[3], y, attTSR[5]);
+				obj.getTRS().setValues(temp.getValues());
+			} catch (Exception ex)
+			{
+				ex.printStackTrace();
+				currentScaleY.setText("1.0");
+				Matrix4 temp = new Matrix4(attTSR[0], attTSR[1], attTSR[2],
+						attTSR[6], attTSR[7], attTSR[8],
+						attTSR[3], 1.0, attTSR[5]);
+				obj.getTRS().setValues(temp.getValues());
+			}
+			finally
+			{
+				renderPanel.repaint();
+			}
+		});
+		
+		JPanel scaleYRow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		scaleYRow.add(scaleYLabel);
+		scaleYRow.add(modifyScaleY);
+		scaleYRow.add(currentScaleY);
+		
+		add(scaleYRow);
+		
+		var scaleZLabel = new JLabel("<html>Scale z: ");
+		scaleZLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleZLabel.setForeground(new Color(50, 50, 25));
+		
+	}
+	
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+	public void setObject(Object3D obj) 
+	{
+		this.obj = obj;
+		if (obj != null) showOptions();
+		else showDisabled();
+	}
+	public void setScene(Scene scene) {this.scene = scene;}
+}

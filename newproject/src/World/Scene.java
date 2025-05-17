@@ -1,5 +1,6 @@
 package World;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import ThreeDimensionals.Object3D;
@@ -13,12 +14,14 @@ public class Scene
 	private Camera cam;
 	//ArrayList<LightSource>LightSources;
 	private Vertex Ia;
+	private Color backgroundColor;
 	
 	public Scene(Camera cam)
 	{
 		setObjects(new ArrayList<Object3D>());
 		setIa(new Vertex(64, 64, 64));
 		this.setCam(cam);
+		setBackgroundColor(Color.BLACK);
 	}
 	public void addObject(Object3D obj)
 	{
@@ -66,4 +69,10 @@ public class Scene
 	/*Vertex normal = (t.v2.subtract(t.v1)).cross(t.v3.subtract(t.v1)).normalizeVect();
 	Vertex lightDir = new Vertex(0,1,0).normalizeVect();
 	double intensity = 0.2 + Math.max(0.0,  normal.dot(lightDir));*/
+	public Color getBackgroundColor() {
+		return backgroundColor;
+	}
+	public void setBackgroundColor(Color backgroundColor) {
+		this.backgroundColor = backgroundColor;
+	}
 }

@@ -1,0 +1,491 @@
+package UIManager;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.text.BadLocationException;
+
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+import World.Scene;
+
+public class ObjectOptions extends JPanel
+{
+	Object3D obj;
+	Scene scene;
+	JPanel renderPanel;
+	
+	public ObjectOptions(Scene scene)
+	{
+		obj = new Object3D();
+		this.scene = scene;
+
+        setFocusable(false);
+	}
+	
+	
+	
+	public void showDisabled()
+	{
+		var viewLabel = new JLabel("<html>Viewing: </html>"); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+        
+		setFocusable(false);
+	}
+	
+	public void showOptions()
+	{
+		setFocusable(true);
+		
+		String type = obj.getClass().getTypeName();
+		var viewLabel = new JLabel("<html>Viewing: " + type); 
+		
+		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
+        viewLabel.setForeground(new Color(50, 50, 25));
+        
+        add(viewLabel);
+		
+		double[] attTSR = obj.getTRS().decomposeTRS();
+		double[] material = {obj.getMaterial().getKa(), obj.getMaterial().getKd(), obj.getMaterial().getKs(), obj.getMaterial().getB()};
+		
+	    JPanel scaleXRow = scaleOption(attTSR, 'x');
+	    JPanel scaleYRow = scaleOption(attTSR, 'y');
+	    JPanel scaleZRow = scaleOption(attTSR, 'z');
+	    
+	    add(scaleXRow);
+	    add(scaleYRow);
+	    add(scaleZRow);
+	    
+	    JPanel rotateXRow = rotationOption(attTSR, 'x');
+	    JPanel rotateYRow = rotationOption(attTSR, 'y');
+	    JPanel rotateZRow = rotationOption(attTSR, 'z');
+	    
+	    add(rotateXRow);
+	    add(rotateYRow);
+	    add(rotateZRow);
+	    
+	    JPanel translateXRow = translateOption(attTSR, 'x');
+	    JPanel translateYRow = translateOption(attTSR, 'y');
+	    JPanel translateZRow = translateOption(attTSR, 'z');
+	    
+	    add(translateXRow);
+	    add(translateYRow);
+	    add(translateZRow);
+	    
+	    JPanel reflectRow = reflectOption(attTSR);
+	    
+	    add(reflectRow);
+	}
+	
+	private JPanel scaleOption(double[] att, char axis)
+	{
+		double x = att[3], y = att[4], z = att[5];
+		
+		var scaleALabel = new JLabel("Scale :");
+		scaleALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		scaleALabel.setForeground(new Color(50,50,25));
+		
+		var modifyScaleA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			scaleALabel.setText("Scale X: ");
+			modifyScaleA.setText(String.valueOf(x));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							X, att[4], att[5]);
+					att[3] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[3]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			scaleALabel.setText("Scale Y: ");
+			modifyScaleA.setText(String.valueOf(y));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], Y, att[5]);
+					att[4] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[4]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			scaleALabel.setText("Scale Z: ");
+			modifyScaleA.setText(String.valueOf(z));
+			modifyScaleA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyScaleA.getText());
+					modifyScaleA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], Z);
+					att[5] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyScaleA.setText(String.valueOf(att[5]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			scaleALabel.setText("Undefined axis for scaling");
+			break;
+		}	
+		
+		JPanel ScaleARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		ScaleARow.add(scaleALabel);
+		ScaleARow.add(modifyScaleA);
+		
+		return ScaleARow;
+	}
+	
+	private JPanel rotationOption(double[] att, char axis)
+	{
+		double x = att[6], y = att[7], z = att[8];
+		var rotateALabel = new JLabel("Rotate: ");
+		rotateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		rotateALabel.setForeground(new Color(50,50,25));
+		
+		var rotateASlider = new JSlider(0, 360, 0);
+		var modifyRotateA = new JTextField(11);
+		
+		switch(Character.toUpperCase(axis))
+		{
+		case 'X':
+			rotateASlider.setValue((int)x);
+			modifyRotateA.setText(String.valueOf(x));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						val, att[7], att[8],
+						att[3], att[4], att[5]);
+				att[6] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyRotateA.getText());
+					X = X % 360;
+					modifyRotateA.setText(String.valueOf(X));
+					rotateASlider.setValue((int)X);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							X, att[7], att[8],
+							att[3], att[4], att[5]);
+					att[6] = X;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[6]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			rotateASlider.setValue((int)y);
+			modifyRotateA.setText(String.valueOf(y));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], val, att[8],
+						att[3], att[4], att[5]);
+				att[7] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyRotateA.getText());
+					Y = Y % 360;
+					modifyRotateA.setText(String.valueOf(Y));
+					rotateASlider.setValue((int)Y);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], Y, att[8],
+							att[3], att[4], att[5]);
+					att[7] = Y;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[7]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			rotateASlider.setValue((int)z);
+			modifyRotateA.setText(String.valueOf(z));
+			rotateASlider.addChangeListener(e->{
+				int val = rotateASlider.getValue();
+				modifyRotateA.setText(String.valueOf(val));
+				
+				Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+						att[6], att[7], val,
+						att[3], att[4], att[5]);
+				att[8] = val;
+				
+				obj.getTRS().setValues(temp.getValues());
+				
+				renderPanel.repaint();
+			});
+			
+			modifyRotateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyRotateA.getText());
+					Z = Z % 360;
+					modifyRotateA.setText(String.valueOf(Z));
+					rotateASlider.setValue((int)Z);
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+							att[6], att[7], Z,
+							att[3], att[4], att[5]);
+					att[8] = Z;
+					
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyRotateA.setText(String.valueOf(att[8]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			
+			break;
+		default:
+			rotateALabel.setText("Undefined axis for rotation");
+			break;
+		}
+		
+		JPanel RotateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		RotateARow.add(rotateALabel);
+		RotateARow.add(rotateASlider);
+		RotateARow.add(modifyRotateA);
+		
+		return RotateARow;		
+	}
+	
+	private JPanel translateOption(double[] att, char axis)
+	{
+		double x = att[0], y = att[1], z = att[2];
+		var translateALabel = new JLabel("Translate :");
+		translateALabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		translateALabel.setForeground(new Color(50,50,25));
+		
+		var modifyTranslateA = new JTextField(11);
+		
+		switch (Character.toUpperCase(axis))
+		{
+		case 'X':
+			translateALabel.setText("Translate x:");
+			modifyTranslateA.setText(String.valueOf(x));
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double X = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(X));
+					
+					Matrix4 temp = new Matrix4(X, att[1], att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[0] = X;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[0]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Y':
+			translateALabel.setText("Translate y:");
+			modifyTranslateA.setText(String.valueOf(y));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Y = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Y));
+					
+					Matrix4 temp = new Matrix4(att[0], Y, att[2],
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[1] = Y;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[1]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		case 'Z':
+			translateALabel.setText("Translate z:");
+			modifyTranslateA.setText(String.valueOf(z));
+			
+			modifyTranslateA.addActionListener(e -> {
+				try
+				{
+					double Z = Double.parseDouble(modifyTranslateA.getText());
+					modifyTranslateA.setText(String.valueOf(Z));
+					
+					Matrix4 temp = new Matrix4(att[0], att[1], Z,
+							att[6], att[7], att[8],
+							att[3], att[4], att[5]);
+					att[2] = Z;
+					obj.getTRS().setValues(temp.getValues());
+				} catch (Exception ex)
+				{
+					ex.printStackTrace();
+					modifyTranslateA.setText(String.valueOf(att[2]));
+				}
+				finally
+				{
+					renderPanel.repaint();
+				}
+			});
+			break;
+		default:
+			translateALabel.setText("Undefined axis for translation");
+			break;
+		}
+		
+		JPanel TranslateARow = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		TranslateARow.add(translateALabel);
+		TranslateARow.add(modifyTranslateA);
+		return TranslateARow;
+	}
+	
+	private JPanel reflectOption(double[] att)
+	{
+		JLabel reflectLabel = new JLabel("Reflect on: ");
+		reflectLabel.setFont(new Font("Serif", Font.PLAIN, 12));
+		reflectLabel.setForeground(new Color(50,50,25));
+		
+		var reflectX = new JButton("X");
+		reflectX.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					-1.0 * att[3], att[4], att[5]);
+			att[3] = -1.0 * att[3];
+			obj.getTRS().setValues(temp.getValues());
+		});
+		
+		var reflectY = new JButton("Y");
+		reflectY.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], -1.0 * att[4], att[5]);
+			att[4] = -1.0 * att[4];
+			obj.getTRS().setValues(temp.getValues());
+		});
+		
+		var reflectZ = new JButton("Z");
+		reflectZ.addActionListener(e->{
+			Matrix4 temp = new Matrix4(att[0], att[1], att[2],
+					att[6], att[7], att[8],
+					att[3], att[4], -1.0 * att[5]);
+			att[5] = -1.0 * att[5];
+			obj.getTRS().setValues(temp.getValues());
+		});
+		
+		JPanel reflect = new JPanel();
+		reflect.add(reflectLabel);
+		reflect.add(reflectX);
+		reflect.add(reflectY);
+		reflect.add(reflectZ);
+		return reflect;
+	}
+	
+	public void setRenderPanel(JPanel renderPanel) {this.renderPanel = renderPanel;}
+	public void setObject(Object3D obj) 
+	{
+		this.obj = obj;
+		if (obj != null) showOptions();
+		else showDisabled();
+	}
+	public void setScene(Scene scene) {this.scene = scene;}
+}
