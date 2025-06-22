@@ -17,7 +17,6 @@ public class MouseControlManager implements MouseMotionListener, MouseListener
 	boolean Pressed;
 	
 	int lastX, lastY;
-	int startX, startY;
 
     double sensitivity;
     
@@ -26,7 +25,7 @@ public class MouseControlManager implements MouseMotionListener, MouseListener
 	public MouseControlManager() 
 	{
 		Pressed = false;
-		startX = startY = lastX = lastY = 0;
+		lastX = lastY = 0;
 		sensitivity = .01;
 	}
 	public void setCamera(Camera camera){this.camera = camera;}
@@ -66,13 +65,7 @@ public class MouseControlManager implements MouseMotionListener, MouseListener
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		if (Pressed == false)
-		{
-			Pressed = true;
-			startX = e.getX();
-			startY = e.getY();
-		}
-		
+		Pressed = true;
 		lastX = e.getX();
 		lastY = e.getY();
 		

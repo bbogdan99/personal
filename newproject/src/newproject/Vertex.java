@@ -1,9 +1,10 @@
 package newproject;
 
+//import World.Scene;
+
 public class Vertex {
 	double x,y,z, w;
 	double xn, yn, zn;
-	double u, v;
 	
 	public Vertex(double x, double y, double z, double w)
 	{
@@ -62,8 +63,6 @@ public class Vertex {
 	public double getY() {return y;}
 	public double getZ() {return z;}
 	public double getW() {return w;}
-	public double getU() {return u;}
-	public double getV() {return v;}
 	public void normalize()
 	{
 		if (w==0) 
@@ -84,6 +83,4 @@ public class Vertex {
 	public void setY(double Y) {this.y =Y;}
 	public void setZ(double Z) {this.z =Z;}
 	public void setW(double W) {this.w =W;}
-	public void setU(double U) {this.u =U;}
-	public void setV(double V) {this.v =V;}
 }

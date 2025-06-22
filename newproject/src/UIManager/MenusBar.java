@@ -1,9 +1,11 @@
 package UIManager;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.Robot;
 import java.awt.event.ItemEvent;
 import java.awt.image.BufferedImage;
@@ -15,6 +17,7 @@ import java.time.format.DateTimeFormatter;
 
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JColorChooser;
@@ -24,8 +27,11 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import FirstPersonControl.KeyEventManager;
@@ -198,7 +204,15 @@ public class MenusBar extends JMenuBar
 			var btns = new JPanel();
 			
 			var backgroundLabel = new JLabel("Background Color");
-			var colorPicker = new JButton("Placeholder");
+			var colorPicker = new JButton();
+			
+			var og = new ImageIcon("res/icons/paintbucket.png");
+			Image image = og.getImage();
+			var scaledImage = image.getScaledInstance(64, 64, Image.SCALE_SMOOTH);
+			var scaledIcon = new ImageIcon(scaledImage);
+			
+			colorPicker.setIcon(scaledIcon);
+			
 			colorPicker.addActionListener(ev -> {
 				var color = JColorChooser.showDialog(this, 
 						"Choose background's color", scene.getBackgroundColor());
@@ -209,14 +223,19 @@ public class MenusBar extends JMenuBar
 			
 			var ambientLabel = new JLabel("Ambient light");
 			var ambX = new JTextField(5);
-			ambX.setText(String.valueOf(scene.getIa().getX()));
+			ambX.setText(String.valueOf(scene.getIa().getColor().getRed()));
 			ambX.addActionListener(a -> {
 				try {
-					double X = Double.parseDouble(ambX.getText());
-					scene.getIa().setX(X);
+					scene.getIa().setColor( new Color(
+							Integer.parseInt(ambX.getText()),
+							scene.getIa().getColor().getGreen(),
+							scene.getIa().getColor().getBlue(),
+							scene.getIa().getColor().getAlpha()
+							));
+					ambX.setText(String.valueOf(scene.getIa().getColor().getRed()));
 				}catch (Exception ex)
 				{
-					ambX.setText(String.valueOf(scene.getIa().getX()));
+					ambX.setText(String.valueOf(scene.getIa().getColor().getRed()));
 				}
 				finally
 				{
@@ -225,14 +244,19 @@ public class MenusBar extends JMenuBar
 			});
 			
 			var ambY = new JTextField(5);
-			ambY.setText(String.valueOf(scene.getIa().getY()));
+			ambY.setText(String.valueOf(scene.getIa().getColor().getGreen()));
 			ambY.addActionListener(a -> {
 				try {
-					double Y = Double.parseDouble(ambY.getText());
-					scene.getIa().setY(Y);
+					scene.getIa().setColor( new Color(
+							scene.getIa().getColor().getRed(),
+							Integer.parseInt(ambY.getText()),
+							scene.getIa().getColor().getBlue(),
+							scene.getIa().getColor().getAlpha()
+							));
+					ambY.setText(String.valueOf(scene.getIa().getColor().getGreen()));
 				}catch (Exception ex)
 				{
-					ambY.setText(String.valueOf(scene.getIa().getY()));
+					ambY.setText(String.valueOf(scene.getIa().getColor().getGreen()));
 				}
 				finally
 				{
@@ -241,14 +265,19 @@ public class MenusBar extends JMenuBar
 			});
 			
 			var ambZ = new JTextField(5);
-			ambZ.setText(String.valueOf(scene.getIa().getZ()));
+			ambZ.setText(String.valueOf(scene.getIa().getColor().getBlue()));
 			ambZ.addActionListener(a-> {
 				try {
-					double Z = Double.parseDouble(ambZ.getText());
-					scene.getIa().setZ(Z);
+					scene.getIa().setColor( new Color(
+							scene.getIa().getColor().getRed(),
+							scene.getIa().getColor().getGreen(),
+							Integer.parseInt(ambZ.getText()),
+							scene.getIa().getColor().getAlpha()
+							));
+					ambZ.setText(String.valueOf(scene.getIa().getColor().getBlue()));
 				}catch (Exception ex)
 				{
-					ambZ.setText(String.valueOf(scene.getIa().getZ()));
+					ambZ.setText(String.valueOf(scene.getIa().getColor().getBlue()));
 				}
 				finally
 				{
@@ -260,19 +289,13 @@ public class MenusBar extends JMenuBar
 			okBtn.addActionListener(a -> {
 				try 
 				{
-					double X = Double.parseDouble(ambX.getText());
-					scene.getIa().setX(X);
+					scene.getIa().setColor( new Color(
+							Integer.parseInt(ambX.getText()),
+							Integer.parseInt(ambY.getText()),
+							Integer.parseInt(ambZ.getText()),
+							scene.getIa().getColor().getAlpha()
+							));
 				}catch (Exception ex){}
-				try
-				{
-					double Y = Double.parseDouble(ambY.getText());
-					scene.getIa().setY(Y);
-				}catch (Exception ex) {}
-				try
-				{
-					double Z = Double.parseDouble(ambZ.getText());
-					scene.getIa().setZ(Z);
-				}catch (Exception ex) {}
 				
 				renderPanel.repaint();
 				sceneDialog.dispose();
@@ -375,7 +398,7 @@ public class MenusBar extends JMenuBar
 			
 			tt.add(ms);
 			tt.add(rs);
-			tt.add(pt);
+			//tt.add(pt);
 			tt.add(btns);
 			
 			sceneDialog.setSize(400, 320);
@@ -397,7 +420,32 @@ public class MenusBar extends JMenuBar
 	{
 		var hMenuItem = new JMenuItem("About");
 		hMenuItem.setToolTipText("Information in regards to this application");
-	
+		hMenuItem.addActionListener(e->{
+			var textPane = new JTextPane();
+			var spane = new JScrollPane(textPane);
+			spane.setPreferredSize(new Dimension(400, 300));
+			
+			textPane.setContentType("text/html");
+			textPane.setEditable(false);
+			
+			loadFile(textPane);
+			
+			JOptionPane.showMessageDialog(null, spane, "About", JOptionPane.INFORMATION_MESSAGE);
+		});
+		
 		HelpMenu.add(hMenuItem);
+	}
+	
+	private void loadFile(JTextPane textPane)
+	{
+		try
+		{
+			//var file = new File(System.getProperty("user.dir") + "/help/about.html");
+			//textPane.setPage("File:///" + file);
+			String curDir = System.getProperty("user.dir").replace("\\", "/");
+			String file = "File:///" + curDir + "/res/help/about.html";
+			textPane.setPage(file);
+			//System.out.println(file);
+		} catch (Exception ex) {ex.printStackTrace();}
 	}
 }

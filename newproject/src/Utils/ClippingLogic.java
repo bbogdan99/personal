@@ -1,9 +1,9 @@
 package Utils;
 
-import java.util.ArrayList;
+
 //import java.util.List;
 
-import ThreeDimensionals.Object3D;
+
 import World.Scene;
 import newproject.Triangle;
 import newproject.Vertex;

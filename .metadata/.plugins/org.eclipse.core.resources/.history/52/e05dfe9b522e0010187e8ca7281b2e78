@@ -1,8 +1,0 @@
-package UIManager;
-
-import javax.swing.JButton;
-
-public class ReflectButton extends JButton
-{
-	
-}

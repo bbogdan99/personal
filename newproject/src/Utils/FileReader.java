@@ -55,6 +55,7 @@ public class FileReader
 	{
 		try 
 		{
+			//ImageIO.read
 			image = ImageIO.read(new File(path));
 		} 
 		catch (IOException e)
@@ -160,8 +161,8 @@ public class FileReader
 						continue;
 					}
 					
-					vertexes.get(Av-1).setU( vertexTexels.get(Avt-1).getFirst()  );
-					vertexes.get(Av-1).setV( vertexTexels.get(Avt-1).getSecond() );
+					/*vertexes.get(Av-1).setU( vertexTexels.get(Avt-1).getFirst()  );
+					vertexes.get(Av-1).setV( vertexTexels.get(Avt-1).getSecond() );*/
 					
 					vertexes.get(Av-1).setNormal( vertexNormals.get(Avn-1).getFirst(), 
 							vertexNormals.get(Avn-1).getSecond(), 
@@ -170,8 +171,8 @@ public class FileReader
 					temp = faceObjRead(data, pos);
 					Bv = temp[0]; Bvt = temp[1]; Bvn = temp[2]; pos = temp[3];
 					
-					vertexes.get(Bv-1).setU( vertexTexels.get(Bvt-1).getFirst()  );
-					vertexes.get(Bv-1).setV( vertexTexels.get(Bvt-1).getSecond() );
+					/*vertexes.get(Bv-1).setU( vertexTexels.get(Bvt-1).getFirst()  );
+					vertexes.get(Bv-1).setV( vertexTexels.get(Bvt-1).getSecond() );*/
 					
 					vertexes.get(Bv-1).setNormal( vertexNormals.get(Bvn-1).getFirst(), 
 							vertexNormals.get(Bvn-1).getSecond(), 
@@ -180,8 +181,8 @@ public class FileReader
 					temp = faceObjRead(data, pos);
 					Cv = temp[0]; Cvt = temp[1]; Cvn = temp[2]; pos = temp[3];
 					
-					vertexes.get(Cv-1).setU( vertexTexels.get(Cvt-1).getFirst()  );
-					vertexes.get(Cv-1).setV( vertexTexels.get(Cvt-1).getSecond() );
+					/*vertexes.get(Cv-1).setU( vertexTexels.get(Cvt-1).getFirst()  );
+					vertexes.get(Cv-1).setV( vertexTexels.get(Cvt-1).getSecond() );*/
 					
 					vertexes.get(Cv-1).setNormal( vertexNormals.get(Cvn-1).getFirst(), 
 							vertexNormals.get(Cvn-1).getSecond(), 
@@ -196,8 +197,8 @@ public class FileReader
 					temp = faceObjRead(data, pos);
 					Dv = temp[0]; Dvt = temp[1]; Dvn = temp[2]; 
 					
-					vertexes.get(Dv-1).setU( vertexTexels.get(Dvt-1).getFirst()  );
-					vertexes.get(Dv-1).setV( vertexTexels.get(Dvt-1).getSecond() );
+					/*vertexes.get(Dv-1).setU( vertexTexels.get(Dvt-1).getFirst()  );
+					vertexes.get(Dv-1).setV( vertexTexels.get(Dvt-1).getSecond() );*/
 					
 					vertexes.get(Dv-1).setNormal( vertexNormals.get(Dvn-1).getFirst(), 
 							vertexNormals.get(Dvn-1).getSecond(), 

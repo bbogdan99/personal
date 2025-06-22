@@ -1,12 +1,11 @@
 package ThreeDimensionals;
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 import Matrix.Matrix4;
 import newproject.Material;
 import newproject.Triangle;
-import newproject.Vertex;
+
 
 public class Object3D 
 {
@@ -29,7 +28,8 @@ public class Object3D
 		this.Triangles = new ArrayList<Triangle>();
 		for (Triangle t: Triangles) 
 		{
-			Triangle a = new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3);
+			Triangle a = new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3, t.getUV1(), t.getUV2(), t.getUV3(),
+					t.getTexture());
 			this.Triangles.add(a);
 		}
 		TRS = new Matrix4();
@@ -40,7 +40,8 @@ public class Object3D
 		this.Triangles = new ArrayList<Triangle>();
 		for (Triangle t: Triangles) 
 		{
-			Triangle a = new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3);
+			Triangle a = new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3, t.getUV1(), t.getUV2(), t.getUV3(),
+					t.getTexture());
 			this.Triangles.add(a);
 		}
 		this.TRS = new Matrix4();
@@ -52,7 +53,8 @@ public class Object3D
 		this.Triangles = new ArrayList<Triangle>();
 		for (Triangle t: other.Triangles) 
 		{
-			Triangle a = new Triangle(new Vertex(t.getV1()), new Vertex(t.getV2()), new Vertex(t.getV3()), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3);
+			Triangle a = new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3, t.getUV1(), t.getUV2(), t.getUV3(),
+					t.getTexture());
 			this.Triangles.add(a);
 		}
 		this.TRS = new Matrix4();
@@ -70,7 +72,7 @@ public class Object3D
 		this.Triangles = new ArrayList<>();
 		for (Triangle t : Triangles) 
 		{
-			this.Triangles.add(new Triangle(t.getV1(), t.getV2(), t.getV3(), t.getColor(), t.clampedv1, t.clampedv2, t.clampedv3));
+			this.Triangles.add(t);
 		}
 	}
 	

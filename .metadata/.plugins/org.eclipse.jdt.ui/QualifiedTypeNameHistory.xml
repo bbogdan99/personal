@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Matrix.Matrix3"/>
-    <fullyQualifiedTypeName name="java.awt.Canvas"/>
-    <fullyQualifiedTypeName name="Drawables.DrawUtils"/>
-    <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
-    <fullyQualifiedTypeName name="newproject.Camera"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="Utils.ClippingLogic"/>
-    <fullyQualifiedTypeName name="Utils.ClippingEngine"/>
-    <fullyQualifiedTypeName name="Utils.ClippingEngine.Plane"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="newproject.Triangle"/>
-    <fullyQualifiedTypeName name="newproject.Material"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
     <fullyQualifiedTypeName name="javax.swing.JMenu"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
-    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="java.awt.Robot"/>
     <fullyQualifiedTypeName name="UIManager.MenusBar"/>
     <fullyQualifiedTypeName name="javax.swing.JCheckBoxMenuItem"/>
@@ -29,7 +16,6 @@
     <fullyQualifiedTypeName name="java.time.ZoneId"/>
     <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
     <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
-    <fullyQualifiedTypeName name="Utils.FileReader"/>
     <fullyQualifiedTypeName name="java.awt.Graphics2D"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
     <fullyQualifiedTypeName name="java.io.File"/>
@@ -43,8 +29,6 @@
     <fullyQualifiedTypeName name="javax.swing.JSlider"/>
     <fullyQualifiedTypeName name="javax.swing.JColorChooser"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
-    <fullyQualifiedTypeName name="newproject.Vertex"/>
-    <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="javax.swing.JDialog"/>
     <fullyQualifiedTypeName name="java.awt.Frame"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
@@ -60,4 +44,20 @@
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
     <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
     <fullyQualifiedTypeName name="UIManager.WorldOptions"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+    <fullyQualifiedTypeName name="Utils.FileReader"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="newproject.UV"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="World.LightSource"/>
+    <fullyQualifiedTypeName name="newproject.Vertex"/>
+    <fullyQualifiedTypeName name="newproject.Material"/>
+    <fullyQualifiedTypeName name="newproject.Camera"/>
+    <fullyQualifiedTypeName name="World.Renderer"/>
+    <fullyQualifiedTypeName name="World.AmbientLight"/>
+    <fullyQualifiedTypeName name="World.DirectionalLight"/>
+    <fullyQualifiedTypeName name="World.PointLight"/>
+    <fullyQualifiedTypeName name="World.SpotLight"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="World.CalculationTask"/>
 </qualifiedTypeNameHistroy>

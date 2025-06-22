@@ -1,0 +1,327 @@
+package newproject;
+import javax.swing.*;
+
+import FirstPersonControl.KeyEventManager;
+import FirstPersonControl.MouseControlManager;
+import Matrix.Matrix4;
+import ThreeDimensionals.Object3D;
+//import OtherMath.MathFct;
+import ThreeDimensionals.Rectangular;
+import UIManager.MenusBar;
+import UIManager.ObjectOptions;
+import UIManager.WorldOptions;
+import Utils.ClippingEngine;
+import Utils.ClippingEngine.Plane;
+import Utils.DrawUtils;
+import Utils.FileReader;
+import World.AmbientLight;
+import World.CalculationTask;
+import World.DirectionalLight;
+import World.LightSource;
+import World.PointLight;
+import World.Scene;
+import World.SpotLight;
+//import World.Renderer;
+
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+
+
+//lighting = ambient + diffuse + specular
+//color = modelcolor * lighting
+
+//ambient:  Ia (predefinit de user), ka - constanta pentru material
+
+
+public class main{
+	
+	public static void main(String[] args) 
+	{
+		JFrame frame = new JFrame("Rendering System");
+		Container pane = frame.getContentPane();
+		pane.setLayout(new BorderLayout());
+
+		
+        double epsilon = 1e-6;
+        
+        double fov = 90; // Or 60
+        double aspect = 9.0/9.0;//((double)getWidth()) / ((double)getHeight());
+        double near = .1;
+        double far = 1000.0;
+        double f = 1.0 / Math.tan(fov / 2);
+
+        Camera cam = new Camera(new Vertex(0,0, 50,1), 0, 0, 0, far, near, fov, aspect);
+        
+        MenusBar menuBar = new MenusBar();
+    	frame.setJMenuBar(menuBar);
+        
+    	Scene scene = new Scene(cam);
+    	
+    	/*scene.addLight(new SpotLight(new Vertex(0, 200, -801),           // position
+        	    new Vertex(1, 1, -1),                // direction (pointing forward)
+        	    new Color(255, 255, 255),          // soft yellow-ish light
+        	    Math.cos(Math.toRadians(12.5)),   // inner cutoff angle cosine (spotlight bright inside this cone)
+        	    Math.cos(Math.toRadians(17.5)),
+        	    1,
+        	    0,
+        	    0));*/
+        //scene.addLight(new AmbientLight(new Color(128, 128, 128)));
+        scene.addLight(new DirectionalLight(new Color(255, 255, 255), new Vertex(0, 0, -1)));
+        //scene.addLight(new PointLight(new Vertex(0, 200, -1001), new Color(255, 255, 255), 0.0, 0.00, 1));
+        
+    	CalculationTask task1 = new CalculationTask(scene);
+    	CalculationTask task2 = new CalculationTask(scene);
+    	CalculationTask task3 = new CalculationTask(scene);
+    	
+    	menuBar.setScene(scene);
+    	
+    	KeyEventManager km = new KeyEventManager();
+        km.setCamera(cam);
+        MouseControlManager mm = new MouseControlManager();
+        mm.setCamera(cam);
+    	
+        Vertex v0 = new Vertex(-100, -100, -100);
+        Vertex v1 = new Vertex(-100, -100,  100);
+        Vertex v2 = new Vertex(-100,  100, -100);
+        Vertex v3 = new Vertex(-100,  100,  100);
+        Vertex v4 = new Vertex( 100, -100, -100);
+        Vertex v5 = new Vertex( 100, -100,  100);
+        Vertex v6 = new Vertex( 100,  100, -100);
+        Vertex v7 = new Vertex( 100,  100,  100);
+
+        Matrix4 model = new Matrix4(0, 0, -1000, 0, 0, 30, 1, 1, 1);
+        FileReader fR = new FileReader();
+        String path = "res/textures/crate.jpg";
+        fR.readFile(path, 1);
+        Rectangular cube = new Rectangular(v0, v1, v2, v3, v4, v5, v6, v7, model, Color.BLUE, fR.getImage());
+        
+        scene.addObject(cube);
+        scene.setBackgroundColor(Color.BLUE);
+    	menuBar.setScene(scene);
+    	menuBar.setKeyEventManager(km);
+    	menuBar.setMouseControlManager(mm);
+
+        ObjectOptions objectOptions = new ObjectOptions(scene);
+        objectOptions.setObject(cube);
+        WorldOptions worldOptions = new WorldOptions(scene, km, mm);
+        km.setWorldOptions(worldOptions);
+        mm.setWorldOptions(worldOptions);
+        
+        
+        
+        JPanel renderPanel = new JPanel() 
+        {
+                public void paintComponent(Graphics g) 
+                {
+                    Graphics2D g2 = (Graphics2D) g;
+                    
+                    g2.setColor(scene.getBackgroundColor());
+                    g2.fillRect(0, 0, getWidth(), getHeight());
+
+                    g2.setColor(Color.WHITE);
+                    
+                    BufferedImage img = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    
+                    double[] zBuffer = new double[img.getWidth() * img.getHeight()];
+
+                    for (int q = 0; q < zBuffer.length; q++) 
+                    {
+                     zBuffer[q] = Double.NEGATIVE_INFINITY;
+                    }
+
+                    double d = .1; 
+
+                    Plane[] planes = new Plane[] {
+                        new Plane(new Vertex(0, 0, 1), -d),//-d),
+                        
+                        new Plane(new Vertex(0, 1, 1), 0),   
+                        new Plane(new Vertex(0, -1, 1), 0),
+                        
+                        new Plane(new Vertex(1, 0, 1), 0),
+                        new Plane(new Vertex(-1, 0, 1), 0),
+                    };
+                    
+                    //scene.addLight(new DirectionalLight(new Color(100, 10, 64), new Vertex(1, -1, -1)));
+                    //scene.addLight(new PointLight(new Vertex(0, 0, -1003), new Color(255, 23, 100), 1.0, 1, 1));
+                    
+                    Scene scene2 = new Scene(scene.getCam());
+                    for (Object3D obj:scene.getObjects()) scene2.addObject(new Object3D(obj));
+                    //scene2.setLightSources(scene.getLightSources());
+                    //System.out.println(scene.getLightSources().size());
+                    //System.out.println(scene.getVertixes().size());
+                    
+                    for (Object3D obj:scene2.getObjects())
+                    {
+                    	Matrix4 mvp = obj.getTRS().multiply(scene2.getCam().getViewMatrix()).multiply(scene2.getCam().getProjectionMatrix());
+                    	for (Triangle t: obj.getTriangles())
+                    	{
+                    		Vertex cv1 = new Vertex(t.getV1());
+                        	Vertex ncv1 = cv1.getNormal().normalizeVect();
+                        	cv1.setNormal(ncv1.getX(), ncv1.getY(), ncv1.getZ());
+                        	
+                        	Vertex cv2 = new Vertex(t.getV2());
+                        	Vertex ncv2 = cv2.normalizeVect().normalizeVect();
+                        	cv2.setNormal(ncv2.getX(), ncv2.getY(), ncv2.getZ());
+
+                        	Vertex cv3 = new Vertex(t.getV3());
+                        	Vertex ncv3 = cv3.normalizeVect().normalizeVect();
+                        	cv3.setNormal(ncv3.getX(), ncv3.getY(), ncv3.getZ());
+                        	
+                        	task1.setM(new Material(obj.getMaterial())); 
+                        	task1.setV(new Vertex(cv1));
+                        	task1.run();
+
+                        	double [] rgb1 = task1.getResult();
+                        	
+                        	task2.setM(new Material(obj.getMaterial())); 
+                        	task2.setV(new Vertex(cv2));
+                        	task2.run(); 
+
+                        	double [] rgb2 = task2.getResult();
+                        	
+                        	task3.setM(new Material(obj.getMaterial())); 
+                        	task3.setV(new Vertex(cv3));
+                        	task3.run();
+
+                        	double [] rgb3 = task3.getResult();
+                        	
+                        	int clampedv1 = 0, clampedv2 = 0, clampedv3 = 0;
+
+                    		clampedv1 = (int)rgb1[1];
+                    		clampedv2 = (int)rgb2[1];
+                    		clampedv3 = (int)rgb3[1];
+                        	
+
+                    		t.v1 = mvp.transform(t.v1);
+                    		t.v2 = mvp.transform(t.v2);
+                    		t.v3 = mvp.transform(t.v3);
+
+                    		t.setClamped(clampedv1, clampedv2, clampedv3);
+                    	}
+                    }
+                    
+                    scene2 = ClippingEngine.ClipScene(scene2, planes);
+
+                    for (Object3D obj: scene2.getObjects())
+                    for (Triangle t: obj.getTriangles())
+                    {
+                    	t.v1.normalize();
+                    	t.v2.normalize();
+                    	t.v3.normalize();
+
+                    	t.v1.x = (t.v1.x + 1.0) * 0.5 * ((double)getWidth());
+                    	t.v1.y = (1.0-t.v1.y) * 0.5 * ((double)getHeight());
+                    	
+                    	t.v2.x = (t.v2.x + 1.0) * 0.5 * ((double)getWidth());
+                    	t.v2.y = (1.0-t.v2.y) * 0.5 * ((double)getHeight());
+                    	
+                    	t.v3.x = (t.v3.x + 1.0) * 0.5 * ((double)getWidth());
+                    	t.v3.y = (1.0-t.v3.y) * 0.5 * ((double)getHeight());
+                    	
+                    	int minX = (int) Math.max(0, Math.ceil(Math.min(t.v1.x, Math.min(t.v2.x, t.v3.x))));
+                    	int maxX = (int) Math.min(img.getWidth() - 1, 
+                                Math.floor(Math.max(t.v1.x, Math.max(t.v2.x, t.v3.x))));
+                    	int minY = (int) Math.max(0, Math.ceil(Math.min(t.v1.y, Math.min(t.v2.y, t.v3.y))));
+                    	int maxY = (int) Math.min(img.getHeight() - 1,
+                                Math.floor(Math.max(t.v1.y, Math.max(t.v2.y, t.v3.y))));
+                    	
+                    	double TriangleArea = (t.v1.y - t.v3.y) * (t.v2.x - t.v3.x) +
+                    			(t.v2.y - t.v3.y) * (t.v3.x - t.v1.x);
+                    	
+                    	for (int y = minY; y<=maxY; y++)
+                    		for (int x = minX; x<=maxX; x++)
+                    		{
+                    			double b1 = ((y - t.v3.y) * (t.v2.x - t.v3.x) + (t.v2.y - t.v3.y) * (t.v3.x - x)) / TriangleArea;
+                    		    double b2 = ((y - t.v1.y) * (t.v3.x - t.v1.x) + (t.v3.y - t.v1.y) * (t.v1.x - x)) / TriangleArea;
+                    		    double b3 = ((y - t.v2.y) * (t.v1.x - t.v2.x) + (t.v1.y - t.v2.y) * (t.v2.x - x)) / TriangleArea;
+
+                    		    if (b1 >= -epsilon && b1 <= 1 + epsilon && b2 >= -epsilon && b2 <= 1 + epsilon && b3 >= -epsilon && b3 <= 1 + epsilon)
+                    		    {
+                    		    	double depth = b1 * t.v1.z + b2 * t.v2.z + b3 * t.v3.z;
+                    		    	
+                    		    	int zIndex = y * img.getWidth() + x;
+                    		    	
+                    		    	if (zBuffer[zIndex] < depth) 
+                    		    	{
+                    		    		double intensity = (b1 * t.clampedv1 + b2 * t.clampedv2 + b3* t.clampedv3)/255.0;
+
+                    		    		if( t.getUV1() == null || t.getUV2() == null || t.getUV3() == null || t.getTexture() == null)
+                    		    		{
+                    		    		
+                    		    		int r = (int)(obj.getMaterial().getColor().getRed() * intensity);    //t.color.getRed() * intensity);
+                    		    		int gr = (int)(obj.getMaterial().getColor().getGreen() * intensity);//(t.color.getGreen() * intensity);
+                    		    		int b = (int)(obj.getMaterial().getColor().getBlue() * intensity);//(t.color.getBlue() * intensity);
+                    		    		r = Math.max(0, Math.min(255, r));
+                    		    		gr = Math.max(0, Math.min(255, gr));
+                    		    		b = Math.max(0, Math.min(255, b));
+                    		    		int test = (obj.getMaterial().getColor().getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, test);
+                    		    		}
+                    		    		else
+                    		    		{
+                    		    		double tx = b1 * t.getUV1().getU() + b2 * t.getUV2().getU() + b3 * t.getUV3().getU();
+                        		    	double ty = b1 * t.getUV1().getV() + b2 * t.getUV2().getV() + b3 * t.getUV3().getV();
+                    		    		Color test = DrawUtils.GetTexel(t.getTexture(), tx, ty);
+                    		    		
+                    		    		int r = (int)(test.getRed() * intensity);
+                    		    		r = (r > 255) ? 255: ((r<0)? 0 : r);
+                    		    		int gr = (int)(test.getGreen() * intensity);
+                    		    		gr = (gr > 255) ? 255: ((gr<0)? 0 : gr);
+                    		    		int b = (int)(test.getBlue() * intensity);
+                    		    		b = (b > 255) ? 255: ((b<0)? 0 : b);
+                    		    		int col = (test.getAlpha() <<24) | (r<<16) | (gr<<8) | b;
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, col);//t.color.getRGB());
+                    		    		}
+                    		    		
+                    		    		zBuffer[zIndex] = depth;
+                    		    	}
+                    		    }
+                    		}
+                    	
+                    }
+                    g2.drawImage(img,0,0,null);
+                    // rendering magic will happen here
+                }
+        };
+            
+        //JPanel worldOptions = new JPanel();
+        objectOptions.setRenderPanel(renderPanel);
+        worldOptions.setRenderPanel(renderPanel);
+        menuBar.setRenderPanel(renderPanel);
+        mm.setRenderPanel(renderPanel);
+    	km.setRenderPanel(renderPanel);
+		
+        
+        worldOptions.setBackground(Color.LIGHT_GRAY);
+        objectOptions.setBackground(Color.LIGHT_GRAY);
+        
+        
+        renderPanel.setFocusable(true);
+        renderPanel.addKeyListener(km);
+        renderPanel.addMouseListener(mm);
+        renderPanel.addMouseMotionListener(mm);
+        
+        worldOptions.addKeyListener(km);
+        objectOptions.addKeyListener(km);
+        
+        frame.setDefaultCloseOperation(3);
+        
+        pane.add(renderPanel, BorderLayout.CENTER);
+        pane.add(objectOptions, BorderLayout.EAST);
+        pane.add(worldOptions, BorderLayout.WEST);
+        frame.setSize(2200, 1400);
+        
+        renderPanel.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() * 4.0/6.0), (int) (frame.getSize().getWidth() * 4.0/6.0)));
+        worldOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0-100), (int) (frame.getSize().getWidth() / 6.0-100)));
+        objectOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0+100), (int) (frame.getSize().getWidth() / 6.0+100)));
+
+        
+        frame.setVisible(true);
+	}
+
+
+}

@@ -30,6 +30,14 @@ public class Material
 		this.B = B;
 		this.color = color;
 	}
+	public Material(Material m)
+	{
+		this.ka = m.ka;
+		this.kd = m.kd;
+		this.ks = m.ks;
+		this.B = m.B;
+		this.color = m.color;
+	}
 	public void setKa(double ka) {this.ka = ka;}
 	public void setKd(double kd) {this.kd = kd;}
 	public void setKs(double ks) {this.ks = ks;}

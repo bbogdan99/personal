@@ -5,7 +5,6 @@ import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
-import Matrix.Matrix4;
 import UIManager.WorldOptions;
 import newproject.Camera;
 
@@ -85,13 +84,14 @@ public class KeyEventManager implements KeyListener{
 		
 	}
 
+	
+	public void setWorldOptions(WorldOptions worldOptions) {this.worldOptions = worldOptions;}
+
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	public void setWorldOptions(WorldOptions worldOptions) {this.worldOptions = worldOptions;}
 	
 
 }

@@ -13,7 +13,15 @@ import UIManager.WorldOptions;
 import Utils.ClippingEngine;
 import Utils.ClippingEngine.Plane;
 import Utils.DrawUtils;
+import Utils.FileReader;
+import World.AmbientLight;
+import World.CalculationTask;
+import World.DirectionalLight;
+import World.LightSource;
+import World.PointLight;
 import World.Scene;
+import World.SpotLight;
+//import World.Renderer;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -28,7 +36,7 @@ import java.awt.image.BufferedImage;
 
 
 public class main{
-
+	
 	public static void main(String[] args) 
 	{
 		JFrame frame = new JFrame("Rendering System");
@@ -50,6 +58,23 @@ public class main{
     	frame.setJMenuBar(menuBar);
         
     	Scene scene = new Scene(cam);
+    	
+    	scene.addLight(new SpotLight(new Vertex(0, 200, -801),           // position
+        	    new Vertex(1, 1, -1),                // direction (pointing forward)
+        	    new Color(255, 255, 255),          // soft yellow-ish light
+        	    Math.cos(Math.toRadians(12.5)),   // inner cutoff angle cosine (spotlight bright inside this cone)
+        	    Math.cos(Math.toRadians(17.5)),
+        	    1,
+        	    0,
+        	    0));
+        //scene.addLight(new AmbientLight(new Color(128, 128, 128)));
+        //scene.addLight(new DirectionalLight(new Color(255, 255, 255), new Vertex(0, 0, -1)));
+        //scene.addLight(new PointLight(new Vertex(0, 200, -1001), new Color(255, 255, 255), 0.0, 0.00, 1));
+        
+    	CalculationTask task1 = new CalculationTask(scene);
+    	CalculationTask task2 = new CalculationTask(scene);
+    	CalculationTask task3 = new CalculationTask(scene);
+    	
     	menuBar.setScene(scene);
     	
     	KeyEventManager km = new KeyEventManager();
@@ -66,8 +91,11 @@ public class main{
         Vertex v6 = new Vertex( 100,  100, -100);
         Vertex v7 = new Vertex( 100,  100,  100);
 
-        Matrix4 model = new Matrix4(0, 0, -1000, 0, 0, 30, 1, 1, 1);
-        Rectangular cube = new Rectangular(v0, v1, v2, v3, v4, v5, v6, v7, model, Color.BLUE);
+        Matrix4 model = new Matrix4(0, 0, -1000, 30, 60, 0, 1, 1, 1);
+        FileReader fR = new FileReader();
+        String path = "res/textures/crate.jpg";
+        fR.readFile(path, 1);
+        Rectangular cube = new Rectangular(v0, v1, v2, v3, v4, v5, v6, v7, model, Color.WHITE, fR.getImage());
         
         scene.addObject(cube);
         scene.setBackgroundColor(Color.BLUE);
@@ -80,6 +108,8 @@ public class main{
         WorldOptions worldOptions = new WorldOptions(scene, km, mm);
         km.setWorldOptions(worldOptions);
         mm.setWorldOptions(worldOptions);
+        
+        
         
         JPanel renderPanel = new JPanel() 
         {
@@ -104,7 +134,7 @@ public class main{
                     double d = .1; 
 
                     Plane[] planes = new Plane[] {
-                        new Plane(new Vertex(0, 0, 1), -d),
+                        new Plane(new Vertex(0, 0, 1), -d),//-d),
                         
                         new Plane(new Vertex(0, 1, 1), 0),   
                         new Plane(new Vertex(0, -1, 1), 0),
@@ -113,82 +143,61 @@ public class main{
                         new Plane(new Vertex(-1, 0, 1), 0),
                     };
                     
+                    //scene.addLight(new DirectionalLight(new Color(100, 10, 64), new Vertex(1, -1, -1)));
+                    //scene.addLight(new PointLight(new Vertex(0, 0, -1003), new Color(255, 23, 100), 1.0, 1, 1));
+                    
                     Scene scene2 = new Scene(scene.getCam());
                     for (Object3D obj:scene.getObjects()) scene2.addObject(new Object3D(obj));
-                    	
+                    //scene2.setLightSources(scene.getLightSources());
+                    //System.out.println(scene.getLightSources().size());
+                    //System.out.println(scene.getVertixes().size());
                     
                     for (Object3D obj:scene2.getObjects())
                     {
                     	Matrix4 mvp = obj.getTRS().multiply(scene2.getCam().getViewMatrix()).multiply(scene2.getCam().getProjectionMatrix());
                     	for (Triangle t: obj.getTriangles())
                     	{
-                    		//Vertex ctv1 = t.getV1();
-                    		//Vertex ctv2 = t.getV2();
-                    		//Vertex ctv3 = t.getV3();
-                    		
-                    		//ctv1.normalize();
-                        	//Vertex ncv1 = ctv1.normalizeVect();
-                        	//ctv2.normalize();
-                        	//Vertex ncv2 = ctv2.normalizeVect();
-                        	//ctv3.normalize();
-                        	//Vertex ncv3 = ctv3.normalizeVect();
-                    		Vertex cv1 = t.getV1();
-                        	//cv1.normalize();
-                        	Vertex ncv1 = cv1.normalizeVect();
+                    		Vertex cv1 = new Vertex(t.getV1());
+                        	Vertex ncv1 = cv1.getNormal().normalizeVect();
+                        	cv1.setNormal(ncv1.getX(), ncv1.getY(), ncv1.getZ());
                         	
-                        	//Vertex lightDir1 = (new Vertex( - t.v1.x, 25 - t.v1.y, 25 - t.v1.z)).normalizeVect();
-                        	Vertex lightDir1 = new Vertex(1, 1, -1).normalizeVect();
-                        	Vertex viewDir1 = (new Vertex(scene2.getCam().getX() - t.v1.x,
-                        			scene2.getCam().getY() - t.v1.y, scene2.getCam().getZ() - t.v1.z)).normalizeVect();
-                        	Vertex halfway1 = (new Vertex(lightDir1.x + viewDir1.x,
-                        			lightDir1.y + viewDir1.y, lightDir1.z + viewDir1.z).normalizeVect());
-                        	double diffuse1 = Math.max(0.0, ncv1.dot(lightDir1));
-                        	double specular1 = Math.pow(Math.max(0.0, ncv1.dot(halfway1)), 32.0);
+                        	Vertex cv2 = new Vertex(t.getV2());
+                        	Vertex ncv2 = cv2.normalizeVect().normalizeVect();
+                        	cv2.setNormal(ncv2.getX(), ncv2.getY(), ncv2.getZ());
+
+                        	Vertex cv3 = new Vertex(t.getV3());
+                        	Vertex ncv3 = cv3.normalizeVect().normalizeVect();
+                        	cv3.setNormal(ncv3.getX(), ncv3.getY(), ncv3.getZ());
                         	
-                        	int v1col = (int)(0.1 * 128.0 + 0.7 * 255.0 * diffuse1 + 0.2 * 255.0 * specular1);
-                        	int clampedv1 = Math.max(0,  Math.min(255, v1col));
+                        	task1.setM(new Material(obj.getMaterial())); 
+                        	task1.setV(new Vertex(cv1));
+                        	task1.run();
+
+                        	double [] rgb1 = task1.getResult();
                         	
-                        	Vertex cv2 = t.getV2();
-                        	//cv2.normalize();
-                        	Vertex ncv2 = cv2.normalizeVect();
+                        	task2.setM(new Material(obj.getMaterial())); 
+                        	task2.setV(new Vertex(cv2));
+                        	task2.run(); 
+
+                        	double [] rgb2 = task2.getResult();
                         	
-                        	//Vertex lightDir2 = (new Vertex( - t.v2.x, 25 - t.v2.y, 25 - t.v2.z)).normalizeVect();
-                        	Vertex lightDir2 = new Vertex(1, 1, -1).normalizeVect();
-                        	Vertex viewDir2 = (new Vertex(scene2.getCam().getX() - t.v2.x,
-                        			scene2.getCam().getY() - t.v2.y, scene2.getCam().getZ() - t.v2.z)).normalizeVect();
-                        	Vertex halfway2 = (new Vertex(lightDir2.x + viewDir2.x,
-                        			lightDir2.y + viewDir2.y, lightDir2.z + viewDir2.z).normalizeVect());
-                        	double diffuse2 = Math.max(0.0, ncv2.dot(lightDir2));
-                        	double specular2 = Math.pow(Math.max(0.0, ncv2.dot(halfway2)), 32.0);
+                        	task3.setM(new Material(obj.getMaterial())); 
+                        	task3.setV(new Vertex(cv3));
+                        	task3.run();
+
+                        	double [] rgb3 = task3.getResult();
                         	
-                        	int v2col = (int)(0.1 * 128.0 + 0.7 * 255.0 * diffuse2 + 0.2 * 255.0 * specular2);
-                        	int clampedv2 = Math.max(0,  Math.min(255, v2col));
+                        	int clampedv1 = 0, clampedv2 = 0, clampedv3 = 0;
+
+                    		clampedv1 = (int)rgb1[1];
+                    		clampedv2 = (int)rgb2[1];
+                    		clampedv3 = (int)rgb3[1];
                         	
-                        	
-                        	
-                        	Vertex cv3 = t.getV3();
-                        	//cv3.normalize();
-                        	Vertex ncv3 = cv3.normalizeVect();
-                        	
-                        	//Vertex lightDir3 = (new Vertex( - t.v3.x, 25 - t.v3.y, 25 - t.v3.z)).normalizeVect();
-                        	Vertex lightDir3 = new Vertex(1, 1, -1).normalizeVect();
-                        	Vertex viewDir3 = (new Vertex(scene2.getCam().getX() - t.v3.x,
-                        			scene2.getCam().getY() - t.v3.y, scene2.getCam().getZ() - t.v3.z)).normalizeVect();
-                        	Vertex halfway3 = (new Vertex(lightDir3.x + viewDir3.x,
-                        			lightDir3.y + viewDir3.y, lightDir3.z + viewDir3.z).normalizeVect());
-                        	double diffuse3 = Math.max(0.0, ncv3.dot(lightDir3));
-                        	double specular3 = Math.pow(Math.max(0.0, ncv3.dot(halfway3)), 32.0);
-                        	
-                        	int v3col = (int)(0.1 * 128.0 + 0.7 * 255.0 * diffuse3 + 0.2 * 255.0 * specular3);
-                        	int clampedv3 = Math.max(0,  Math.min(255, v3col));
-                    		
+
                     		t.v1 = mvp.transform(t.v1);
                     		t.v2 = mvp.transform(t.v2);
                     		t.v3 = mvp.transform(t.v3);
-                    		//Vertex tv1 = mvp.transform(t.v1);
-                        	//Vertex tv2 = mvp.transform(t.v2);
-                        	//Vertex tv3 =  mvp.transform(t.v2);
-                    		
+
                     		t.setClamped(clampedv1, clampedv2, clampedv3);
                     	}
                     }
@@ -201,11 +210,7 @@ public class main{
                     	t.v1.normalize();
                     	t.v2.normalize();
                     	t.v3.normalize();
-                    	
-                    	//ClippingLogic.applyCurvilinearDistortion(t.v1);
-                    	//ClippingLogic.applyCurvilinearDistortion(t.v2);
-                    	//ClippingLogic.applyCurvilinearDistortion(t.v3);
-                    	
+
                     	t.v1.x = (t.v1.x + 1.0) * 0.5 * ((double)getWidth());
                     	t.v1.y = (1.0-t.v1.y) * 0.5 * ((double)getHeight());
                     	
@@ -214,8 +219,6 @@ public class main{
                     	
                     	t.v3.x = (t.v3.x + 1.0) * 0.5 * ((double)getWidth());
                     	t.v3.y = (1.0-t.v3.y) * 0.5 * ((double)getHeight());
-                    	
-                    	//System.out.println(t.v1.x + " " + t.v1.y + " " + t.v1.z);
                     	
                     	int minX = (int) Math.max(0, Math.ceil(Math.min(t.v1.x, Math.min(t.v2.x, t.v3.x))));
                     	int maxX = (int) Math.min(img.getWidth() - 1, 
@@ -226,7 +229,6 @@ public class main{
                     	
                     	double TriangleArea = (t.v1.y - t.v3.y) * (t.v2.x - t.v3.x) +
                     			(t.v2.y - t.v3.y) * (t.v3.x - t.v1.x);
-                    	
                     	
                     	for (int y = minY; y<=maxY; y++)
                     		for (int x = minX; x<=maxX; x++)
@@ -244,7 +246,9 @@ public class main{
                     		    	if (zBuffer[zIndex] < depth) 
                     		    	{
                     		    		double intensity = (b1 * t.clampedv1 + b2 * t.clampedv2 + b3* t.clampedv3)/255.0;
-                    		    		//System.out.println(intensity);
+
+                    		    		if( t.getUV1() == null || t.getUV2() == null || t.getUV3() == null || t.getTexture() == null)
+                    		    		{
                     		    		
                     		    		int r = (int)(obj.getMaterial().getColor().getRed() * intensity);    //t.color.getRed() * intensity);
                     		    		int gr = (int)(obj.getMaterial().getColor().getGreen() * intensity);//(t.color.getGreen() * intensity);
@@ -254,8 +258,25 @@ public class main{
                     		    		b = Math.max(0, Math.min(255, b));
                     		    		int test = (obj.getMaterial().getColor().getAlpha() <<24 )| (r << 16) | (gr << 8) | (b);
                     		    		
-                    		    		DrawUtils.DrawPixel(img, x, y, test);//t.color.getRGB());
-
+                    		    		DrawUtils.DrawPixel(img, x, y, test);
+                    		    		}
+                    		    		else
+                    		    		{
+                    		    		double tx = b1 * t.getUV1().getU() + b2 * t.getUV2().getU() + b3 * t.getUV3().getU();
+                        		    	double ty = b1 * t.getUV1().getV() + b2 * t.getUV2().getV() + b3 * t.getUV3().getV();
+                    		    		Color test = DrawUtils.GetTexel(t.getTexture(), tx, ty);
+                    		    		
+                    		    		int r = (int)(test.getRed() * intensity);
+                    		    		r = (r > 255) ? 255: ((r<0)? 0 : r);
+                    		    		int gr = (int)(test.getGreen() * intensity);
+                    		    		gr = (gr > 255) ? 255: ((gr<0)? 0 : gr);
+                    		    		int b = (int)(test.getBlue() * intensity);
+                    		    		b = (b > 255) ? 255: ((b<0)? 0 : b);
+                    		    		int col = (test.getAlpha() <<24) | (r<<16) | (gr<<8) | b;
+                    		    		
+                    		    		DrawUtils.DrawPixel(img, x, y, col);//t.color.getRGB());
+                    		    		}
+                    		    		
                     		    		zBuffer[zIndex] = depth;
                     		    	}
                     		    }
@@ -292,12 +313,13 @@ public class main{
         pane.add(renderPanel, BorderLayout.CENTER);
         pane.add(objectOptions, BorderLayout.EAST);
         pane.add(worldOptions, BorderLayout.WEST);
-        frame.setSize(2000, 1400);
+        frame.setSize(2200, 1400);
         
         renderPanel.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() * 4.0/6.0), (int) (frame.getSize().getWidth() * 4.0/6.0)));
         worldOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0), (int) (frame.getSize().getWidth() / 6.0)));
         objectOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0), (int) (frame.getSize().getWidth() / 6.0)));
 
+        
         frame.setVisible(true);
 	}
 

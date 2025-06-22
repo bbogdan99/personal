@@ -1,11 +1,8 @@
 package UIManager;
 
-import java.awt.GraphicsEnvironment;
-import java.awt.GridLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JPanel;
 
 import FirstPersonControl.KeyEventManager;
@@ -23,7 +20,7 @@ public class WorldOptions extends JPanel
 	private JLabel cameraRotLabel;
 	private JLabel projTypeLabel;
 	
-	ObjectOptions objOptions;
+	//ObjectOptions objOptions;
 	
 	public WorldOptions(Scene scene, KeyEventManager km, MouseControlManager mm)
 	{
@@ -54,7 +51,7 @@ public class WorldOptions extends JPanel
 		String rZ = String.valueOf(scene.getCam().getRoll());
 		cameraRotLabel.setText("Rot: X:" + rX + " Y:" + rY + " Z:" + rZ);
 		
-		projTypeLabel = new JLabel();
+		/*projTypeLabel = new JLabel();
 		int type = scene.getCam().getProjType();
 		String proj = "";
 		switch (type)
@@ -72,14 +69,14 @@ public class WorldOptions extends JPanel
 			proj = "Undefined";
 			break;
 		}
-		projTypeLabel.setText("Projection type: " + proj);
+		projTypeLabel.setText("Projection type: " + proj);*/
 		
 		add(worldView);
 		add(cameraLabel);
 		
 		add(cameraPosLabel);
 		add(cameraRotLabel);
-		add(projTypeLabel);
+		//add(projTypeLabel);
 
 		/*var objList = new JList(scene.getObjects().toArray());
 		objList.addListSelectionListener(e->{

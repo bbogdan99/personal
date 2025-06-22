@@ -51,7 +51,7 @@ public class ObjectOptions extends JPanel
 		setFocusable(true);
 		
 		String type = obj.getClass().getTypeName();
-		var viewLabel = new JLabel("<html>Viewing: " + type); 
+		var viewLabel = new JLabel("<html>Viewing: " + type.substring(18)); 
 		
 		viewLabel.setFont(new Font("Serif", Font.PLAIN, 14));
         viewLabel.setForeground(new Color(50, 50, 25));

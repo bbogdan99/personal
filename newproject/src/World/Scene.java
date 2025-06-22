@@ -5,38 +5,41 @@ import java.util.ArrayList;
 
 import ThreeDimensionals.Object3D;
 import newproject.Camera;
-import newproject.Triangle;
 import newproject.Vertex;
 
 public class Scene 
 {
 	private ArrayList<Object3D>Objects;
 	private Camera cam;
-	//ArrayList<LightSource>LightSources;
-	private Vertex Ia;
+	private ArrayList<LightSource>LightSources;
+	
+	private AmbientLight Ia;
 	private Color backgroundColor;
 	
 	public Scene(Camera cam)
 	{
-		setObjects(new ArrayList<Object3D>());
-		setIa(new Vertex(64, 64, 64));
+		Objects = new ArrayList<>();
+		LightSources = new ArrayList<>();
+		setIa(new AmbientLight( new Color(64, 64, 64)));
 		this.setCam(cam);
 		setBackgroundColor(Color.BLACK);
 	}
 	public void addObject(Object3D obj)
 	{
-		getObjects().add(obj);
+		Objects.add(obj);
 	}
-	public void setIA(Vertex Ia)
+	public void addLight(LightSource Light)
 	{
-		this.getIa().setX(Ia.getX());
-		this.getIa().setY(Ia.getY());
-		this.getIa().setZ(Ia.getZ());
+		LightSources.add(Light);
+	}
+	public void setIA(AmbientLight Ia)
+	{
+		this.Ia = new AmbientLight(Ia.getColor());
 	}
 	public String toString()
 	{
 		String returnd = "";
-		returnd += "Lumina ambientala " + getIa().getX() + " " + getIa().getY() + " " + getIa().getZ() + "\n";
+		//returnd += "Lumina ambientala " + getIa().getX() + " " + getIa().getY() + " " + getIa().getZ() + "\n";
 		returnd += "Camera pos: " + getCam().getX() + " " + getCam().getY() + " " + getCam().getZ() + "\n";
 		returnd += "Camera rot: " + getCam().getPitch() + " " + getCam().getYaw() + " " + getCam().getRoll() + "\n";
 		for (Object3D o: getObjects())
@@ -54,11 +57,11 @@ public class Scene
 	public void setCam(Camera cam) {
 		this.cam = cam;
 	}
-	public Vertex getIa() {
+	public AmbientLight getIa() {
 		return Ia;
 	}
-	public void setIa(Vertex ia) {
-		Ia = ia;
+	public void setIa(AmbientLight ia) {
+		Ia = new AmbientLight(ia.getColor());
 	}
 	public ArrayList<Object3D> getObjects() {
 		return Objects;
@@ -75,4 +78,14 @@ public class Scene
 	public void setBackgroundColor(Color backgroundColor) {
 		this.backgroundColor = backgroundColor;
 	}
+	
+	public ArrayList<LightSource> getLightSources() {
+		return LightSources;
+	}
+	public void setLightSources(ArrayList<LightSource>LightSources)
+	{
+		this.LightSources = LightSources;
+	}
+	
+	
 }
