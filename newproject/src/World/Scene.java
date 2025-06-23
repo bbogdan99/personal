@@ -16,6 +16,8 @@ public class Scene
 	private AmbientLight Ia;
 	private Color backgroundColor;
 	
+	private boolean wireFrameMode;
+	
 	public Scene(Camera cam)
 	{
 		Objects = new ArrayList<>();
@@ -23,6 +25,7 @@ public class Scene
 		setIa(new AmbientLight( new Color(64, 64, 64)));
 		this.setCam(cam);
 		setBackgroundColor(Color.BLACK);
+		wireFrameMode = false;
 	}
 	public void addObject(Object3D obj)
 	{
@@ -36,6 +39,9 @@ public class Scene
 	{
 		this.Ia = new AmbientLight(Ia.getColor());
 	}
+	public void setWireFrameMode(boolean type) {wireFrameMode = type;}
+	public boolean getWireFrameMode() {return wireFrameMode;}
+	
 	public String toString()
 	{
 		String returnd = "";

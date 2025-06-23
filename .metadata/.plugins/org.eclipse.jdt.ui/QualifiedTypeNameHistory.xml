@@ -44,7 +44,6 @@
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
     <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
     <fullyQualifiedTypeName name="UIManager.WorldOptions"/>
-    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="Utils.FileReader"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="newproject.UV"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="World.SpotLight"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="World.CalculationTask"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 </qualifiedTypeNameHistroy>

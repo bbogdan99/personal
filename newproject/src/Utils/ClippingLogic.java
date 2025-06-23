@@ -11,7 +11,7 @@ import newproject.Vertex;
 public class ClippingLogic
 {
 	
-	public static void applyCurvilinearDistortion(Vertex v)
+	/*public static void applyCurvilinearDistortion(Vertex v)
 	{
 		double strength = 0.5;
 	    double maxBend = Math.PI / 4;
@@ -24,7 +24,7 @@ public class ClippingLogic
 
 	    v.setX(newX);
 	    v.setZ(newZ);
-	}
+	}*/
 	/*public static Scene ClipScene(Scene scene, Vertex[] planes)
 	{
 		ArrayList<Object3D>clipped_objects = new ArrayList<Object3D>();

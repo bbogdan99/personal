@@ -59,16 +59,16 @@ public class main{
         
     	Scene scene = new Scene(cam);
     	
-    	scene.addLight(new SpotLight(new Vertex(0, 200, -801),           // position
+    	/*scene.addLight(new SpotLight(new Vertex(0, 200, -801),           // position
         	    new Vertex(1, 1, -1),                // direction (pointing forward)
         	    new Color(255, 255, 255),          // soft yellow-ish light
         	    Math.cos(Math.toRadians(12.5)),   // inner cutoff angle cosine (spotlight bright inside this cone)
         	    Math.cos(Math.toRadians(17.5)),
         	    1,
         	    0,
-        	    0));
+        	    0));*/
         //scene.addLight(new AmbientLight(new Color(128, 128, 128)));
-        //scene.addLight(new DirectionalLight(new Color(255, 255, 255), new Vertex(0, 0, -1)));
+        scene.addLight(new DirectionalLight(new Color(255, 255, 255), new Vertex(0, 0, -1)));
         //scene.addLight(new PointLight(new Vertex(0, 200, -1001), new Color(255, 255, 255), 0.0, 0.00, 1));
         
     	CalculationTask task1 = new CalculationTask(scene);
@@ -200,11 +200,14 @@ public class main{
 
                     		t.setClamped(clampedv1, clampedv2, clampedv3);
                     	}
+                    	
                     }
+                    
                     
                     scene2 = ClippingEngine.ClipScene(scene2, planes);
 
                     for (Object3D obj: scene2.getObjects())
+                    
                     for (Triangle t: obj.getTriangles())
                     {
                     	t.v1.normalize();
@@ -229,6 +232,34 @@ public class main{
                     	
                     	double TriangleArea = (t.v1.y - t.v3.y) * (t.v2.x - t.v3.x) +
                     			(t.v2.y - t.v3.y) * (t.v3.x - t.v1.x);
+                    	
+                    	if (scene.getWireFrameMode() == true)
+                    	{
+                    	int re = (int)(obj.getMaterial().getColor().getRed());    //t.color.getRed() * intensity);
+    		    		int gre = (int)(obj.getMaterial().getColor().getGreen());//(t.color.getGreen() * intensity);
+    		    		int be = (int)(obj.getMaterial().getColor().getBlue());//(t.color.getBlue() * intensity);
+    		    		re = Math.max(0, Math.min(255, re));
+    		    		gre = Math.max(0, Math.min(255, gre));
+    		    		be = Math.max(0, Math.min(255, be));
+    		    		int teste = (obj.getMaterial().getColor().getAlpha() <<24 )| (re << 16) | (gre << 8) | (be);
+    		    		
+    		    		
+    		    		DrawUtils.DrawWireframeTriangle(img, 
+    		    				/*t.v1.x > minX ? t.v1.x : minX, 
+    		    				t.v1.y > minY ? t.v1.y : minY, 
+    		    				t.v2.x > minX ? t.v2.x : minX, 
+    		    				t.v2.y > minY ? t.v2.y : minY, 
+    		    				t.v3.x > minX ? t.v3.x : minX, 
+    		    				t.v3.y > minY ? t.v3.y : minY, */
+    		    				ClippingEngine.clampX(img, t.v1.x),
+    		    				ClippingEngine.clampY(img, t.v1.y),
+    		    				ClippingEngine.clampX(img, t.v2.x),
+    		    				ClippingEngine.clampY(img, t.v2.y),
+    		    				ClippingEngine.clampX(img, t.v3.x),
+    		    				ClippingEngine.clampY(img, t.v3.y),
+    		    				teste);
+    		    		continue;
+                    	}
                     	
                     	for (int y = minY; y<=maxY; y++)
                     		for (int x = minX; x<=maxX; x++)
@@ -277,6 +308,7 @@ public class main{
                     		    		DrawUtils.DrawPixel(img, x, y, col);//t.color.getRGB());
                     		    		}
                     		    		
+                    		    		
                     		    		zBuffer[zIndex] = depth;
                     		    	}
                     		    }
@@ -284,8 +316,9 @@ public class main{
                     	
                     }
                     g2.drawImage(img,0,0,null);
+                    }
                     // rendering magic will happen here
-                }
+                
         };
             
         //JPanel worldOptions = new JPanel();

@@ -129,11 +129,11 @@ public class MenusBar extends JMenuBar
 		wMenuItem.addItemListener( e -> {
 			if (e.getStateChange() == ItemEvent.SELECTED)
 			{
-				
+				scene.setWireFrameMode(true);
 			}
 			else
 			{
-				
+				scene.setWireFrameMode(false);
 			}
 			renderPanel.repaint();
 		});
@@ -413,7 +413,7 @@ public class MenusBar extends JMenuBar
 		
 		SettingsMenu.add(sMenuItem);
 		SettingsMenu.add(cMenuItem);
-		SettingsMenu.add(rMenuItem);
+		//SettingsMenu.add(rMenuItem);
 
 	}
 	private void setHelppMenu(JMenu HelpMenu)

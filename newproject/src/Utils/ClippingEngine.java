@@ -1,5 +1,6 @@
 package Utils;
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +42,19 @@ public class ClippingEngine {
         clippedScene.setLightSources(scene.getLightSources());
         for (Object3D obj : clippedObjects) clippedScene.addObject(obj);
         return clippedScene;
+    }
+    
+    public static double clampX(BufferedImage img ,double x)
+    {
+    	x = (x >= img.getWidth()) ? img.getWidth()-1 : x;
+    	x = (x < 0) ? 0 : x;
+    	return x;
+    }
+    public static double clampY(BufferedImage img, double y)
+    {
+    	y = (y >= img.getHeight()) ? img.getHeight()-1 : y;
+    	y = (y < 0) ? 0 : y;
+    	return y;
     }
 
     private static Object3D ClipObject(Object3D obj, Plane[] planes) 
@@ -179,5 +193,6 @@ public class ClippingEngine {
         		A.getY() + dir.getY() * t, 
         		A.getZ() + dir.getZ() * t);
     }
+    
 
 }
