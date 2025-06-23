@@ -349,8 +349,8 @@ public class main{
         frame.setSize(2200, 1400);
         
         renderPanel.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() * 4.0/6.0), (int) (frame.getSize().getWidth() * 4.0/6.0)));
-        worldOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0 - 50), (int) (frame.getSize().getWidth() / 6.0 - 50)));
-        objectOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0 + 50), (int) (frame.getSize().getWidth() / 6.0 + 50)));
+        worldOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0), (int) (frame.getSize().getWidth() / 6.0)));
+        objectOptions.setPreferredSize( new Dimension ((int)  (frame.getSize().getHeight() / 6.0), (int) (frame.getSize().getWidth() / 6.0)));
 
         
         frame.setVisible(true);
